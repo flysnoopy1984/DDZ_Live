@@ -1,0 +1,9 @@
+G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.Main.resources
+G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZProj\bin\Debug\DDZProj.exe
+G:\Project\DDZ\DDZProj\DDZProj\bin\Debug\DDZProj.pdb
+G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.exe
+G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.pdb

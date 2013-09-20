@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5676E6B-2F86-4AF6-801E-767C46CA78C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDZProj</RootNamespace>
+    <AssemblyName>DDZProj</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\DDZEnum.cs" />
+    <Compile Include="Core\Player.cs" />
+    <Compile Include="Core\Poker.cs" />
+    <Compile Include="Core\SysConfiguration.cs" />
+    <Compile Include="Core\User.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\38.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\39.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\42.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\43.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\47.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\52.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\53.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\54.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Poker\PokerBack.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Sound\chose.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\give.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\loss.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\start.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\win.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

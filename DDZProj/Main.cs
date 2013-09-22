@@ -47,8 +47,8 @@ namespace DDZProj
         {
             SoundGive = new SoundPlayer(global::DDZProj.Properties.Resources.give);
 
-            Pokers = new Poker[54];
-            pokerImages = new PictureBox[54];
+            Pokers = new Poker[17];
+            pokerImages = new PictureBox[17];
 
         }
 
@@ -62,7 +62,7 @@ namespace DDZProj
         #region NEW出牌的图形
         private void newPaiImage()
         {
-            for (int i = 0; i < 17; i++)
+            for (int i = 0; i < Pokers.Length; i++)
             {
                 pokerImages[Pokers[i].Index] = new PictureBox();
                 pokerImages[Pokers[i].Index].BackgroundImage = Pokers[Pokers[i].Index].ForeImage;
@@ -77,11 +77,10 @@ namespace DDZProj
         #region 开始发牌
         void Dealt()
         {
-          
-            for (int i = 0; i < 17; i++)
+            for (int i = 0; i < pokerImages.Length; i++)
             {
                 pokerImages[i].Show();
-                pokerImages[i].SetBounds(i*30+20, 100, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);               
+                pokerImages[i].SetBounds(i * SysConfiguration.PokerXSep, 100, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);               
                 pokerImages[i].BringToFront();
                 SoundGive.Play();
                 Thread.Sleep(100);
@@ -92,7 +91,13 @@ namespace DDZProj
         #region 出牌
         void PostCard()
         {
-            //this.Pokers[2]
+            Random r = new Random();
+            int i =r.Next(0, pokerImages.Length-1);
+
+            PictureBox pi = pokerImages[i];
+            
+            pi.SetBounds(500, 500, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight); 
+
         }
 
         void PostCardAction()
@@ -104,12 +109,31 @@ namespace DDZProj
 
         #endregion
 
+        #region 排序排
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bpos">从第几张开始排序</param>
+        void OrderCard(int bpos)
+        {
+            for (int i = 0; i < pokerImages.Length; i++)
+            {
+                
+            }
+        }
+        #endregion
+
         private void bn_Begin_Click(object sender, EventArgs e)
         {
             Test();
             th_Dealt = new Thread(new ThreadStart(Dealt));
             th_Dealt.Start();
             th_Dealt.Join();
+        }
+
+        private void bn_Post_Click(object sender, EventArgs e)
+        {
+            PostCardAction();
         }
     }
 }

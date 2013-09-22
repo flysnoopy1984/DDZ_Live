@@ -7,3 +7,14 @@ G:\Project\DDZ\DDZProj\DDZProj\bin\Debug\DDZProj.exe
 G:\Project\DDZ\DDZProj\DDZProj\bin\Debug\DDZProj.pdb
 G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.exe
 G:\Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.pdb
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.exe
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.pdb
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\bin\Debug\DDZProj.exe
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\bin\Debug\DDZProj.pdb
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.Main.resources
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\DDZProj.Properties.Resources.resources
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Projects\OutSource_Project\DDZ\DDZProj\DDZProj\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Projects\OutSource_Project\DDZ\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.exe
+E:\Projects\OutSource_Project\DDZ\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.pdb

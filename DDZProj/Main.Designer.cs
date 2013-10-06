@@ -34,7 +34,7 @@
             // 
             // bn_Begin
             // 
-            this.bn_Begin.Location = new System.Drawing.Point(12, 25);
+            this.bn_Begin.Location = new System.Drawing.Point(1084, 12);
             this.bn_Begin.Name = "bn_Begin";
             this.bn_Begin.Size = new System.Drawing.Size(75, 23);
             this.bn_Begin.TabIndex = 2;
@@ -44,7 +44,7 @@
             // 
             // bn_Post
             // 
-            this.bn_Post.Location = new System.Drawing.Point(119, 24);
+            this.bn_Post.Location = new System.Drawing.Point(1084, 52);
             this.bn_Post.Name = "bn_Post";
             this.bn_Post.Size = new System.Drawing.Size(75, 23);
             this.bn_Post.TabIndex = 3;

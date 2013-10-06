@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsoleMain.Designer.cs">
+      <DependentUpon>ConsoleMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\DDZEnum.cs" />
     <Compile Include="Core\Player.cs" />
     <Compile Include="Core\Poker.cs" />
@@ -59,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConsoleMain.resx">
+      <DependentUpon>ConsoleMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

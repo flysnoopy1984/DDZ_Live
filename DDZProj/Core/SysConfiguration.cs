@@ -13,6 +13,12 @@ namespace DDZProj.Core
         private static int _PokerWidth;
         private static int _PokerHeight;
         private static int _PokerXSep;
+        private static int _PokerCount;
+
+        public static int PokerCount
+        {
+            get { return _PokerCount; }
+        }
 
         public static int PokerWidth
         {
@@ -46,8 +52,11 @@ namespace DDZProj.Core
             _ScreenWidth = Screen.PrimaryScreen.Bounds.Width;
             _ScreenHeight = Screen.PrimaryScreen.Bounds.Height;
 
+            //牌的数量
+            _PokerCount = 54;
+
             //牌的长宽
-            _PokerWidth = 65;
+            _PokerWidth = 60;
             _PokerHeight = 100;
 
             //牌与牌的间隔距离

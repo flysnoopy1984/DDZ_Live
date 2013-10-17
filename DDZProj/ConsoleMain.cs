@@ -24,6 +24,16 @@ namespace DDZProj
             InitializeComponent();
         }
 
+        private void Bn_Begin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bn_Reset_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

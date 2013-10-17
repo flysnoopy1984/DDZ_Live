@@ -23,37 +23,62 @@ namespace DDZProj.Core
             get { return _ForeImage; }
         }
 
-        private int _index;//做为牌的随机属性
-
-        public int Index
-        {
-            get { return _index; }
-            set { _index = value; }
-        }
+     
+        public int Index { get; set; } //做为牌的随机属性        
 
         public int No { get; set; } //牌号
 
-        public int Color { get; set; } //花色
+        public int Size { get; set; } //牌大小
+
+        public PokerColor Color { get; set; } //花色
 
         public Poker()
         {
         }
 
-        public Poker(int no)
+        public Poker(int no,int size, PokerColor c)
         {
             this.No = no;
-            InitPoker();
-        }     
+            this.Size = size;
+            this.Color = c;
 
-       
+            InitPoker();
+        }       
 
         #region function
         private void InitPoker()
-        {         
-
+        {
+            int imgNo =0;
+            int i=0;
             if (this.No>0)
             {
-                _ForeImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + No);
+                switch (Color)
+                {
+                    case PokerColor.spade:
+                        i=0;
+                        break;
+                    case PokerColor.heart:
+                        i = 1;
+                        break;
+                    case PokerColor.club:
+                        i = 2;
+                        break;
+                    case PokerColor.diamond:
+                        i = 3;
+                        break;
+                }
+
+                if (No == 1 || No == 2)
+                {
+                    _ForeImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + No);
+                }
+                else
+                {
+                    imgNo = i * 13 + No;                
+                   
+                    _ForeImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + imgNo);                    
+                }
+               
             }
         }
         #endregion

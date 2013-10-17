@@ -12,9 +12,10 @@ namespace DDZProj.Core
     public enum PokerColor
     {        
         spade =1,
-        club = 2,
-        heart = 3,
+        heart = 2,
+        club = 3,      
         diamond = 4,
-
+        Da = 5,
+        Xiao = 6,
     }
 }

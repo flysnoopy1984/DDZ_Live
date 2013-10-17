@@ -53,8 +53,10 @@
       <DependentUpon>ConsoleMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\DDZEnum.cs" />
+    <Compile Include="Core\DDZGame.cs" />
     <Compile Include="Core\Player.cs" />
     <Compile Include="Core\Poker.cs" />
+    <Compile Include="Core\ScreenControl.cs" />
     <Compile Include="Core\SysConfiguration.cs" />
     <Compile Include="Core\User.cs" />
     <Compile Include="Main.cs">
@@ -256,7 +258,12 @@
   <ItemGroup>
     <None Include="Images\Poker\PokerBack.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DDZInterface\DDZInterface.csproj">
+      <Project>{DB1EF340-D9C8-4DC8-B784-121D05366A4B}</Project>
+      <Name>DDZInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Sound\chose.wav" />
   </ItemGroup>

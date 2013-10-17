@@ -1,0 +1,5 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\bin\Debug\DDZInterface.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\bin\Debug\DDZInterface.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\obj\Debug\DDZInterface.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\obj\Debug\DDZInterface.pdb

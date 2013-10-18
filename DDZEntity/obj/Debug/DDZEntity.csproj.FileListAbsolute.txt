@@ -1,1 +1,7 @@
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\bin\Debug\DDZEntity.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\bin\Debug\DDZEntity.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\bin\Debug\DDZCommon.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\bin\Debug\DDZCommon.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\obj\Debug\DDZEntity.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\obj\Debug\DDZEntity.pdb

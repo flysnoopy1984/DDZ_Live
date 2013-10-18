@@ -31,3 +31,7 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\GenerateResource.write.1.t
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZInterface.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZInterface.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaCtrl.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZCommon.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZEntity.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZCommon.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZEntity.pdb

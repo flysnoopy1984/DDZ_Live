@@ -58,13 +58,9 @@
     <Compile Include="ConsoleMain.Designer.cs">
       <DependentUpon>ConsoleMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core\DDZEnum.cs" />
     <Compile Include="Core\DDZGame.cs" />
-    <Compile Include="Core\Player.cs" />
-    <Compile Include="Core\Poker.cs" />
     <Compile Include="Core\ScreenControl.cs" />
     <Compile Include="Core\SysConfiguration.cs" />
-    <Compile Include="Core\User.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +264,14 @@
     <None Include="Images\Poker\PokerBack.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DDZCommon\DDZCommon.csproj">
+      <Project>{0585EB55-7CCC-417C-BFB2-31052E35F3BF}</Project>
+      <Name>DDZCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDZEntity\DDZEntity.csproj">
+      <Project>{04B93478-3082-4AC9-BE19-291095B63F86}</Project>
+      <Name>DDZEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DDZInterface\DDZInterface.csproj">
       <Project>{DB1EF340-D9C8-4DC8-B784-121D05366A4B}</Project>
       <Name>DDZInterface</Name>

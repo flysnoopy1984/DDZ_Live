@@ -1,0 +1,8 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\bin\Debug\DDZCommon.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\bin\Debug\DDZCommon.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\obj\Debug\GenerateResource.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\obj\Debug\GenerateResource.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.Properties.RecDDZ.resources

@@ -7,7 +7,8 @@ using System.Drawing;
 namespace DDZEntity
 {
     public class Poker
-    {
+    {     
+        
         private static Image backImage;//背面图，静态
 
         public static Image BackImage
@@ -34,6 +35,7 @@ namespace DDZEntity
 
         public Poker()
         {
+            
         }
 
         public Poker(int no,int size, PokerColor c)
@@ -70,13 +72,13 @@ namespace DDZEntity
 
                 if (No == 1 || No == 2)
                 {
-                    _ForeImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + No);
+                    _ForeImage =DDZCommon.ResManager.GetImageRes("_" + No);
                 }
                 else
                 {
-                    imgNo = i * 13 + No;                
-                   
-                    _ForeImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + imgNo);                    
+                    imgNo = i * 13 + No;
+
+                    _ForeImage = DDZCommon.ResManager.GetImageRes("_" + No);               
                 }
                
             }

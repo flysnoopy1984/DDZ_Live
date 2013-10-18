@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDZInterface", "DDZInterfac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDZEntity", "DDZEntity\DDZEntity.csproj", "{04B93478-3082-4AC9-BE19-291095B63F86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDZCommon", "DDZCommon\DDZCommon.csproj", "{0585EB55-7CCC-417C-BFB2-31052E35F3BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{04B93478-3082-4AC9-BE19-291095B63F86}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{04B93478-3082-4AC9-BE19-291095B63F86}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{04B93478-3082-4AC9-BE19-291095B63F86}.Release|x86.ActiveCfg = Release|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0585EB55-7CCC-417C-BFB2-31052E35F3BF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

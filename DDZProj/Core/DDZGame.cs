@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Media;
 using System.Threading;
+using DDZEntity;
 
 namespace DDZProj.Core
 {

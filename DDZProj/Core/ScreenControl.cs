@@ -52,8 +52,8 @@ namespace DDZProj.Core
 
             if (m_IsFullScreen)//全屏 ,按特定的顺序执行
             {
-               // _Form.TopMost = true;                
-              //  SetFormFullScreen(m_IsFullScreen);
+                      
+                //SetFormFullScreen(m_IsFullScreen);
                 _Form.FormBorderStyle = FormBorderStyle.None;
                 _Form.WindowState = FormWindowState.Maximized;
                 _Form.Activate();//
@@ -61,10 +61,10 @@ namespace DDZProj.Core
             }
             else//还原，按特定的顺序执行——窗体状态，窗体边框，设置任务栏和工作区域
             {
-                //_Form.TopMost = false;
+                
                 _Form.WindowState = FormWindowState.Normal;
                 _Form.FormBorderStyle = FormBorderStyle.Sizable;
-               //   SetFormFullScreen(m_IsFullScreen);
+                 //SetFormFullScreen(m_IsFullScreen);
                 _Form.Activate();
             }
             _Form.ResumeLayout(false);

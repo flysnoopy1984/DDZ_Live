@@ -15,6 +15,8 @@ namespace DDZProj.Core
         private List<Poker> _PokerList;   //一副牌的对象
         private SoundPlayer _SoundGive;//出牌声音
         private Form _MainForm;
+        private AreaCtrl _AreaA, _AreaB, _AreaC;
+
 
         public List<PictureBox> PictureBoxList
         {
@@ -63,7 +65,8 @@ namespace DDZProj.Core
             /*New牌控件初始化*/
             for (int i = 0; i < SysConfiguration.PokerCount; i++)
             {
-                PictureBox pb = new PictureBox();               
+                PictureBox pb = new PictureBox();
+                pb.Hide();
                 pb.BackgroundImage = _PokerList[i].ForeImage;
              
                 pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -71,12 +74,21 @@ namespace DDZProj.Core
                 _PBPokerList.Add(pb);
                 _MainForm.Controls.Add(pb);
             }
+
+            //UI区域初始化
+            this.InitArea();
         }
 
-        public void GetInitData()
+        /// <summary>
+        /// 初始化桌面布局
+        /// </summary>
+        private void InitArea()
         {
+            _AreaA = new AreaCtrl(AreaPos.top, _MainForm);
+            _AreaB = new AreaCtrl(AreaPos.left, _MainForm);
+            _AreaC = new AreaCtrl(AreaPos.right, _MainForm);
 
-        }
+        }        
 
         #region 开始发牌
         public void StartDealt()

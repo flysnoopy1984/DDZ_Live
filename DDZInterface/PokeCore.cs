@@ -7,6 +7,6 @@ namespace DDZInterface
 {
     public class PokeCore : BaseInterface
     {
-        
+      
     }
 }

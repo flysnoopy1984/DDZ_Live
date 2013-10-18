@@ -9,6 +9,12 @@ namespace DDZProj.Core
     {
     }
 
+    public enum AreaPos
+    {
+        top,
+        left,
+        right
+    }
     public enum PokerColor
     {        
         spade =1,

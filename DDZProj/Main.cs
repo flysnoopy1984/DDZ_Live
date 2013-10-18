@@ -16,7 +16,7 @@ namespace DDZProj
     {
         private ConsoleMain _ConsoleMain;
         private ScreenControl _ScreenControl;
-      
+        
         
         private Thread th_PostCard;   //出牌线程
         private DDZGame _DDZGame;
@@ -29,24 +29,20 @@ namespace DDZProj
 
             _ScreenControl = new ScreenControl(this);
             _ConsoleMain = new ConsoleMain(this);  
-          
+            
+            //系统参数设置
             SysConfiguration.Init();
 
+            //一局游戏初始化
             _DDZGame = new DDZGame(this);
             _DDZGame.InitGame();
+
+           
 
             CheckForIllegalCrossThreadCalls = false;//为false可以跨线程调用windows控件
         }
 
-        /// <summary>
-        /// 初始化桌面布局
-        /// </summary>
-        private void InitLayOut()
-        {
-            //int x = SysConfiguration.ScreenWidth/2 
-        }
-
-       
+      
 
         #region 出牌
         /*
@@ -80,6 +76,7 @@ namespace DDZProj
             PostCardAction();
         }
 
+        #region Form 重载函数        
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             /*全屏*/
@@ -95,6 +92,7 @@ namespace DDZProj
                 _ScreenControl.Esc();
                 return true;
             }
+            /* 开始发牌 */
             if (msg.Msg == 256 && keyData == (System.Windows.Forms.Keys.Enter))
             {
                 _DDZGame.StartDealt();
@@ -102,8 +100,8 @@ namespace DDZProj
             }
             
             return base.ProcessCmdKey(ref msg, keyData);
-        }      
+        }
+        #endregion
 
-     
     }
 }

@@ -30,3 +30,4 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\GenerateResource.read.1.tl
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\GenerateResource.write.1.tlog
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZInterface.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZInterface.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaCtrl.resources

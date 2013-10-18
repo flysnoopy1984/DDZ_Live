@@ -14,6 +14,8 @@ namespace DDZProj.Core
         private static int _PokerHeight;
         private static int _PokerXSep;
         private static int _PokerCount;
+        
+
 
         public static int PokerCount
         {
@@ -46,6 +48,9 @@ namespace DDZProj.Core
             get { return _ScreenHeight; }
         }
 
+        public static int TopSpec { get; set; }
+        public static int LeftSpec { get; set; }
+
         public static void Init()
         {
             //屏幕长宽
@@ -61,6 +66,10 @@ namespace DDZProj.Core
 
             //牌与牌的间隔距离
             _PokerXSep = _PokerWidth / 2;
+
+            //边缘距离
+            TopSpec = 20;
+            LeftSpec = 20;
 
         }
               

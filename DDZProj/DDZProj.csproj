@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreaCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AreaCtrl.Designer.cs">
+      <DependentUpon>AreaCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsoleMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AreaCtrl.resx">
+      <DependentUpon>AreaCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsoleMain.resx">
       <DependentUpon>ConsoleMain.cs</DependentUpon>
     </EmbeddedResource>

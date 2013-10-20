@@ -23,6 +23,8 @@ namespace DDZProj
             _MainForm = f;
 
             this.Init();
+
+            CheckForIllegalCrossThreadCalls = false;//为false可以跨线程调用windows控件
         }
 
         void Init()

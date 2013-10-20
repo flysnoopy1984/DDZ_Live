@@ -18,6 +18,11 @@ namespace DDZProj
             InitializeComponent();            
         }
 
+        public DDZPokerImage(Poker p)
+        {
+            Poker = p;
+            InitializeComponent();
+        }
 
         public DDZPokerImage(IContainer container)
         {

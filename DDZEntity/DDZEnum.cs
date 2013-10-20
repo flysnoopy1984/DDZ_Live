@@ -11,9 +11,9 @@ namespace DDZEntity
 
     public enum AreaPos
     {
-        top,
-        left,
-        right
+        left = 1,
+        top =2,       
+        right =3,
     }
     public enum PokerColor
     {        

@@ -9,7 +9,7 @@ namespace DDZEntity
     public class Poker
     {     
         
-        private static Image _backImage;//背面图，静态
+        private static Image _backImage=DDZCommon.ResManager.GetImageRes("PokerBack");//背面图，静态
 
         public static Image BackImage
         {
@@ -33,18 +33,21 @@ namespace DDZEntity
 
         public PokerColor Color { get; set; } //花色
 
-        public Poker()
+        public Poker(int no)
         {
-            
+            this.No = no; 
+
+            InitPoker();
         }
 
-        public Poker(int no,int size, PokerColor c)
+        public Poker(int no,int size,PokerColor c)
         {
             this.No = no;
-            this.Size = size;
+         
             this.Color = c;
 
-            Poker._backImage = DDZCommon.ResManager.GetImageRes("PokerBack");
+            this.Size = size;           
+
             InitPoker();
         }       
 
@@ -52,7 +55,9 @@ namespace DDZEntity
         private void InitPoker()
         {
             int imgNo =0;
+
             int i=0;
+
             if (this.No>0)
             {
                 switch (Color)
@@ -74,12 +79,43 @@ namespace DDZEntity
                 if (No == 1 || No == 2)
                 {
                     _ForeImage =DDZCommon.ResManager.GetImageRes("_" + No);
+                    if (No == 1)
+                    {
+                        Size = 17;
+                        this.Color = PokerColor.Da;
+                    }
+                    else
+                    {
+                        Size = 16;
+                        this.Color = PokerColor.Xiao;
+                    }
                 }
                 else
                 {
                     imgNo = i * 13 + No;
+                    _ForeImage = DDZCommon.ResManager.GetImageRes("_" + No);
 
-                    _ForeImage = DDZCommon.ResManager.GetImageRes("_" + No);               
+                    if (No >= 3 && No <= 15)
+                    {
+                        this.Color = PokerColor.spade;
+                        this.Size = No;
+                    }
+                    if (No >= 16 && No <= 28)
+                    {
+                        this.Color = PokerColor.heart;
+                        this.Size = No-13;
+                    }
+                    if (No >= 29 && No <= 41)
+                    {
+                        this.Color = PokerColor.club;
+                        this.Size = No-26;
+                    }
+                    if (No >= 42 && No <= 54)
+                    {
+                        this.Color = PokerColor.diamond;
+                        this.Size = No-39;
+                    }
+
                 }
                
             }

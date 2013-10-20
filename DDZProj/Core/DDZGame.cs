@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Media;
 using System.Threading;
 using DDZEntity;
+using DDZInterface;
 
 namespace DDZProj.Core
 {
@@ -15,8 +16,11 @@ namespace DDZProj.Core
         private List<DDZPokerImage> _PiList;
         private SoundPlayer _SoundGive;//出牌声音
         private Form _MainForm;
-        private AreaCtrl _AreaA, _AreaB, _AreaC;
+        private AreaCtrl _AreaT, _AreaL, _AreaR;
         private AreaPoker _AreaPoker;
+
+        /*接口数据*/
+        private PokerData _PokerData;
 
 
         public List<DDZPokerImage> PokerImageList
@@ -30,6 +34,7 @@ namespace DDZProj.Core
         {
             _SoundGive = new SoundPlayer(global::DDZProj.Properties.Resources.give);          
             _PiList = new List<DDZPokerImage>();
+            _PokerData = new PokerData();
             _MainForm = f;
         }
 
@@ -60,7 +65,8 @@ namespace DDZProj.Core
                 pi.Poker = p;
                 pi.BackgroundImage = Poker.BackImage;
                 pi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                pi.SetBounds(SysConfiguration.ScreenWidth / 2, SysConfiguration.ScreenHeight / 2, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);                
+                pi.SetBounds(SysConfiguration.ScreenWidth / 2, SysConfiguration.ScreenHeight / 2, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
+                pi.BringToFront();
                 _MainForm.Controls.Add(pi);
                 _PiList.Add(pi);
                 j++;
@@ -75,9 +81,9 @@ namespace DDZProj.Core
         /// </summary>
         private void InitArea()
         {
-            _AreaA = new AreaCtrl(AreaPos.top, _MainForm);
-            _AreaB = new AreaCtrl(AreaPos.left, _MainForm);
-            _AreaC = new AreaCtrl(AreaPos.right, _MainForm);
+            _AreaT = new AreaCtrl(AreaPos.top, _MainForm);
+            _AreaL = new AreaCtrl(AreaPos.left, _MainForm);
+            _AreaR = new AreaCtrl(AreaPos.right, _MainForm);
             _AreaPoker = new AreaPoker(_MainForm);
             
 
@@ -95,15 +101,35 @@ namespace DDZProj.Core
         void Dealt()
         {
             int i = 1;
-            foreach (DDZPokerImage pi in _PiList)
+            Dictionary<AreaPos, List<Poker>> piInfo =  _PokerData.GetPokerInfo();
+            _AreaT.ObtainPoker(piInfo[AreaPos.top]);
+            _AreaL.ObtainPoker(piInfo[AreaPos.left]);
+            _AreaR.ObtainPoker(piInfo[AreaPos.right]);
+
+            
+            for (i=0;i<17;i++)
             {
+                _AreaL.ShowOne(i);
+                _AreaT.ShowOne(i);
+                _AreaR.ShowOne(i);
+                
+                Thread.Sleep(100);
+            }
+            ShowBossPoker();
+        }
+
+        private void ShowBossPoker()
+        {
+            List<Poker> list = _PokerData.Get3DiZhuPoker();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DDZPokerImage pi = new DDZPokerImage(list[i]);
                 pi.Show();
                 pi.BackgroundImage = pi.Poker.ForeImage;
                 pi.SetBounds(i * SysConfiguration.PokerXSep, 100, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
                 pi.BringToFront();
-                i++;
-                Thread.Sleep(100);
             }
+          
         }
         #endregion
     }

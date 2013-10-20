@@ -1,0 +1,4 @@
+H:\Projects\OutSource_Project\DDZ_Live\TestConsole\bin\Debug\TestConsole.exe
+H:\Projects\OutSource_Project\DDZ_Live\TestConsole\bin\Debug\TestConsole.pdb
+H:\Projects\OutSource_Project\DDZ_Live\TestConsole\obj\x86\Debug\TestConsole.exe
+H:\Projects\OutSource_Project\DDZ_Live\TestConsole\obj\x86\Debug\TestConsole.pdb

@@ -48,6 +48,7 @@
       <DependentUpon>RecDDZ.resx</DependentUpon>
     </Compile>
     <Compile Include="ResManager.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\RecDDZ.resx">

@@ -8,7 +8,6 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.Properties.RecDDZ.resources
 H:\Projects\OutSource_Project\DDZ_Live\DDZCommon\bin\Debug\DDZCommon.dll
 H:\Projects\OutSource_Project\DDZ_Live\DDZCommon\bin\Debug\DDZCommon.pdb
-H:\Projects\OutSource_Project\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.csprojResolveAssemblyReference.cache
 H:\Projects\OutSource_Project\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.Properties.RecDDZ.resources
 H:\Projects\OutSource_Project\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.csproj.GenerateResource.Cache
 H:\Projects\OutSource_Project\DDZ_Live\DDZCommon\obj\Debug\DDZCommon.dll

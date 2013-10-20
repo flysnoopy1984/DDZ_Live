@@ -28,18 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bn_Post = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // bn_Post
-            // 
-            this.bn_Post.Location = new System.Drawing.Point(1095, 1);
-            this.bn_Post.Name = "bn_Post";
-            this.bn_Post.Size = new System.Drawing.Size(75, 23);
-            this.bn_Post.TabIndex = 3;
-            this.bn_Post.Text = "Post";
-            this.bn_Post.UseVisualStyleBackColor = true;
-            this.bn_Post.Click += new System.EventHandler(this.bn_Post_Click);
             // 
             // Main
             // 
@@ -47,7 +36,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1171, 696);
-            this.Controls.Add(this.bn_Post);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MainForm";
@@ -57,7 +45,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button bn_Post;
     }
 }
 

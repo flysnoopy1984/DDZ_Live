@@ -3,3 +3,7 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\bin\Debug\DDZInterface.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\obj\Debug\ResolveAssemblyReference.cache
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\obj\Debug\DDZInterface.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\obj\Debug\DDZInterface.pdb
+H:\Projects\OutSource_Project\DDZ_Live\DDZInterface\bin\Debug\DDZInterface.dll
+H:\Projects\OutSource_Project\DDZ_Live\DDZInterface\bin\Debug\DDZInterface.pdb
+H:\Projects\OutSource_Project\DDZ_Live\DDZInterface\obj\Debug\DDZInterface.dll
+H:\Projects\OutSource_Project\DDZ_Live\DDZInterface\obj\Debug\DDZInterface.pdb

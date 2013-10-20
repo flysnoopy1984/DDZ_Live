@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DDZEnum.cs" />
+    <Compile Include="IM\DPoker.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Poker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

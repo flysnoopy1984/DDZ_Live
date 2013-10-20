@@ -5,3 +5,10 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\bin\Debug\DDZCommon.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\bin\Debug\DDZCommon.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\obj\Debug\DDZEntity.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZEntity\obj\Debug\DDZEntity.pdb
+H:\Projects\OutSource_Project\DDZ_Live\DDZEntity\bin\Debug\DDZEntity.dll
+H:\Projects\OutSource_Project\DDZ_Live\DDZEntity\bin\Debug\DDZEntity.pdb
+H:\Projects\OutSource_Project\DDZ_Live\DDZEntity\bin\Debug\DDZCommon.dll
+H:\Projects\OutSource_Project\DDZ_Live\DDZEntity\bin\Debug\DDZCommon.pdb
+H:\Projects\OutSource_Project\DDZ_Live\DDZEntity\obj\Debug\DDZEntity.csprojResolveAssemblyReference.cache
+H:\Projects\OutSource_Project\DDZ_Live\DDZEntity\obj\Debug\DDZEntity.dll
+H:\Projects\OutSource_Project\DDZ_Live\DDZEntity\obj\Debug\DDZEntity.pdb

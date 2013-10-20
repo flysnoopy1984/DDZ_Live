@@ -28,43 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.SuspendLayout();
+            this.p_PokerInfo = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // splitContainer1
+            // p_PokerInfo
             // 
-            this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Size = new System.Drawing.Size(411, 378);
-            this.splitContainer1.SplitterDistance = 240;
-            this.splitContainer1.SplitterWidth = 1;
-            this.splitContainer1.TabIndex = 0;
+            this.p_PokerInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.p_PokerInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.p_PokerInfo.Location = new System.Drawing.Point(0, 274);
+            this.p_PokerInfo.Name = "p_PokerInfo";
+            this.p_PokerInfo.Size = new System.Drawing.Size(407, 100);
+            this.p_PokerInfo.TabIndex = 0;
             // 
             // AreaCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.splitContainer1);
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.p_PokerInfo);
             this.Name = "AreaCtrl";
-            this.Size = new System.Drawing.Size(411, 378);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(407, 374);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel p_PokerInfo;
+
     }
 }

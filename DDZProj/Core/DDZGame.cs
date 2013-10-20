@@ -11,36 +11,32 @@ namespace DDZProj.Core
 {
     public class DDZGame
     {
-        private Thread th_Dealt;  //发牌线程
-        private List<PictureBox> _PBPokerList;//一副牌的图形
-        private List<Poker> _PokerList;   //一副牌的对象
+        private Thread th_Dealt;  //发牌线程     
+        private List<DDZPokerImage> _PiList;
         private SoundPlayer _SoundGive;//出牌声音
         private Form _MainForm;
         private AreaCtrl _AreaA, _AreaB, _AreaC;
+        private AreaPoker _AreaPoker;
 
 
-        public List<PictureBox> PictureBoxList
+        public List<DDZPokerImage> PokerImageList
         {
-            get { return _PBPokerList; }
+            get { return _PiList; }
         }
 
-        public List<Poker> PokerList
-        {
-            get { return _PokerList; }
-        }
+   
 
         public DDZGame(Form f)
         {
-            _SoundGive = new SoundPlayer(global::DDZProj.Properties.Resources.give);
-            _PokerList = new List<Poker>();
-            _PBPokerList = new List<PictureBox>();
+            _SoundGive = new SoundPlayer(global::DDZProj.Properties.Resources.give);          
+            _PiList = new List<DDZPokerImage>();
             _MainForm = f;
         }
 
         public void InitGame()
-        {            
-            _PokerList.Clear();
-            _PBPokerList.Clear();
+        {
+            _PiList.Clear();
+         
 
             /*New牌信息初始化*/
             int j=3;
@@ -60,22 +56,16 @@ namespace DDZProj.Core
                 else 
                     p = new Poker(i,j,pc);
 
-                _PokerList.Add(p);               
+                DDZPokerImage pi = new DDZPokerImage();
+                pi.Poker = p;
+                pi.BackgroundImage = Poker.BackImage;
+                pi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                pi.SetBounds(SysConfiguration.ScreenWidth / 2, SysConfiguration.ScreenHeight / 2, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);                
+                _MainForm.Controls.Add(pi);
+                _PiList.Add(pi);
                 j++;
             }
-            /*New牌控件初始化*/
-            for (int i = 0; i < SysConfiguration.PokerCount; i++)
-            {
-                PictureBox pb = new PictureBox();
-                pb.Hide();
-                pb.BackgroundImage = _PokerList[i].ForeImage;
-             
-                pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               
-                _PBPokerList.Add(pb);
-                _MainForm.Controls.Add(pb);
-            }
-
+          
             //UI区域初始化
             this.InitArea();
         }
@@ -88,6 +78,9 @@ namespace DDZProj.Core
             _AreaA = new AreaCtrl(AreaPos.top, _MainForm);
             _AreaB = new AreaCtrl(AreaPos.left, _MainForm);
             _AreaC = new AreaCtrl(AreaPos.right, _MainForm);
+            _AreaPoker = new AreaPoker(_MainForm);
+            
+
 
         }        
 
@@ -101,13 +94,13 @@ namespace DDZProj.Core
 
         void Dealt()
         {
-            List<PictureBox> list = this.PictureBoxList;
             int i = 1;
-            foreach (PictureBox pb in list)
+            foreach (DDZPokerImage pi in _PiList)
             {
-                pb.Show();
-                pb.SetBounds(i * SysConfiguration.PokerXSep, 100, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
-                pb.BringToFront();
+                pi.Show();
+                pi.BackgroundImage = pi.Poker.ForeImage;
+                pi.SetBounds(i * SysConfiguration.PokerXSep, 100, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
+                pi.BringToFront();
                 i++;
                 Thread.Sleep(100);
             }

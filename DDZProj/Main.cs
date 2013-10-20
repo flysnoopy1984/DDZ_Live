@@ -35,51 +35,16 @@ namespace DDZProj
 
             //一局游戏初始化
             _DDZGame = new DDZGame(this);
-            _DDZGame.InitGame();
-
-           
+            _DDZGame.InitGame();          
 
             CheckForIllegalCrossThreadCalls = false;//为false可以跨线程调用windows控件
-        }
+        }       
 
-      
-
-        #region 出牌
-        /*
-        void PostCard()
-        {
-            Random r = new Random();
-            int i =r.Next(0, pokerImages.Length-1);
-
-            PictureBox pi = pokerImages[i];
-            
-            pi.SetBounds(500, 500, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight); 
-
-        }
-        */
-
-        void PostCardAction()
-        {
-            /*
-            th_PostCard = new Thread(new ThreadStart(PostCard));
-            th_PostCard.Start();
-            th_PostCard.Join();
-             * */
-        }
-
-        #endregion      
-     
-
-        private void bn_Post_Click(object sender, EventArgs e)
-        {
-            
-            PostCardAction();
-        }
-
-        #region Form 重载函数        
+        #region Form 重载函数
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             /*全屏*/
+
             if (msg.Msg == 256 && keyData == (System.Windows.Forms.Keys.Control | Keys.Enter))
             {               
                 this.SetVisibleCore(false);

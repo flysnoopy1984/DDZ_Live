@@ -19,6 +19,8 @@ namespace DDZProj
         private AreaPos _AreaPos;
         private Form _MainForm;
         private Player _Player;
+        private int _PokerBeginX;
+        private int _PokerBeginY;
 
         public AreaCtrl(AreaPos areaPos,Form f)
         {
@@ -40,27 +42,34 @@ namespace DDZProj
             int h = 0;
             if (_AreaPos == AreaPos.top)
             {
-                w = SysConfiguration.ScreenWidth / 3;
-                h = SysConfiguration.ScreenHeight / 3;
-                x = SysConfiguration.ScreenWidth / 3;
+                w = SysConfiguration.ScreenWidth / 32*13;
+                h = SysConfiguration.ScreenHeight / 9 * 4 - SysConfiguration.TopSpec;
+                x = Convert.ToInt32(SysConfiguration.ScreenWidth / 32*9.5);
                 y = SysConfiguration.TopSpec;
+                //手牌区域
+                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight /9);
             }
             else
             {
                 w = SysConfiguration.ScreenWidth / 4;
-                h = SysConfiguration.ScreenHeight / 3 * 2 - SysConfiguration.TopSpec;
+                h = Convert.ToInt32(SysConfiguration.ScreenHeight / 18*11.5);
                 if (_AreaPos == AreaPos.left)
                     x = SysConfiguration.LeftSpec;
                 else if (_AreaPos == AreaPos.right)
                     x = SysConfiguration.ScreenWidth - w - SysConfiguration.LeftSpec;
 
-                y = SysConfiguration.ScreenHeight / 3;
+                y = SysConfiguration.ScreenHeight / 18*5;
+
+                //手牌区域
+                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 3.5);
 
             }
             
             this.SetBounds(x, y, w, h);
             _MainForm.Controls.Remove(this);
-            _MainForm.Controls.Add(this);        
+            _MainForm.Controls.Add(this); 
+       
+           
         }
 
         /// <summary>

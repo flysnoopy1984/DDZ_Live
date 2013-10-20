@@ -51,6 +51,10 @@ namespace DDZProj.Core
         public static int TopSpec { get; set; }
         public static int LeftSpec { get; set; }
 
+        public static int InnerTopSpec { get; set; }
+        public static int InnerLeftSpec { get; set; }
+
+
         public static void Init()
         {
             //屏幕长宽
@@ -68,8 +72,12 @@ namespace DDZProj.Core
             _PokerXSep = _PokerWidth / 2;
 
             //边缘距离
-            TopSpec = 20;
-            LeftSpec = 20;
+            TopSpec = Convert.ToInt32(_ScreenHeight/18*0.5);
+            LeftSpec = TopSpec;
+
+            //内边距
+            InnerTopSpec = Convert.ToInt32(_ScreenWidth / 18 * 0.2);
+            InnerLeftSpec = Convert.ToInt32(_ScreenHeight / 32 * 0.2);
 
         }
               

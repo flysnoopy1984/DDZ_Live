@@ -9,12 +9,12 @@ namespace DDZEntity
     public class Poker
     {     
         
-        private static Image backImage;//背面图，静态
+        private static Image _backImage;//背面图，静态
 
         public static Image BackImage
         {
-            get { return Poker.backImage; }
-            set { Poker.backImage = value; }
+            get { return Poker._backImage; }
+            
         }
 
         private Image _ForeImage = null;//牌的正面图
@@ -44,6 +44,7 @@ namespace DDZEntity
             this.Size = size;
             this.Color = c;
 
+            Poker._backImage = DDZCommon.ResManager.GetImageRes("PokerBack");
             InitPoker();
         }       
 

@@ -41,8 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseInterface.cs" />
-    <Compile Include="PokeCore.cs" />
+    <Compile Include="PokerData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDZCommon\DDZCommon.csproj">
+      <Project>{0585EB55-7CCC-417C-BFB2-31052E35F3BF}</Project>
+      <Name>DDZCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDZEntity\DDZEntity.csproj">
+      <Project>{04B93478-3082-4AC9-BE19-291095B63F86}</Project>
+      <Name>DDZEntity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

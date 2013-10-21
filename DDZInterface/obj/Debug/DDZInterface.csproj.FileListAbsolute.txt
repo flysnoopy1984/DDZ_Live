@@ -12,3 +12,7 @@ H:\Projects\OutSource_Project\DDZ_Live\DDZInterface\bin\Debug\DDZEntity.dll
 H:\Projects\OutSource_Project\DDZ_Live\DDZInterface\bin\Debug\DDZCommon.pdb
 H:\Projects\OutSource_Project\DDZ_Live\DDZInterface\bin\Debug\DDZEntity.pdb
 H:\Projects\OutSource_Project\DDZ_Live\DDZInterface\obj\Debug\DDZInterface.csprojResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\bin\Debug\DDZCommon.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\bin\Debug\DDZEntity.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\bin\Debug\DDZCommon.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZInterface\bin\Debug\DDZEntity.pdb

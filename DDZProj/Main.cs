@@ -15,14 +15,16 @@ namespace DDZProj
     public partial class Main : Form
     {
         private ConsoleMain _ConsoleMain;
-        private ScreenControl _ScreenControl;
-        
+        private ScreenControl _ScreenControl;        
         
         private Thread th_PostCard;   //出牌线程
         private DDZGame _DDZGame;
 
-        int[] datas = { 1, 2, 3, 4, 5, 6, 7, 8, 11, 21, 23, 12, 32, 45, 27, 52, 32 };
-       
+        public DDZGame CurrentGame
+        {
+            get { return _DDZGame; }
+        }
+
         public Main()
         {
             InitializeComponent();
@@ -60,7 +62,10 @@ namespace DDZProj
             /* 开始发牌 */
             if (msg.Msg == 256 && keyData == (System.Windows.Forms.Keys.Enter))
             {
-                _DDZGame.StartDealt();
+                if (_ConsoleMain == null)
+                    _ConsoleMain = new ConsoleMain();
+                _ConsoleMain.Show();
+                
                 return true;
             }
             

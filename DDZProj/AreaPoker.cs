@@ -13,8 +13,7 @@ namespace DDZProj
     public partial class AreaPoker : UserControl
     {
         Form _MainForm;
-        private int _PokerBeginX;
-        private int _PokerBeginY;
+      
 
         public AreaPoker(Form f)
         {

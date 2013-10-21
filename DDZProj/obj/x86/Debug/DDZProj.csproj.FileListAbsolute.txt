@@ -52,3 +52,4 @@ H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.Main.resour
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.Properties.Resources.resources
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.csproj.GenerateResource.Cache
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaPoker.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaPoker.resources

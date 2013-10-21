@@ -54,6 +54,10 @@ namespace DDZProj.Core
         public static int InnerTopSpec { get; set; }
         public static int InnerLeftSpec { get; set; }
 
+        public static int MaxPokerWidthNum { get; set; }
+
+        public static int CallScoreTime { get; set; }
+
 
         public static void Init()
         {
@@ -78,6 +82,11 @@ namespace DDZProj.Core
             //内边距
             InnerTopSpec = Convert.ToInt32(_ScreenWidth / 18 * 0.2);
             InnerLeftSpec = Convert.ToInt32(_ScreenHeight / 32 * 0.2);
+
+            //最大宽度数量
+            MaxPokerWidthNum = 11;
+
+            CallScoreTime = 15;
 
         }
               

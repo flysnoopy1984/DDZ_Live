@@ -33,21 +33,22 @@
             // 
             // p_PokerInfo
             // 
-            this.p_PokerInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.p_PokerInfo.BackColor = System.Drawing.Color.Transparent;
             this.p_PokerInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.p_PokerInfo.Location = new System.Drawing.Point(0, 274);
+            this.p_PokerInfo.Location = new System.Drawing.Point(0, 278);
             this.p_PokerInfo.Name = "p_PokerInfo";
-            this.p_PokerInfo.Size = new System.Drawing.Size(407, 100);
+            this.p_PokerInfo.Size = new System.Drawing.Size(411, 100);
             this.p_PokerInfo.TabIndex = 0;
             // 
             // AreaCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.p_PokerInfo);
             this.Name = "AreaCtrl";
-            this.Size = new System.Drawing.Size(407, 374);
+            this.Size = new System.Drawing.Size(411, 378);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AreaCtrl_Paint);
             this.ResumeLayout(false);
 
         }

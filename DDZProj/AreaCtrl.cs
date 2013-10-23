@@ -24,7 +24,7 @@ namespace DDZProj
         private int _PCurX;
         private int _PCurY;        
         private int _AreaWidth, _AreaHeight;
-        private int _maxWidthNum;
+        private int _maxWidthNum;//一行最大排数量(第一次计算得出)
 
         public List<DDZPokerImage> RemainPokerList { get; set; }
         public bool IsBoss { get; set; }
@@ -74,8 +74,9 @@ namespace DDZProj
                 y = SysConfiguration.TopSpec;
                 //手牌区域
                 p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight /9);
-                //最大手牌数量
-                _maxWidthNum = 20;
+
+                
+              
             }
             else
             {
@@ -89,9 +90,7 @@ namespace DDZProj
                 y = SysConfiguration.ScreenHeight / 18*5;
 
                 //手牌区域
-                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 3.5);
-                //最大手牌数量
-                _maxWidthNum = SysConfiguration.MaxPokerWidthNum;
+                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 3.5);             
 
             }
             _AreaWidth = w;
@@ -99,6 +98,8 @@ namespace DDZProj
             this.SetBounds(x, y, w, h);
             _MainForm.Controls.Remove(this);
             _MainForm.Controls.Add(this);
+
+            _maxWidthNum = (_AreaWidth - SysConfiguration.LeftSpec * 2) / SysConfiguration.PokerXSep - 1;
           
         }
 
@@ -134,18 +135,17 @@ namespace DDZProj
             _PCurY = 0;
 
             p_PokerInfo.Controls.Add(pi);
-
             pi.ShowPoker();
-        
 
-            if (i > _maxWidthNum-1)
+            if (i+1 > _maxWidthNum)
             {
-                i -= _maxWidthNum ;
-                i--;
+                i -= _maxWidthNum;
                 _PCurY += SysConfiguration.PokerHeight / 2;
+                 
             }
 
-            _PCurX = i * SysConfiguration.PokerXSep;
+            _PCurX = i * SysConfiguration.PokerXSep + SysConfiguration.LeftSpec;            
+
             pi.SetBounds(_PCurX , _PCurY, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
             
             pi.BringToFront();
@@ -179,11 +179,7 @@ namespace DDZProj
         }
 
      
-        #endregion
-
-        #region 排序
-       
-        #endregion
+        #endregion    
 
         #region 呈现Paint
 

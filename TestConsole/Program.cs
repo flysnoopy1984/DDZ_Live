@@ -53,7 +53,7 @@ namespace TestConsole
 
         public static void Order()
         {
-
+            /*
             for (int i = 1; i < list.Count; i++)
             {
                 j = i - 1;
@@ -69,6 +69,7 @@ namespace TestConsole
                 }
 
             }
+             */
         }
     }
 }

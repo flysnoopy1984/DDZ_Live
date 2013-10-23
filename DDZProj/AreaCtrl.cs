@@ -37,7 +37,7 @@ namespace DDZProj
       
 
        
-        private int CountDownNum = -1;
+        private int _CountDownNum = -1;
         
 
         public AreaCtrl(AreaPos areaPos,Form f)
@@ -102,6 +102,13 @@ namespace DDZProj
           
         }
 
+        public void Reset()
+        {
+            IsCurrent = false;
+            _CountDownNum = -1;
+            IsBoss = false;
+        }
+
         #endregion
 
         #region 接口--获取牌信息
@@ -110,10 +117,12 @@ namespace DDZProj
         /// </summary>
         public void ObtainPoker(DDZGame game,List<Poker> pokerList)
         {
-
             RemainPokerList.Clear();
+            int i=1;
             foreach (Poker p in pokerList)
             {
+                p.Index = i;
+                i++;
                 RemainPokerList.Add(game.PokerImageList[p.No]);
             }          
         }
@@ -125,8 +134,9 @@ namespace DDZProj
             _PCurY = 0;
 
             p_PokerInfo.Controls.Add(pi);
-            pi.Show();
-            pi.BackgroundImage = pi.Poker.ForeImage;
+
+            pi.ShowPoker();
+        
 
             if (i > _maxWidthNum-1)
             {
@@ -147,7 +157,7 @@ namespace DDZProj
         public void CallingBoss()
         {
             IsCurrent = true;
-            CountDownNum = SysConfiguration.CallScoreTime;
+            _CountDownNum = SysConfiguration.CallScoreTime;
             Refresh();
 
             _TimerCountDown.Change(0, 1000);         
@@ -158,11 +168,11 @@ namespace DDZProj
         void CountDown_CallBack(object state)
         {
             Refresh();
-            CountDownNum--;
-            if (CountDownNum < -1 || IsCurrent == false)
+            _CountDownNum--;
+            if (_CountDownNum < -1 || IsCurrent == false)
             {
                 _TimerCountDown.Change(-1, 0);
-                CountDownNum = -1;
+                _CountDownNum = -1;
                 IsCurrent = false;
                 Refresh();
             }           
@@ -170,6 +180,12 @@ namespace DDZProj
 
      
         #endregion
+
+        #region 排序
+       
+        #endregion
+
+        #region 呈现Paint
 
         private void AreaCtrl_Paint(object sender, PaintEventArgs e)
         {
@@ -201,18 +217,21 @@ namespace DDZProj
                                 w,
                                 ButtonBorderStyle.Solid);
 
-            if (CountDownNum == -1)
+            if (_CountDownNum == -1)
             {
                 Util.PaintNewFont(e.Graphics, "");
             }
             else
             {
-                Util.PaintNewFont(e.Graphics, CountDownNum.ToString());
-            }    
-          
-        }
+                Util.PaintNewFont(e.Graphics, _CountDownNum.ToString());
+            }
 
-      
+        }
+        #endregion
+
+
+
+
 
 
     }

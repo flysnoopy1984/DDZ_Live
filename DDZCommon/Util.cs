@@ -61,10 +61,10 @@ namespace DDZCommon
             //对绘图平面实施坐标变换、、
             g.Transform = matrix;
             SolidBrush grayBrush = new SolidBrush(Color.Gray);
-            SolidBrush colorBrush = new SolidBrush(Color.BlueViolet);
+            SolidBrush colorBrush = new SolidBrush(Color.WhiteSmoke);
          
             //绘制阴影
-            g.DrawString(text, newFont, grayBrush, new PointF(0, 30));
+         //   g.DrawString(text, newFont, grayBrush, new PointF(0, 30));
             g.ResetTransform();
             //绘制前景
             g.DrawString(text, newFont, colorBrush, new PointF(0, 30));

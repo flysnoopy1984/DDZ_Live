@@ -50,5 +50,25 @@ namespace TestConsole
             Array.Copy(output, 10,ro, 0,10);
             return ro;
         }
+
+        public static void Order()
+        {
+
+            for (int i = 1; i < list.Count; i++)
+            {
+                j = i - 1;
+                while (j >= 0)
+                {
+                    if (list[i].Poker.Size < list[j].Poker.Size)
+                    {
+                        temp = list[j].Poker;
+                        list[j].ChangePoker(list[i].Poker);
+                        list[i].ChangePoker(temp);
+                    }
+                    j--;
+                }
+
+            }
+        }
     }
 }

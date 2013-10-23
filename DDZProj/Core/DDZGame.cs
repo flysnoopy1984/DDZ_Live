@@ -16,7 +16,7 @@ namespace DDZProj.Core
         private Dictionary<int,DDZPokerImage> _PiList;
         private SoundPlayer _SoundGive;//出牌声音
         private Form _MainForm;
-        private AreaCtrl _AreaT, _AreaL, _AreaR,_CurrentArea;
+        private AreaCtrl _AreaT, _AreaL, _AreaR,_CurrentArea,_BossArea;
         private AreaPoker _AreaPoker;
         private Stack<AreaCtrl> _CallStock;
 
@@ -28,6 +28,20 @@ namespace DDZProj.Core
         public Dictionary<int,DDZPokerImage> PokerImageList
         {
             get { return _PiList; }
+        }
+
+        public AreaCtrl GetAreaCtrl(AreaPos pos)
+        {
+            switch (pos)
+            {
+                case AreaPos.top:
+                    return _AreaT;
+                case AreaPos.left:
+                    return _AreaL;
+                case AreaPos.right:
+                    return _AreaR;
+            }
+            return null;
         }
 
    
@@ -134,11 +148,15 @@ namespace DDZProj.Core
         #region 等待叫地主
         public void CallingBoss()
         {
+            _AreaR.Reset();
+            _AreaT.Reset();
+            _AreaL.Reset();
+
             _CallStock = new Stack<AreaCtrl>();
             _CallStock.Push(_AreaR);
             _CallStock.Push(_AreaT);
             _CallStock.Push(_AreaL);
-         
+            _BossArea = null;
                 
            th_CallBoss = new Thread(new ThreadStart(CallScore));         
            th_CallBoss.Start();
@@ -150,8 +168,7 @@ namespace DDZProj.Core
         void CallScore()
         {        
             while (true)
-            {
-              
+            {             
                 if (_CallStock.Count == 0) 
                     break;
                 _CurrentArea = _CallStock.Pop();
@@ -162,11 +179,17 @@ namespace DDZProj.Core
                     Thread.Sleep(100);
                     if (_CurrentArea.CallScore == 3)
                     {
+                        _BossArea = _CurrentArea;
+                        _CurrentArea.IsCurrent = false;
                         _CallStock.Clear();
                         return;
                     }
-                }
-                
+                    else if (_CurrentArea.CallScore > 0)
+                    {
+                        _CurrentArea.IsCurrent = false;
+                        break;
+                    }
+                }                
             }         
         }
 

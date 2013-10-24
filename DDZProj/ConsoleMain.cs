@@ -13,6 +13,12 @@ namespace DDZProj
     public partial class ConsoleMain : Form
     {
         private Main _mainForm;
+        private List<Poker> postPokerList
+        {
+            get;
+            set;
+        }
+        
         public ConsoleMain()
         {
             InitializeComponent();
@@ -22,12 +28,15 @@ namespace DDZProj
         {
             _mainForm = mainForm;
 
+            postPokerList = new List<Poker>();
+
             InitializeComponent();
         }
 
         private void Bn_Begin_Click(object sender, EventArgs e)
         {
             _mainForm.CurrentGame.StartDealt();
+
         }
 
         private void bn_Reset_Click(object sender, EventArgs e)
@@ -57,23 +66,64 @@ namespace DDZProj
 
         private void bn_APost_Click(object sender, EventArgs e)
         {
-            FillPokerInfo(_mainForm.CurrentGame.GetAreaCtrl(DDZEntity.AreaPos.left));
+            FillList(_mainForm.CurrentGame.GetAreaCtrl(DDZEntity.AreaPos.left),this.lb_A);
         }
 
         private void bn_PostB_Click(object sender, EventArgs e)
         {
-            FillPokerInfo(_mainForm.CurrentGame.GetAreaCtrl(DDZEntity.AreaPos.top));
+            FillList(_mainForm.CurrentGame.GetAreaCtrl(DDZEntity.AreaPos.top),this.lb_B);
         }
 
         private void bn_PostC_Click(object sender, EventArgs e)
         {
-            FillPokerInfo(_mainForm.CurrentGame.GetAreaCtrl(DDZEntity.AreaPos.right));
+            FillList(_mainForm.CurrentGame.GetAreaCtrl(DDZEntity.AreaPos.right),this.lb_C);
+        }
+
+        private void FillList(AreaCtrl area,ListBox lb)
+        {           
+            if (area.RemainPokerList != null)
+            {
+                lb.Items.Clear();
+                foreach (DDZPokerImage pi in area.RemainPokerList)
+                {
+                    string name = "";
+                    switch (pi.Poker.Color)
+                    {
+                        case PokerColor.club:
+                            name = "梅花";
+                            break;
+                        case PokerColor.diamond:
+                            name = "方块";
+                            break;
+                        case PokerColor.heart:
+                            name = "红心";
+                            break;
+                        case PokerColor.spade:
+                            name = "黑桃";
+                            break;
+                        case PokerColor.Da:
+                            name = "大怪";
+                            break;
+                        case PokerColor.Xiao:
+                            name = "小怪";
+                            break;
+                    }
+                    if (pi.Poker.Color != PokerColor.Xiao && pi.Poker.Color != PokerColor.Da)
+                        name += "-" + Convert.ToString(pi.Poker.Size) + "-"+pi.Poker.No;
+                    else
+                        name += "-"+pi.Poker.No;
+
+                    lb.Items.Add(name);
+                 
+                }
+            }
         }
 
         private void FillPokerInfo(AreaCtrl area)
         {
             this.tb_pokerInfo.Text = "";
             int bx=0, by=0;
+           
             this.p_pokerbutton.Controls.Clear();
 
             if (area.RemainPokerList != null)
@@ -103,10 +153,9 @@ namespace DDZProj
                             break;
                     }
                     if (pi.Poker.Color != PokerColor.Xiao && pi.Poker.Color != PokerColor.Da)
-                        name += "-" + Convert.ToString(pi.Poker.Size) + "  ";
+                        name += "-" + Convert.ToString(pi.Poker.Size) + "-" + pi.Poker.No;
                     else
-                        name += "  ";
-                 
+                        name += "-" + pi.Poker.No;              
                    
 
                     Button b = new Button();
@@ -118,12 +167,14 @@ namespace DDZProj
                         bx = 0;
                         by += b.Height+5;
                     }
-                  
+                    b.Tag = pi.Poker;
                     b.Location = new Point(bx,by);
                     bx += b.Width;
                     b.Click += delegate
                     {
                         this.tb_pokerInfo.Text += b.Text + "   ";
+                       
+                        postPokerList.Add((Poker)b.Tag);
                     };
                   
                     
@@ -136,7 +187,7 @@ namespace DDZProj
         private void bn_ChangePoker_Click(object sender, EventArgs e)
         {
             AreaCtrl ac =  _mainForm.CurrentGame.GetAreaCtrl(AreaPos.top);
-            DDZPokerImage.OrderPoker(ac.RemainPokerList);
+            AreaCtrl.OrderPoker(ac.RemainPokerList);
             ac.Refresh();
         }
 
@@ -148,20 +199,30 @@ namespace DDZProj
 
         private void bn_PostPoker_Click(object sender, EventArgs e)
         {
-           // AreaCtrl ac = _mainForm.CurrentGame.GetAreaCtrl(AreaPos.top);
-
+           
+            _mainForm.CurrentGame.TestPostPoker(postPokerList);
+            postPokerList.Clear();
         }
 
         private void bn_CurrentArea_Click(object sender, EventArgs e)
         {
+            /*
             AreaCtrl ac = _mainForm.CurrentGame.GetCurrentArea();
             if(ac!=null)
                 FillPokerInfo(ac);
+             */
+            AreaCtrl ac = _mainForm.CurrentGame.TestCurrentArea();
+            FillPokerInfo(ac);
         }
 
         private void bn_End_Click(object sender, EventArgs e)
         {
+            _mainForm.CurrentGame.EndGame();
+        }
 
+        private void bn_Pass_Click(object sender, EventArgs e)
+        {
+            _mainForm.CurrentGame.GetCurrentArea().Pass();
         }
 
      

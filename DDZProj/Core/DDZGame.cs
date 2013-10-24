@@ -16,7 +16,7 @@ namespace DDZProj.Core
         private Thread th_Dealt, th_CallBoss,th_Listen,th_Game;  //发牌线程     
         private Dictionary<int,DDZPokerImage> _PiList;
         private SoundPlayer _SoundGive;//出牌声音
-        private Form _MainForm;
+        private Main _MainForm;
         private AreaCtrl _AreaT, _AreaL, _AreaR,_CurrentArea,_BossArea;
         private AreaPoker _AreaPoker;
         private Stack<AreaCtrl> _CallStock;
@@ -71,13 +71,13 @@ namespace DDZProj.Core
             return _BossArea;
         }
 
-        public int GameState()
+        public int GetGameState()
         {
             return _GameState;
         }
         #endregion
 
-        public DDZGame(Form f)
+        public DDZGame(Main f)
         {
             _SoundGive = new SoundPlayer(global::DDZProj.Properties.Resources.give);
             _PiList = new Dictionary<int, DDZPokerImage>();
@@ -145,9 +145,9 @@ namespace DDZProj.Core
         {
             int i = 1;
             Dictionary<AreaPos, List<Poker>> piInfo =  _PokerData.GetPokerInfo();
-            _AreaT.ObtainPoker(this,piInfo[AreaPos.top]);
-            _AreaL.ObtainPoker(this,piInfo[AreaPos.left]);
-            _AreaR.ObtainPoker(this,piInfo[AreaPos.right]);
+            _AreaT.ObtainPoker(piInfo[AreaPos.top]);
+            _AreaL.ObtainPoker(piInfo[AreaPos.left]);
+            _AreaR.ObtainPoker(piInfo[AreaPos.right]);
             
             for (i=0;i<17;i++)
             {
@@ -235,7 +235,7 @@ namespace DDZProj.Core
        
         #endregion
 
-        #region 打牌中
+        #region 打牌
         public void StartGame()
         {
             if (_BossArea == null)
@@ -278,8 +278,13 @@ namespace DDZProj.Core
                 _PostQueue.Enqueue(_CurrentArea);
                  _CurrentArea.Counting();
 
-                 while (_CurrentArea.IsCurrent && _GameState >0)
-                 {                     
+                 while (_CurrentArea.IsCurrent)
+                 {
+                     if (_GameState < 0)
+                     {
+                         _CurrentArea.IsCurrent = false;
+                         break;
+                     }
                      Thread.Sleep(20);
                  }  
                 
@@ -293,6 +298,12 @@ namespace DDZProj.Core
         #endregion
 
         #region 测试
+
+        public AreaCtrl TestCurrentArea()
+        {
+            _CurrentArea = _AreaT;
+            return _AreaT;
+        }
         public void TestSetScore(int s)
         {
             if (_CurrentArea != null)
@@ -302,12 +313,25 @@ namespace DDZProj.Core
             }
         }
 
+        public void TestPostPoker(List<Poker> pList)
+        {
+            _CurrentArea.PostPoker(pList);
+
+            AreaCtrl.OrderPoker(_CurrentArea.RemainPokerList);
+            _AreaPoker.PostPoker(_CurrentArea.GetAreaPos(), _CurrentArea.PostPokerList);
+        }
+
         #endregion
 
         #region 接口数据监听
         void ListenCallBoss()
         {
 
+        }
+
+        void ListenPostPoker()
+        {
+            
         }
         #endregion
 

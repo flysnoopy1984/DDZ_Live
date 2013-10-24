@@ -44,6 +44,10 @@
             this.bn_Start = new System.Windows.Forms.Button();
             this.bn_PostPoker = new System.Windows.Forms.Button();
             this.bn_CurrentArea = new System.Windows.Forms.Button();
+            this.bn_Pass = new System.Windows.Forms.Button();
+            this.lb_A = new System.Windows.Forms.ListBox();
+            this.lb_B = new System.Windows.Forms.ListBox();
+            this.lb_C = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // bn_Reset
@@ -98,7 +102,7 @@
             // 
             // bn_End
             // 
-            this.bn_End.Location = new System.Drawing.Point(393, 12);
+            this.bn_End.Location = new System.Drawing.Point(301, 56);
             this.bn_End.Name = "bn_End";
             this.bn_End.Size = new System.Drawing.Size(75, 23);
             this.bn_End.TabIndex = 5;
@@ -151,7 +155,7 @@
             this.tb_pokerInfo.Location = new System.Drawing.Point(12, 232);
             this.tb_pokerInfo.Multiline = true;
             this.tb_pokerInfo.Name = "tb_pokerInfo";
-            this.tb_pokerInfo.Size = new System.Drawing.Size(445, 40);
+            this.tb_pokerInfo.Size = new System.Drawing.Size(445, 83);
             this.tb_pokerInfo.TabIndex = 10;
             // 
             // p_pokerbutton
@@ -183,7 +187,7 @@
             // 
             // bn_PostPoker
             // 
-            this.bn_PostPoker.Location = new System.Drawing.Point(493, 230);
+            this.bn_PostPoker.Location = new System.Drawing.Point(561, 230);
             this.bn_PostPoker.Name = "bn_PostPoker";
             this.bn_PostPoker.Size = new System.Drawing.Size(75, 23);
             this.bn_PostPoker.TabIndex = 14;
@@ -201,11 +205,49 @@
             this.bn_CurrentArea.UseVisualStyleBackColor = true;
             this.bn_CurrentArea.Click += new System.EventHandler(this.bn_CurrentArea_Click);
             // 
+            // bn_Pass
+            // 
+            this.bn_Pass.Location = new System.Drawing.Point(118, 105);
+            this.bn_Pass.Name = "bn_Pass";
+            this.bn_Pass.Size = new System.Drawing.Size(75, 23);
+            this.bn_Pass.TabIndex = 16;
+            this.bn_Pass.Text = "Pass";
+            this.bn_Pass.UseVisualStyleBackColor = true;
+            this.bn_Pass.Click += new System.EventHandler(this.bn_Pass_Click);
+            // 
+            // lb_A
+            // 
+            this.lb_A.FormattingEnabled = true;
+            this.lb_A.Location = new System.Drawing.Point(12, 334);
+            this.lb_A.Name = "lb_A";
+            this.lb_A.Size = new System.Drawing.Size(272, 355);
+            this.lb_A.TabIndex = 17;
+            // 
+            // lb_B
+            // 
+            this.lb_B.FormattingEnabled = true;
+            this.lb_B.Location = new System.Drawing.Point(301, 334);
+            this.lb_B.Name = "lb_B";
+            this.lb_B.Size = new System.Drawing.Size(267, 355);
+            this.lb_B.TabIndex = 18;
+            // 
+            // lb_C
+            // 
+            this.lb_C.FormattingEnabled = true;
+            this.lb_C.Location = new System.Drawing.Point(584, 334);
+            this.lb_C.Name = "lb_C";
+            this.lb_C.Size = new System.Drawing.Size(296, 355);
+            this.lb_C.TabIndex = 19;
+            // 
             // ConsoleMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 310);
+            this.ClientSize = new System.Drawing.Size(998, 706);
+            this.Controls.Add(this.lb_C);
+            this.Controls.Add(this.lb_B);
+            this.Controls.Add(this.lb_A);
+            this.Controls.Add(this.bn_Pass);
             this.Controls.Add(this.bn_CurrentArea);
             this.Controls.Add(this.bn_PostPoker);
             this.Controls.Add(this.bn_Start);
@@ -247,5 +289,9 @@
         private System.Windows.Forms.Button bn_Start;
         private System.Windows.Forms.Button bn_PostPoker;
         private System.Windows.Forms.Button bn_CurrentArea;
+        private System.Windows.Forms.Button bn_Pass;
+        private System.Windows.Forms.ListBox lb_A;
+        private System.Windows.Forms.ListBox lb_B;
+        private System.Windows.Forms.ListBox lb_C;
     }
 }

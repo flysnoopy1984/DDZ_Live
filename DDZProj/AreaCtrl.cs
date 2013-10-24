@@ -19,29 +19,30 @@ namespace DDZProj
         /// 表示区域位置
         /// </summary>
         private AreaPos _AreaPos;
-        private Form _MainForm;
+        private Main _MainForm;        
         
         private int _PCurX;
         private int _PCurY;        
         private int _AreaWidth, _AreaHeight;
         private int _maxWidthNum;//一行最大排数量(第一次计算得出)
-
-        public List<DDZPokerImage> RemainPokerList { get; set; }
-        public bool IsBoss { get; set; }
-        public bool IsCurrent { get; set; }    
-        public int CallScore { get; set; }
-
+    
         //倒计时线程    
         private System.Threading.Timer _TimerCountDown;  
         private int _CountDownNum = -1;
 
+       
+        public bool IsBoss { get; set; }
+        public bool IsCurrent { get; set; }
+        public int CallScore { get; set; }
+        public List<DDZPokerImage> RemainPokerList { get; set; }
+        public List<DDZPokerImage> PostPokerList { get; set; }
 
         public AreaPos GetAreaPos()
         {
             return _AreaPos;
         }
 
-        public AreaCtrl(AreaPos areaPos,Form f)
+        public AreaCtrl(AreaPos areaPos, Main f)
         {
             _AreaPos = areaPos;
             _MainForm = f;
@@ -53,9 +54,7 @@ namespace DDZProj
             _TimerCountDown = new System.Threading.Timer(new TimerCallback(CountDown_CallBack), null, -1, 1000);
 
             CheckForIllegalCrossThreadCalls = false;//为false可以跨线程调用windows控件
-        }
-
-       
+        }      
 
 
         #region 初始化
@@ -120,7 +119,7 @@ namespace DDZProj
         /// <summary>
         /// 获取牌信息
         /// </summary>
-        public void ObtainPoker(DDZGame game,List<Poker> pokerList)
+        public void ObtainPoker(List<Poker> pokerList)
         {
             RemainPokerList.Clear();
             int i=1;
@@ -128,8 +127,19 @@ namespace DDZProj
             {
                 p.Index = i;
                 i++;
-                RemainPokerList.Add(game.PokerImageList[p.No]);
-            }          
+                RemainPokerList.Add(_MainForm.CurrentGame.PokerImageList[p.No]);
+            }
+            AreaCtrl.OrderPoker(RemainPokerList);
+        }
+
+        public void ShowRemainPoker()
+        {
+            for (int i = 0; i < RemainPokerList.Count; i++)
+            {
+                ShowOne(i);
+
+            }
+
         }
 
         public void ShowOne(int i)
@@ -162,27 +172,11 @@ namespace DDZProj
         {
             IsCurrent = true;
             _CountDownNum = SysConfiguration.CallScoreTime;
+            PostPokerList = null;
             Refresh();
 
             _TimerCountDown.Change(0, 1000);      
-        }
-        /*
-        public void BeginPostingCount()
-        {
-            IsCurrent = true;
-            _CountDownNum = SysConfiguration.CallScoreTime;
-            _TimerCountDown.Change(0, 1000);    
-        }
-
-        public void EndPostingCount()
-        {
-            IsCurrent = false;
-            _CountDownNum = -1;
-            Refresh();
-            _TimerCountDown.Change(-1, 0);
-
-        }
-        */
+        }     
 
         void CountDown_CallBack(object state)
         {
@@ -208,6 +202,65 @@ namespace DDZProj
         }
         #endregion
 
+        #region 出牌
+        public void PostPoker(List<Poker> postPoker)
+        {
+            PostPokerList = new List<DDZPokerImage>();
+            foreach (Poker p in postPoker)
+            {
+                foreach (DDZPokerImage pi in RemainPokerList)
+                {
+                    if (pi.Poker.No == p.No)
+                    {
+                        PostPokerList.Add(pi);
+                        RemainPokerList.Remove(pi);
+                        break;
+                    }
+                }
+            }
+            this.p_PokerInfo.Controls.Clear();
+            ShowRemainPoker();
+            this.IsCurrent = false;
+        }
+
+        public void Pass()
+        {
+            this.IsCurrent = false;
+            Refresh();
+        }
+        #endregion
+
+        #region 排序
+        /// <summary>
+        /// 大小排序，没有花色之分
+        /// </summary>
+        /// <param name="list"></param>
+        public static void OrderPoker(List<DDZPokerImage> list)
+        {
+            DDZPokerImage mpi = list[0];
+            int ms = mpi.Poker.Size;
+            Poker temp;
+            int j = 0;
+
+            for (int i = 1; i < list.Count; i++)
+            {
+                j = 0;
+
+                while (j < i)
+                {
+                    if (list[i].Poker.Size < list[j].Poker.Size)
+                    {
+                        temp = list[j].Poker;
+                        list[j].ChangePoker(list[i].Poker);
+                        list[i].ChangePoker(temp);
+                    }
+                    j++;
+                }
+
+            }
+        }
+        #endregion
+
         #region 呈现Paint
 
         private void AreaCtrl_Paint(object sender, PaintEventArgs e)
@@ -225,6 +278,7 @@ namespace DDZProj
                 c = Color.White;
                 w = 2;
             }
+
             ControlPaint.DrawBorder(e.Graphics,
                                 this.ClientRectangle,
                                 c,

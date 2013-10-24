@@ -51,35 +51,6 @@ namespace DDZProj
             ShowPoker();        
         }
        
-        /// <summary>
-        /// 大小排序，没有花色之分
-        /// </summary>
-        /// <param name="list"></param>
-        public static void OrderPoker(List<DDZPokerImage> list)
-        {
-            DDZPokerImage mpi = list[0];
-            int ms = mpi.Poker.Size;
-            Poker temp;
-            int j = 0;
-
-            for (int i = 1; i < list.Count; i++)
-            {
-                j = 0;
-            
-                while (j<i)
-                {                   
-                    if (list[i].Poker.Size < list[j].Poker.Size)
-                    {
-                        temp = list[j].Poker;
-                        list[j].ChangePoker(list[i].Poker);
-                        list[i].ChangePoker(temp);                 
-                    }
-                    j++;
-                }              
-                
-            }
-         
-           
-        }
+        
     }
 }

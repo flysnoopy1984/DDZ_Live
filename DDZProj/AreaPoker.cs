@@ -14,12 +14,13 @@ namespace DDZProj
 {
     public partial class AreaPoker : UserControl
     {
-        Form _MainForm;
+        Main _MainForm;
         public string TopScore = "";
         public string LeftScore = "";
         public string RightScore = "";
+        public Dictionary<AreaPos, List<Poker>> _PostedPokerList; // 牌局中所有已出的拍
 
-        public AreaPoker(Form f)
+        public AreaPoker(Main f)
         {
             InitializeComponent();
 
@@ -77,7 +78,21 @@ namespace DDZProj
 
         public void PostPoker(AreaPos fromPos, List<DDZPokerImage> postList)
         {
-
+            switch (fromPos)
+            {
+                case AreaPos.top:
+                    p_Top.Controls.Clear();
+                    p_Top.Controls.AddRange(postList.ToArray());
+                    break;
+                case AreaPos.left:
+                    p_Top.Controls.Clear();
+                    p_left.Controls.AddRange(postList.ToArray());                  
+                    break;
+                case AreaPos.right:
+                    p_Top.Controls.Clear();
+                    p_right.Controls.AddRange(postList.ToArray());
+                    break;
+            }
         }
 
         public void ClearScore()
@@ -85,23 +100,27 @@ namespace DDZProj
             TopScore = "";
             RightScore = "";
             LeftScore = "";
+            Refresh();
         }
 
       
 
         private void p_Top_Paint(object sender, PaintEventArgs e)
         {
-            Util.PaintNewFont(e.Graphics, TopScore, Color.Gray,SysConfiguration.LeftSpec,0);
+            if(_MainForm.CurrentGame.GetGameState() == -1)
+                Util.PaintNewFont(e.Graphics, TopScore, Color.Gray,SysConfiguration.LeftSpec,0);
         }
 
         private void p_right_Paint(object sender, PaintEventArgs e)
         {
-            Util.PaintNewFont(e.Graphics, RightScore, Color.Gray, this.p_right.Width - 30, 0);
+            if (_MainForm.CurrentGame.GetGameState() == -1)
+                Util.PaintNewFont(e.Graphics, RightScore, Color.Gray, this.p_right.Width - 30, 0);
         }
 
         private void p_left_Paint(object sender, PaintEventArgs e)
         {
-            Util.PaintNewFont(e.Graphics, LeftScore, Color.Gray, SysConfiguration.LeftSpec, 0);
+            if (_MainForm.CurrentGame.GetGameState() == -1)
+                Util.PaintNewFont(e.Graphics, LeftScore, Color.Gray, SysConfiguration.LeftSpec, 0);
         }
     }
 }

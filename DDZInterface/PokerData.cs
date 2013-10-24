@@ -64,6 +64,11 @@ namespace DDZInterface
             return _BossPoker;
         }
 
+        public List<Poker> GetPostPoker()
+        {
+            return null;
+        }
+
 
     }
 }

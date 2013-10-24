@@ -33,7 +33,7 @@
             this.bn_APost = new System.Windows.Forms.Button();
             this.bn_PostB = new System.Windows.Forms.Button();
             this.bn_PostC = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bn_End = new System.Windows.Forms.Button();
             this.bn_CallBoss = new System.Windows.Forms.Button();
             this.bn_One = new System.Windows.Forms.Button();
             this.bn_Two = new System.Windows.Forms.Button();
@@ -41,6 +41,9 @@
             this.tb_pokerInfo = new System.Windows.Forms.TextBox();
             this.p_pokerbutton = new System.Windows.Forms.Panel();
             this.bn_ChangePoker = new System.Windows.Forms.Button();
+            this.bn_Start = new System.Windows.Forms.Button();
+            this.bn_PostPoker = new System.Windows.Forms.Button();
+            this.bn_CurrentArea = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bn_Reset
@@ -65,7 +68,7 @@
             // 
             // bn_APost
             // 
-            this.bn_APost.Location = new System.Drawing.Point(12, 106);
+            this.bn_APost.Location = new System.Drawing.Point(561, 57);
             this.bn_APost.Name = "bn_APost";
             this.bn_APost.Size = new System.Drawing.Size(75, 23);
             this.bn_APost.TabIndex = 2;
@@ -75,7 +78,7 @@
             // 
             // bn_PostB
             // 
-            this.bn_PostB.Location = new System.Drawing.Point(108, 105);
+            this.bn_PostB.Location = new System.Drawing.Point(561, 105);
             this.bn_PostB.Name = "bn_PostB";
             this.bn_PostB.Size = new System.Drawing.Size(75, 23);
             this.bn_PostB.TabIndex = 3;
@@ -85,7 +88,7 @@
             // 
             // bn_PostC
             // 
-            this.bn_PostC.Location = new System.Drawing.Point(208, 105);
+            this.bn_PostC.Location = new System.Drawing.Point(561, 150);
             this.bn_PostC.Name = "bn_PostC";
             this.bn_PostC.Size = new System.Drawing.Size(75, 23);
             this.bn_PostC.TabIndex = 4;
@@ -93,14 +96,15 @@
             this.bn_PostC.UseVisualStyleBackColor = true;
             this.bn_PostC.Click += new System.EventHandler(this.bn_PostC_Click);
             // 
-            // button1
+            // bn_End
             // 
-            this.button1.Location = new System.Drawing.Point(295, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "结束";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bn_End.Location = new System.Drawing.Point(393, 12);
+            this.bn_End.Name = "bn_End";
+            this.bn_End.Size = new System.Drawing.Size(75, 23);
+            this.bn_End.TabIndex = 5;
+            this.bn_End.Text = "结束";
+            this.bn_End.UseVisualStyleBackColor = true;
+            this.bn_End.Click += new System.EventHandler(this.bn_End_Click);
             // 
             // bn_CallBoss
             // 
@@ -167,11 +171,44 @@
             this.bn_ChangePoker.UseVisualStyleBackColor = true;
             this.bn_ChangePoker.Click += new System.EventHandler(this.bn_ChangePoker_Click);
             // 
+            // bn_Start
+            // 
+            this.bn_Start.Location = new System.Drawing.Point(301, 13);
+            this.bn_Start.Name = "bn_Start";
+            this.bn_Start.Size = new System.Drawing.Size(75, 23);
+            this.bn_Start.TabIndex = 13;
+            this.bn_Start.Text = "Start";
+            this.bn_Start.UseVisualStyleBackColor = true;
+            this.bn_Start.Click += new System.EventHandler(this.bn_Start_Click);
+            // 
+            // bn_PostPoker
+            // 
+            this.bn_PostPoker.Location = new System.Drawing.Point(493, 230);
+            this.bn_PostPoker.Name = "bn_PostPoker";
+            this.bn_PostPoker.Size = new System.Drawing.Size(75, 23);
+            this.bn_PostPoker.TabIndex = 14;
+            this.bn_PostPoker.Text = "出牌";
+            this.bn_PostPoker.UseVisualStyleBackColor = true;
+            this.bn_PostPoker.Click += new System.EventHandler(this.bn_PostPoker_Click);
+            // 
+            // bn_CurrentArea
+            // 
+            this.bn_CurrentArea.Location = new System.Drawing.Point(13, 105);
+            this.bn_CurrentArea.Name = "bn_CurrentArea";
+            this.bn_CurrentArea.Size = new System.Drawing.Size(75, 23);
+            this.bn_CurrentArea.TabIndex = 15;
+            this.bn_CurrentArea.Text = "当前出牌者";
+            this.bn_CurrentArea.UseVisualStyleBackColor = true;
+            this.bn_CurrentArea.Click += new System.EventHandler(this.bn_CurrentArea_Click);
+            // 
             // ConsoleMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 286);
+            this.ClientSize = new System.Drawing.Size(666, 310);
+            this.Controls.Add(this.bn_CurrentArea);
+            this.Controls.Add(this.bn_PostPoker);
+            this.Controls.Add(this.bn_Start);
             this.Controls.Add(this.bn_ChangePoker);
             this.Controls.Add(this.p_pokerbutton);
             this.Controls.Add(this.tb_pokerInfo);
@@ -179,7 +216,7 @@
             this.Controls.Add(this.bn_Two);
             this.Controls.Add(this.bn_One);
             this.Controls.Add(this.bn_CallBoss);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bn_End);
             this.Controls.Add(this.bn_PostC);
             this.Controls.Add(this.bn_PostB);
             this.Controls.Add(this.bn_APost);
@@ -199,7 +236,7 @@
         private System.Windows.Forms.Button bn_APost;
         private System.Windows.Forms.Button bn_PostB;
         private System.Windows.Forms.Button bn_PostC;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bn_End;
         private System.Windows.Forms.Button bn_CallBoss;
         private System.Windows.Forms.Button bn_One;
         private System.Windows.Forms.Button bn_Two;
@@ -207,5 +244,8 @@
         private System.Windows.Forms.TextBox tb_pokerInfo;
         private System.Windows.Forms.Panel p_pokerbutton;
         private System.Windows.Forms.Button bn_ChangePoker;
+        private System.Windows.Forms.Button bn_Start;
+        private System.Windows.Forms.Button bn_PostPoker;
+        private System.Windows.Forms.Button bn_CurrentArea;
     }
 }

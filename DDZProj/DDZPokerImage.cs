@@ -24,6 +24,8 @@ namespace DDZProj
 
             this.BackgroundImage = Poker.BackImage;
 
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+
             InitializeComponent();
         }
 

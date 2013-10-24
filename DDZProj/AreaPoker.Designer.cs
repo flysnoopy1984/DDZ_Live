@@ -28,7 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.p_right = new System.Windows.Forms.Panel();
+            this.p_Top = new System.Windows.Forms.Panel();
+            this.p_left = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // p_right
+            // 
+            this.p_right.BackColor = System.Drawing.Color.Transparent;
+            this.p_right.Dock = System.Windows.Forms.DockStyle.Top;
+            this.p_right.Location = new System.Drawing.Point(0, 100);
+            this.p_right.Name = "p_right";
+            this.p_right.Size = new System.Drawing.Size(365, 112);
+            this.p_right.TabIndex = 0;
+            this.p_right.Paint += new System.Windows.Forms.PaintEventHandler(this.p_right_Paint);
+            // 
+            // p_Top
+            // 
+            this.p_Top.BackColor = System.Drawing.Color.Transparent;
+            this.p_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.p_Top.Location = new System.Drawing.Point(0, 0);
+            this.p_Top.Name = "p_Top";
+            this.p_Top.Size = new System.Drawing.Size(365, 100);
+            this.p_Top.TabIndex = 1;
+            this.p_Top.Paint += new System.Windows.Forms.PaintEventHandler(this.p_Top_Paint);
+            // 
+            // p_left
+            // 
+            this.p_left.BackColor = System.Drawing.Color.Transparent;
+            this.p_left.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.p_left.Location = new System.Drawing.Point(0, 207);
+            this.p_left.Name = "p_left";
+            this.p_left.Size = new System.Drawing.Size(365, 100);
+            this.p_left.TabIndex = 2;
+            this.p_left.Paint += new System.Windows.Forms.PaintEventHandler(this.p_left_Paint);
             // 
             // AreaPoker
             // 
@@ -36,6 +69,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.p_left);
+            this.Controls.Add(this.p_right);
+            this.Controls.Add(this.p_Top);
             this.Name = "AreaPoker";
             this.Size = new System.Drawing.Size(365, 307);
             this.ResumeLayout(false);
@@ -43,5 +79,9 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel p_right;
+        private System.Windows.Forms.Panel p_Top;
+        private System.Windows.Forms.Panel p_left;
     }
 }

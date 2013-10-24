@@ -37,7 +37,7 @@ namespace DDZProj
 
         private void bn_CallBoss_Click(object sender, EventArgs e)
         {
-            _mainForm.CurrentGame.CallingBoss();
+            _mainForm.CurrentGame.CallBoss();
         }
 
         private void bn_One_Click(object sender, EventArgs e)
@@ -138,6 +138,30 @@ namespace DDZProj
             AreaCtrl ac =  _mainForm.CurrentGame.GetAreaCtrl(AreaPos.top);
             DDZPokerImage.OrderPoker(ac.RemainPokerList);
             ac.Refresh();
+        }
+
+        private void bn_Start_Click(object sender, EventArgs e)
+        {
+            _mainForm.CurrentGame.StartGame();
+
+        }
+
+        private void bn_PostPoker_Click(object sender, EventArgs e)
+        {
+           // AreaCtrl ac = _mainForm.CurrentGame.GetAreaCtrl(AreaPos.top);
+
+        }
+
+        private void bn_CurrentArea_Click(object sender, EventArgs e)
+        {
+            AreaCtrl ac = _mainForm.CurrentGame.GetCurrentArea();
+            if(ac!=null)
+                FillPokerInfo(ac);
+        }
+
+        private void bn_End_Click(object sender, EventArgs e)
+        {
+
         }
 
      

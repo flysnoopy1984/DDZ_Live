@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DDZProj.Core;
+using DDZCommon;
+using DDZEntity;
 
 namespace DDZProj
 {
     public partial class AreaPoker : UserControl
     {
         Form _MainForm;
-      
+        public string TopScore = "";
+        public string LeftScore = "";
+        public string RightScore = "";
 
         public AreaPoker(Form f)
         {
@@ -28,16 +32,77 @@ namespace DDZProj
 
         void Init()
         {
-           
-            int w = SysConfiguration.ScreenWidth / 32*14;
-            int h = SysConfiguration.ScreenHeight /2;
+            int w = SysConfiguration.ScreenWidth / 32 * 14;
+            int h = SysConfiguration.ScreenHeight / 2;
 
-            int x = SysConfiguration.ScreenWidth / 32*9;
-            int y = Convert.ToInt32(SysConfiguration.ScreenHeight / 18* 8.5);
+            int x = SysConfiguration.ScreenWidth / 32 * 9;
+            int y = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 8.5);
 
             this.SetBounds(x, y, w, h);
+
             _MainForm.Controls.Remove(this);
-            _MainForm.Controls.Add(this);     
+            _MainForm.Controls.Add(this);
+
+            int ph = h / 3;
+            this.p_left.Height = ph;
+            this.p_right.Height = ph;
+            this.p_Top.Height = ph;
+
+        }
+
+        public void PostScore(AreaPos fromPos, int s)
+        {
+            if (s > 0 && s <= 3)
+            {
+                switch (fromPos)
+                {
+                    case AreaPos.top:
+                        TopScore = s.ToString();
+                        p_Top.Refresh();
+                        break;
+                    case AreaPos.left:
+                        LeftScore = s.ToString();
+                        p_left.Refresh();
+                        break;
+                    case AreaPos.right:
+                        RightScore = s.ToString();
+                        p_right.Refresh();
+                        break;
+                }
+
+            }
+           
+
+        }
+
+        public void PostPoker(AreaPos fromPos, List<DDZPokerImage> postList)
+        {
+
+        }
+
+        public void ClearScore()
+        {
+            TopScore = "";
+            RightScore = "";
+            LeftScore = "";
+        }
+
+      
+
+        private void p_Top_Paint(object sender, PaintEventArgs e)
+        {
+            Util.PaintNewFont(e.Graphics, TopScore, Color.Gray,SysConfiguration.LeftSpec,0);
+        }
+
+        private void p_right_Paint(object sender, PaintEventArgs e)
+        {
+            Util.PaintNewFont(e.Graphics, RightScore, Color.Gray, this.p_right.Width - 30, 0);
+        }
+
+        private void p_left_Paint(object sender, PaintEventArgs e)
+        {
+            Util.PaintNewFont(e.Graphics, LeftScore, Color.Gray, SysConfiguration.LeftSpec, 0);
         }
     }
 }
+    

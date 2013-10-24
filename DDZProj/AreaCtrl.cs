@@ -31,14 +31,15 @@ namespace DDZProj
         public bool IsCurrent { get; set; }    
         public int CallScore { get; set; }
 
-        //倒计时线程
-        private Thread t_CountDown;
-        private System.Threading.Timer _TimerCountDown;
-      
-
-       
+        //倒计时线程    
+        private System.Threading.Timer _TimerCountDown;  
         private int _CountDownNum = -1;
-        
+
+
+        public AreaPos GetAreaPos()
+        {
+            return _AreaPos;
+        }
 
         public AreaCtrl(AreaPos areaPos,Form f)
         {
@@ -53,6 +54,9 @@ namespace DDZProj
 
             CheckForIllegalCrossThreadCalls = false;//为false可以跨线程调用windows控件
         }
+
+       
+
 
         #region 初始化
         /// <summary>
@@ -99,7 +103,7 @@ namespace DDZProj
             _MainForm.Controls.Remove(this);
             _MainForm.Controls.Add(this);
 
-            _maxWidthNum = (_AreaWidth - SysConfiguration.LeftSpec * 2) / SysConfiguration.PokerXSep - 1;
+            _maxWidthNum = (_AreaWidth - 5 * 2) / SysConfiguration.PokerXSep -1;
           
         }
 
@@ -154,16 +158,31 @@ namespace DDZProj
         #endregion
 
         #region 倒计时
-        public void CallingBoss()
+        public void Counting()
         {
             IsCurrent = true;
             _CountDownNum = SysConfiguration.CallScoreTime;
             Refresh();
 
-            _TimerCountDown.Change(0, 1000);         
-              
-          
+            _TimerCountDown.Change(0, 1000);      
         }
+        /*
+        public void BeginPostingCount()
+        {
+            IsCurrent = true;
+            _CountDownNum = SysConfiguration.CallScoreTime;
+            _TimerCountDown.Change(0, 1000);    
+        }
+
+        public void EndPostingCount()
+        {
+            IsCurrent = false;
+            _CountDownNum = -1;
+            Refresh();
+            _TimerCountDown.Change(-1, 0);
+
+        }
+        */
 
         void CountDown_CallBack(object state)
         {
@@ -180,6 +199,14 @@ namespace DDZProj
 
      
         #endregion    
+
+        #region 设置地主图标
+        public void SetBoss()
+        {
+            IsBoss = true;
+
+        }
+        #endregion
 
         #region 呈现Paint
 
@@ -225,10 +252,6 @@ namespace DDZProj
         }
         #endregion
 
-
-
-
-
-
+   
     }
 }

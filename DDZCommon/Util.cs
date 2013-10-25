@@ -80,5 +80,33 @@ namespace DDZCommon
                 
             }
         }
+
+        public static void ShowImage(Graphics g,Image Image)
+        {
+            try
+            {
+                int width = Image.Width; //图像宽度 
+                int height = Image.Height; //图像高度
+              
+                g.Clear(Color.Gray); //初始为全灰色
+                for (int i = 0; i <= width / 2; i++)
+                {
+                    int j = Convert.ToInt32(i * (Convert.ToSingle(height) / Convert.ToSingle(width)));
+                    Rectangle DestRect = new Rectangle(width / 2 - i, height / 2 - j, 2 * i, 2 * j);
+                    Rectangle SrcRect = new Rectangle(0, 0, Image.Width, Image.Height);
+                    g.DrawImage(Image, DestRect, SrcRect, GraphicsUnit.Pixel);
+                    System.Threading.Thread.Sleep(10);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void EffectBoom(Graphics g,int x,int y)
+        {
+
+        }
     }
 }

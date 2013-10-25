@@ -70,14 +70,13 @@ namespace DDZProj
                         p_right.Refresh();
                         break;
                 }
-
             }
-           
-
-        }
+        }       
 
         public void PostPoker(AreaPos fromPos, List<DDZPokerImage> postList)
         {
+            AreaCtrl.OrderPoker(postList);
+            int direction = 1;
             switch (fromPos)
             {
                 case AreaPos.top:
@@ -91,7 +90,18 @@ namespace DDZProj
                 case AreaPos.right:
                     p_Top.Controls.Clear();
                     p_right.Controls.AddRange(postList.ToArray());
+                    direction = -1;
                     break;
+            }
+            SetPostPoker(postList, direction);
+        }
+
+        private void SetPostPoker(List<DDZPokerImage> postList,int direction = 1)
+        {        
+            for (int i = 0; i < postList.Count; i++)
+            {
+                postList[i].ShowPoker();
+                postList[i].SetBounds(SysConfiguration.LeftSpec+i * SysConfiguration.PokerXSep, 0, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
             }
         }
 

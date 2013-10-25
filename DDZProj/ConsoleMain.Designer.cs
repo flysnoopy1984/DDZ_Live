@@ -48,6 +48,8 @@
             this.lb_A = new System.Windows.Forms.ListBox();
             this.lb_B = new System.Windows.Forms.ListBox();
             this.lb_C = new System.Windows.Forms.ListBox();
+            this.bn_Boom = new System.Windows.Forms.Button();
+            this.bn_Test = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bn_Reset
@@ -239,11 +241,32 @@
             this.lb_C.Size = new System.Drawing.Size(296, 355);
             this.lb_C.TabIndex = 19;
             // 
+            // bn_Boom
+            // 
+            this.bn_Boom.Location = new System.Drawing.Point(681, 11);
+            this.bn_Boom.Name = "bn_Boom";
+            this.bn_Boom.Size = new System.Drawing.Size(75, 23);
+            this.bn_Boom.TabIndex = 20;
+            this.bn_Boom.Text = "Boom";
+            this.bn_Boom.UseVisualStyleBackColor = true;
+            this.bn_Boom.Click += new System.EventHandler(this.bn_Boom_Click);
+            // 
+            // bn_Test
+            // 
+            this.bn_Test.Location = new System.Drawing.Point(692, 56);
+            this.bn_Test.Name = "bn_Test";
+            this.bn_Test.Size = new System.Drawing.Size(75, 23);
+            this.bn_Test.TabIndex = 21;
+            this.bn_Test.Text = "Test";
+            this.bn_Test.UseVisualStyleBackColor = true;
+            // 
             // ConsoleMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 706);
+            this.Controls.Add(this.bn_Test);
+            this.Controls.Add(this.bn_Boom);
             this.Controls.Add(this.lb_C);
             this.Controls.Add(this.lb_B);
             this.Controls.Add(this.lb_A);
@@ -293,5 +316,7 @@
         private System.Windows.Forms.ListBox lb_A;
         private System.Windows.Forms.ListBox lb_B;
         private System.Windows.Forms.ListBox lb_C;
+        private System.Windows.Forms.Button bn_Boom;
+        private System.Windows.Forms.Button bn_Test;
     }
 }

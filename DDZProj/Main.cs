@@ -40,7 +40,9 @@ namespace DDZProj
             _DDZGame.InitGame();          
 
             CheckForIllegalCrossThreadCalls = false;//为false可以跨线程调用windows控件
-        }       
+        }  
+     
+        
 
         #region Form 重载函数
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)

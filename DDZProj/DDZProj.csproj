@@ -58,6 +58,12 @@
     <Compile Include="AreaPoker.Designer.cs">
       <DependentUpon>AreaPoker.cs</DependentUpon>
     </Compile>
+    <Compile Include="AreaScore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AreaScore.Designer.cs">
+      <DependentUpon>AreaScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsoleMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,7 @@
       <DependentUpon>ConsoleMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\DDZGame.cs" />
+    <Compile Include="Core\GameScore.cs" />
     <Compile Include="Core\ScreenControl.cs" />
     <Compile Include="Core\SysConfiguration.cs" />
     <Compile Include="DDZPokerImage.cs">
@@ -86,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AreaPoker.resx">
       <DependentUpon>AreaPoker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaScore.resx">
+      <DependentUpon>AreaScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsoleMain.resx">
       <DependentUpon>ConsoleMain.cs</DependentUpon>

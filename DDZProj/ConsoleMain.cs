@@ -225,6 +225,16 @@ namespace DDZProj
             _mainForm.CurrentGame.GetCurrentArea().Pass();
         }
 
+        private void bn_Boom_Click(object sender, EventArgs e)
+        {
+            Image img = DDZCommon.ResManager.GetImageRes("bomb");
+
+            Rectangle r = new Rectangle(img.Width/4, 0, img.Width/4, img.Height);
+            Graphics g = this.CreateGraphics();
+            g.DrawImage(img,600,100,r,GraphicsUnit.Pixel);
+            
+        }
+
      
 
       

@@ -304,6 +304,7 @@ namespace DDZProj.Core
             _CurrentArea = _AreaT;
             return _AreaT;
         }
+
         public void TestSetScore(int s)
         {
             if (_CurrentArea != null)
@@ -321,6 +322,10 @@ namespace DDZProj.Core
             _AreaPoker.PostPoker(_CurrentArea.GetAreaPos(), _CurrentArea.PostPokerList);
         }
 
+        public void TestShowImageEffert()
+        {
+
+        }
         #endregion
 
         #region 接口数据监听

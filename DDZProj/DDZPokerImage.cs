@@ -32,7 +32,7 @@ namespace DDZProj
         public void ShowPoker()
         {
             this.BackgroundImage = Poker.ForeImage;
-
+            this.BringToFront();
             this.Show();
 
         }

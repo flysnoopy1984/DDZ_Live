@@ -438,9 +438,30 @@ namespace DDZCommon.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap bomb {
+            get {
+                object obj = ResourceManager.GetObject("bomb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap bubble {
+            get {
+                object obj = ResourceManager.GetObject("bubble", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap PokerBack {
             get {
                 object obj = ResourceManager.GetObject("PokerBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap portrait {
+            get {
+                object obj = ResourceManager.GetObject("portrait", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

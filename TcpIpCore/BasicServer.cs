@@ -5,6 +5,7 @@ using System.Text;
 using System.Net.Sockets;
 using System.Net;
 using System.Threading;
+using TcpIpCore.Entity;
 
 namespace TcpIpCore
 {
@@ -16,22 +17,46 @@ namespace TcpIpCore
         private int _Port = 8888;
         private int _BlockLog = 5;      
         private int _ServerState;
-        private Thread _ThreadServerListen;        
+        private Thread _ThreadServerListen;
+        private Thread _ThreadReceive;
 
-        public void StartServer()
+        public delegate void AcceptConnectHandler(EndPoint remotePoint);
+        public event AcceptConnectHandler AfterAccept;
+
+        public delegate void ReceiveHandler(TransferObject transObject);
+        public event ReceiveHandler AfterReceive;
+    
+    
+
+        private ManualResetEvent _AcceptSign = new ManualResetEvent(false);
+
+        public void StartServer(string ip, int port)
         {
-            
-            _Socketlistener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPAddress ip = IPAddress.Parse(_Host);
-            _EndPoint = new IPEndPoint(ip, _Port);
+            _Host = ip;
+            _Port = port;
+        }        
 
-            _Socketlistener.Bind(_EndPoint);
-            _Socketlistener.Listen(_BlockLog);
+        public int StartServer()
+        {
+            try
+            {
+                _Socketlistener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                IPAddress ip = IPAddress.Parse(_Host);
+                _EndPoint = new IPEndPoint(ip, _Port);
 
-            _ThreadServerListen = new Thread(new ThreadStart(Listening));
-            _ThreadServerListen.Start();
+                _Socketlistener.Bind(_EndPoint);
+                _Socketlistener.Listen(_BlockLog);
 
-            _ServerState = 1;
+                _ThreadServerListen = new Thread(new ThreadStart(Listening));
+                _ThreadServerListen.Start();
+
+                _ServerState = 1;
+            }
+            catch
+            {
+                return -2;
+            }
+            return _ServerState;
         }
 
         public void StopServer()
@@ -43,20 +68,40 @@ namespace TcpIpCore
         {
             while (_ServerState > 0)
             {
-                _Socketlistener.BeginAccept(new AsyncCallback(HandleAccept), _Socketlistener);
-
+                _AcceptSign.Reset();
+                _Socketlistener.BeginAccept(new AsyncCallback(HandleAcceptCallBack), _Socketlistener);
+                _AcceptSign.WaitOne();
             }
         }
 
-        void HandleAccept(IAsyncResult ar)
+        void HandleAcceptCallBack(IAsyncResult ar)
         {
-            Socket handle = _Socketlistener.EndAccept(ar);   
+            Socket handle = _Socketlistener.EndAccept(ar);
+            _AcceptSign.Set();
+            if (AfterAccept != null)
+            {
+                AfterAccept(handle.RemoteEndPoint);
+            }
+            TransferObject transObj = new TransferObject();
+            transObj.HandlingStock = handle;
+
+            handle.BeginReceive(transObj.Buffer, 0, transObj.Buffer.Length, SocketFlags.None, new AsyncCallback(HandleReceiveCallBack), transObj);
 
         }
 
-        void HandleReceive()
+        void HandleReceiveCallBack(IAsyncResult ar)
         {
+            TransferObject transObj = (TransferObject) ar.AsyncState;
+            Socket recHandle = transObj.HandlingStock;
 
+            int recSize = recHandle.EndReceive(ar);
+            if (recSize > 0)
+            {
+                if (AfterReceive == null)
+                {
+                    AfterReceive(transObj);
+                }
+            }
         }
     }
 }

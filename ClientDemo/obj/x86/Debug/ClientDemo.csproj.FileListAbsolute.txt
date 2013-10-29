@@ -1,0 +1,11 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\bin\Debug\ClientDemo.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\bin\Debug\ClientDemo.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\bin\Debug\TcpIpCore.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\bin\Debug\TcpIpCore.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.DDZClient.resources

@@ -1,0 +1,11 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.MainConsole.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\bin\Debug\ServerConsole.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\bin\Debug\ServerConsole.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\bin\Debug\TcpIpCore.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\bin\Debug\TcpIpCore.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.pdb

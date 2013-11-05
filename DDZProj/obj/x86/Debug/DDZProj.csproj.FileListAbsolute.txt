@@ -54,3 +54,4 @@ H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.csproj.Gene
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaPoker.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaPoker.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaScore.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaScore.resources

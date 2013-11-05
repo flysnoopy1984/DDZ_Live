@@ -9,3 +9,12 @@ G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\GenerateResource.write.
 G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.exe
 G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.DDZClient.resources
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\bin\Debug\ClientDemo.exe
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\bin\Debug\ClientDemo.pdb
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\bin\Debug\TcpIpCore.dll
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\bin\Debug\TcpIpCore.pdb
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.DDZClient.resources
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.Properties.Resources.resources
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.csproj.GenerateResource.Cache
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.exe
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.pdb

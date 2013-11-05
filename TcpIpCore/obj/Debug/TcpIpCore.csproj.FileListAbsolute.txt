@@ -3,3 +3,7 @@ G:\Project\DDZ\DDZProj\DDZ_Live\TcpIpCore\bin\Debug\TcpIpCore.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\TcpIpCore\obj\Debug\ResolveAssemblyReference.cache
 G:\Project\DDZ\DDZProj\DDZ_Live\TcpIpCore\obj\Debug\TcpIpCore.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\TcpIpCore\obj\Debug\TcpIpCore.pdb
+H:\Projects\OutSource_Project\DDZ_Live\TcpIpCore\bin\Debug\TcpIpCore.dll
+H:\Projects\OutSource_Project\DDZ_Live\TcpIpCore\bin\Debug\TcpIpCore.pdb
+H:\Projects\OutSource_Project\DDZ_Live\TcpIpCore\obj\Debug\TcpIpCore.dll
+H:\Projects\OutSource_Project\DDZ_Live\TcpIpCore\obj\Debug\TcpIpCore.pdb

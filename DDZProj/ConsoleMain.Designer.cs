@@ -50,6 +50,8 @@
             this.lb_C = new System.Windows.Forms.ListBox();
             this.bn_Boom = new System.Windows.Forms.Button();
             this.bn_Test = new System.Windows.Forms.Button();
+            this.pb_Image = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).BeginInit();
             this.SuspendLayout();
             // 
             // bn_Reset
@@ -259,12 +261,22 @@
             this.bn_Test.TabIndex = 21;
             this.bn_Test.Text = "Test";
             this.bn_Test.UseVisualStyleBackColor = true;
+            this.bn_Test.Click += new System.EventHandler(this.bn_Test_Click);
+            // 
+            // pb_Image
+            // 
+            this.pb_Image.Location = new System.Drawing.Point(681, 123);
+            this.pb_Image.Name = "pb_Image";
+            this.pb_Image.Size = new System.Drawing.Size(133, 130);
+            this.pb_Image.TabIndex = 22;
+            this.pb_Image.TabStop = false;
             // 
             // ConsoleMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 706);
+            this.Controls.Add(this.pb_Image);
             this.Controls.Add(this.bn_Test);
             this.Controls.Add(this.bn_Boom);
             this.Controls.Add(this.lb_C);
@@ -289,6 +301,7 @@
             this.Controls.Add(this.bn_Reset);
             this.Name = "ConsoleMain";
             this.Text = "Console";
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,5 +331,6 @@
         private System.Windows.Forms.ListBox lb_C;
         private System.Windows.Forms.Button bn_Boom;
         private System.Windows.Forms.Button bn_Test;
+        private System.Windows.Forms.PictureBox pb_Image;
     }
 }

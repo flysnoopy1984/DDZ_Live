@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DDZEntity;
+using DDZProj.Core;
 
 namespace DDZProj
 {
@@ -233,6 +234,13 @@ namespace DDZProj
             Graphics g = this.CreateGraphics();
             g.DrawImage(img,600,100,r,GraphicsUnit.Pixel);
             
+        }
+
+        private void bn_Test_Click(object sender, EventArgs e)
+        {
+            Image img = ImageHandler.GetFarmerPortrait();
+            pb_Image.Image = img;
+
         }
 
      

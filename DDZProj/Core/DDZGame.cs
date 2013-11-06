@@ -187,15 +187,15 @@ namespace DDZProj.Core
             _CallStock.Push(_AreaT);
             _CallStock.Push(_AreaL);
             _BossArea = null;
-                
-           th_CallBoss = new Thread(new ThreadStart(CallScore));         
+
+           th_CallBoss = new Thread(new ThreadStart(DoCallBoss));         
            th_CallBoss.Start();
 
            th_Listen = new Thread(new ThreadStart(ListenCallBoss));
            th_Listen.Start();
         }
 
-        void CallScore()
+        void DoCallBoss()
         {        
             while (true)
             {             

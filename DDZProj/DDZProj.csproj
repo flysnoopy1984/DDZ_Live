@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="Core\DDZGame.cs" />
     <Compile Include="Core\GameScore.cs" />
+    <Compile Include="Core\ImageHandler.cs" />
     <Compile Include="Core\ScreenControl.cs" />
     <Compile Include="Core\SysConfiguration.cs" />
     <Compile Include="DDZPokerImage.cs">
@@ -104,7 +105,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>

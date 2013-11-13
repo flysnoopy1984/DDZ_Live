@@ -1,0 +1,9 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\bin\Debug\DDZTest.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\bin\Debug\DDZTest.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\obj\x86\Debug\DDZTest.Form1.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\obj\x86\Debug\DDZTest.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\obj\x86\Debug\DDZTest.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZTest\obj\x86\Debug\DDZTest.pdb

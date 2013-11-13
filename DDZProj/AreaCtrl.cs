@@ -36,6 +36,8 @@ namespace DDZProj
         public int CallScore { get; set; }
         public List<DDZPokerImage> RemainPokerList { get; set; }
         public List<DDZPokerImage> PostPokerList { get; set; }
+        public int Score { get; set; }
+        public Image _ImgPortrait;
 
         public AreaPos GetAreaPos()
         {
@@ -76,9 +78,7 @@ namespace DDZProj
                 x = Convert.ToInt32(SysConfiguration.ScreenWidth / 32*9.5);
                 y = SysConfiguration.TopSpec;
                 //手牌区域
-                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight /9);
-
-                
+                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight /9);               
               
             }
             else
@@ -101,8 +101,11 @@ namespace DDZProj
             this.SetBounds(x, y, w, h);
             _MainForm.Controls.Remove(this);
             _MainForm.Controls.Add(this);
-
             _maxWidthNum = (_AreaWidth - 5 * 2) / SysConfiguration.PokerXSep -1;
+
+            //头像
+            _ImgPortrait = ImageHandler.GetFarmerPortrait();
+            this.pb_Portrait.Image = _ImgPortrait;
           
         }
 

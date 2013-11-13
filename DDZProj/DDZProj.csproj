@@ -71,6 +71,7 @@
       <DependentUpon>ConsoleMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\DDZGame.cs" />
+    <Compile Include="Core\DDZPlayer.cs" />
     <Compile Include="Core\GameScore.cs" />
     <Compile Include="Core\ImageHandler.cs" />
     <Compile Include="Core\ScreenControl.cs" />

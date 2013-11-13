@@ -238,7 +238,7 @@ namespace DDZProj
 
         private void bn_Test_Click(object sender, EventArgs e)
         {
-            Image img = ImageHandler.GetFarmerPortrait();
+            Image img = ImageHandler.GetBossPortrait();
             pb_Image.Image = img;
 
         }

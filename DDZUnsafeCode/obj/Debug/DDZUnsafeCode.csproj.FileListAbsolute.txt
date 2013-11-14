@@ -1,0 +1,5 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZUnsafeCode\bin\Debug\DDZUnsafeCode.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZUnsafeCode\bin\Debug\DDZUnsafeCode.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZUnsafeCode\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZUnsafeCode\obj\Debug\DDZUnsafeCode.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZUnsafeCode\obj\Debug\DDZUnsafeCode.pdb

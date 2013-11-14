@@ -88,6 +88,18 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="PainterControl\DDZ_CallScorePortrait.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PainterControl\DDZ_CallScorePortrait.Designer.cs">
+      <DependentUpon>DDZ_CallScorePortrait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PainterControl\DDZ_RemainPokerPortrait.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PainterControl\DDZ_RemainPokerPortrait.Designer.cs">
+      <DependentUpon>DDZ_RemainPokerPortrait.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AreaCtrl.resx">
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainterControl\DDZ_CallScorePortrait.resx">
+      <DependentUpon>DDZ_CallScorePortrait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainterControl\DDZ_RemainPokerPortrait.resx">
+      <DependentUpon>DDZ_RemainPokerPortrait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -302,6 +320,10 @@
     <ProjectReference Include="..\DDZInterface\DDZInterface.csproj">
       <Project>{DB1EF340-D9C8-4DC8-B784-121D05366A4B}</Project>
       <Name>DDZInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDZUnsafeCode\DDZUnsafeCode.csproj">
+      <Project>{6C337E90-3395-4273-91CB-DE59FAF863D0}</Project>
+      <Name>DDZUnsafeCode</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

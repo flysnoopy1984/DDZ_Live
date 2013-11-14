@@ -55,3 +55,7 @@ H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaPoker.r
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaPoker.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaScore.resources
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaScore.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_CallScorePortrait.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_RemainPokerPortrait.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZUnsafeCode.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZUnsafeCode.pdb

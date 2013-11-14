@@ -43,6 +43,21 @@ namespace DDZCommon
             return ro;
         }
 
+        public static void PaintCallScorePortrait(Graphics g, string text,int x,int y)
+        {
+            try
+            {
+                Font newFont = new Font("隶书", 16,FontStyle.Regular);
+                SolidBrush colorBrush = new SolidBrush(Color.White);
+                g.DrawString(text, newFont, colorBrush, new PointF(x, y));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+        }
+
         public static void PaintNewFont(Graphics g, string text)
         {
             PaintNewFont(g, text, Color.Gray,0,30);
@@ -75,8 +90,9 @@ namespace DDZCommon
                 //绘制前景
                 g.DrawString(text, newFont, colorBrush, new PointF(x, y));
             }
-            catch
+            catch(Exception ex)
             {
+                throw ex;
                 
             }
         }

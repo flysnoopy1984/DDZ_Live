@@ -232,6 +232,78 @@
   <ItemGroup>
     <None Include="Resources\bubble.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_dipai_num.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddz_end_num_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rc_num9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upomp_lthj_radio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upomp_lthj_radio_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-and-gray-button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

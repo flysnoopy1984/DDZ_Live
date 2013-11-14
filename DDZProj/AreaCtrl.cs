@@ -103,9 +103,9 @@ namespace DDZProj
             _MainForm.Controls.Add(this);
             _maxWidthNum = (_AreaWidth - 5 * 2) / SysConfiguration.PokerXSep -1;
 
-            //头像
-            _ImgPortrait = ImageHandler.GetFarmerPortrait();
-            this.pb_Portrait.Image = _ImgPortrait;
+            ////头像
+            //_ImgPortrait = ImageHandler.GetFarmerPortrait();
+            //this.pb_Portrait.Image = _ImgPortrait;
           
         }
 

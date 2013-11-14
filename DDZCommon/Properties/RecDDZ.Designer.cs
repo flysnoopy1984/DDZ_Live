@@ -452,6 +452,90 @@ namespace DDZCommon.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap bubble1 {
+            get {
+                object obj = ResourceManager.GetObject("bubble1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_dipai_num {
+            get {
+                object obj = ResourceManager.GetObject("ddz_dipai_num", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_0 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_1 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_2 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_3 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_4 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_5 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_6 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_7 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_8 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_end_num_9 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_end_num_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap PokerBack {
             get {
                 object obj = ResourceManager.GetObject("PokerBack", resourceCulture);
@@ -466,12 +550,103 @@ namespace DDZCommon.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap radio_select {
+            get {
+                object obj = ResourceManager.GetObject("radio_select", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num0 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num1 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num2 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num3 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num4 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num5 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num6 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num7 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num8 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap rc_num9 {
+            get {
+                object obj = ResourceManager.GetObject("rc_num9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Properties.
         /// </summary>
         internal static string String {
             get {
                 return ResourceManager.GetString("String", resourceCulture);
+            }
+        }
+        
+        internal static System.Drawing.Bitmap upomp_lthj_radio {
+            get {
+                object obj = ResourceManager.GetObject("upomp_lthj_radio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap WB {
+            get {
+                object obj = ResourceManager.GetObject("WB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

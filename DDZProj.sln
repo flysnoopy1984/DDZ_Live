@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientDemo", "ClientDemo\Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDZTest", "DDZTest\DDZTest.csproj", "{5B9F8B92-D515-4724-8765-3651E9636049}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDZUnsafeCode", "DDZUnsafeCode\DDZUnsafeCode.csproj", "{6C337E90-3395-4273-91CB-DE59FAF863D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,16 @@ Global
 		{5B9F8B92-D515-4724-8765-3651E9636049}.Release|Mixed Platforms.Build.0 = Release|x86
 		{5B9F8B92-D515-4724-8765-3651E9636049}.Release|x86.ActiveCfg = Release|x86
 		{5B9F8B92-D515-4724-8765-3651E9636049}.Release|x86.Build.0 = Release|x86
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6C337E90-3395-4273-91CB-DE59FAF863D0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

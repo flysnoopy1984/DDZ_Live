@@ -59,3 +59,4 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_RemainPokerPortrait.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZUnsafeCode.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZUnsafeCode.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_TimeCount.resources

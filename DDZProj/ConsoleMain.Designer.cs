@@ -51,6 +51,9 @@
             this.bn_Boom = new System.Windows.Forms.Button();
             this.bn_Test = new System.Windows.Forms.Button();
             this.pb_Image = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +69,7 @@
             // 
             // Bn_Begin
             // 
-            this.Bn_Begin.Location = new System.Drawing.Point(109, 12);
+            this.Bn_Begin.Location = new System.Drawing.Point(301, 56);
             this.Bn_Begin.Name = "Bn_Begin";
             this.Bn_Begin.Size = new System.Drawing.Size(75, 23);
             this.Bn_Begin.TabIndex = 1;
@@ -106,7 +109,7 @@
             // 
             // bn_End
             // 
-            this.bn_End.Location = new System.Drawing.Point(301, 56);
+            this.bn_End.Location = new System.Drawing.Point(301, 105);
             this.bn_End.Name = "bn_End";
             this.bn_End.Size = new System.Drawing.Size(75, 23);
             this.bn_End.TabIndex = 5;
@@ -116,7 +119,7 @@
             // 
             // bn_CallBoss
             // 
-            this.bn_CallBoss.Location = new System.Drawing.Point(209, 13);
+            this.bn_CallBoss.Location = new System.Drawing.Point(394, 12);
             this.bn_CallBoss.Name = "bn_CallBoss";
             this.bn_CallBoss.Size = new System.Drawing.Size(75, 23);
             this.bn_CallBoss.TabIndex = 6;
@@ -156,7 +159,7 @@
             // 
             // tb_pokerInfo
             // 
-            this.tb_pokerInfo.Location = new System.Drawing.Point(12, 232);
+            this.tb_pokerInfo.Location = new System.Drawing.Point(12, 341);
             this.tb_pokerInfo.Multiline = true;
             this.tb_pokerInfo.Name = "tb_pokerInfo";
             this.tb_pokerInfo.Size = new System.Drawing.Size(445, 83);
@@ -164,7 +167,7 @@
             // 
             // p_pokerbutton
             // 
-            this.p_pokerbutton.Location = new System.Drawing.Point(13, 150);
+            this.p_pokerbutton.Location = new System.Drawing.Point(13, 259);
             this.p_pokerbutton.Name = "p_pokerbutton";
             this.p_pokerbutton.Size = new System.Drawing.Size(444, 76);
             this.p_pokerbutton.TabIndex = 11;
@@ -181,7 +184,7 @@
             // 
             // bn_Start
             // 
-            this.bn_Start.Location = new System.Drawing.Point(301, 13);
+            this.bn_Start.Location = new System.Drawing.Point(394, 56);
             this.bn_Start.Name = "bn_Start";
             this.bn_Start.Size = new System.Drawing.Size(75, 23);
             this.bn_Start.TabIndex = 13;
@@ -191,7 +194,7 @@
             // 
             // bn_PostPoker
             // 
-            this.bn_PostPoker.Location = new System.Drawing.Point(561, 230);
+            this.bn_PostPoker.Location = new System.Drawing.Point(561, 204);
             this.bn_PostPoker.Name = "bn_PostPoker";
             this.bn_PostPoker.Size = new System.Drawing.Size(75, 23);
             this.bn_PostPoker.TabIndex = 14;
@@ -201,7 +204,7 @@
             // 
             // bn_CurrentArea
             // 
-            this.bn_CurrentArea.Location = new System.Drawing.Point(13, 105);
+            this.bn_CurrentArea.Location = new System.Drawing.Point(394, 150);
             this.bn_CurrentArea.Name = "bn_CurrentArea";
             this.bn_CurrentArea.Size = new System.Drawing.Size(75, 23);
             this.bn_CurrentArea.TabIndex = 15;
@@ -211,7 +214,7 @@
             // 
             // bn_Pass
             // 
-            this.bn_Pass.Location = new System.Drawing.Point(118, 105);
+            this.bn_Pass.Location = new System.Drawing.Point(394, 105);
             this.bn_Pass.Name = "bn_Pass";
             this.bn_Pass.Size = new System.Drawing.Size(75, 23);
             this.bn_Pass.TabIndex = 16;
@@ -222,25 +225,25 @@
             // lb_A
             // 
             this.lb_A.FormattingEnabled = true;
-            this.lb_A.Location = new System.Drawing.Point(12, 334);
+            this.lb_A.Location = new System.Drawing.Point(12, 438);
             this.lb_A.Name = "lb_A";
-            this.lb_A.Size = new System.Drawing.Size(272, 355);
+            this.lb_A.Size = new System.Drawing.Size(272, 251);
             this.lb_A.TabIndex = 17;
             // 
             // lb_B
             // 
             this.lb_B.FormattingEnabled = true;
-            this.lb_B.Location = new System.Drawing.Point(301, 334);
+            this.lb_B.Location = new System.Drawing.Point(301, 438);
             this.lb_B.Name = "lb_B";
-            this.lb_B.Size = new System.Drawing.Size(267, 355);
+            this.lb_B.Size = new System.Drawing.Size(272, 355);
             this.lb_B.TabIndex = 18;
             // 
             // lb_C
             // 
             this.lb_C.FormattingEnabled = true;
-            this.lb_C.Location = new System.Drawing.Point(584, 334);
+            this.lb_C.Location = new System.Drawing.Point(584, 438);
             this.lb_C.Name = "lb_C";
-            this.lb_C.Size = new System.Drawing.Size(296, 355);
+            this.lb_C.Size = new System.Drawing.Size(272, 355);
             this.lb_C.TabIndex = 19;
             // 
             // bn_Boom
@@ -271,11 +274,41 @@
             this.pb_Image.TabIndex = 22;
             this.pb_Image.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(11, 105);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "1号";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(108, 105);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "2号";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(208, 105);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "3号";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // ConsoleMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 706);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pb_Image);
             this.Controls.Add(this.bn_Test);
             this.Controls.Add(this.bn_Boom);
@@ -332,5 +365,8 @@
         private System.Windows.Forms.Button bn_Boom;
         private System.Windows.Forms.Button bn_Test;
         private System.Windows.Forms.PictureBox pb_Image;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

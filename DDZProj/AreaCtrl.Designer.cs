@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.p_PokerInfo = new System.Windows.Forms.Panel();
+            this.ddZ_TimeCount = new DDZProj.PainterControl.DDZ_TimeCount();
             this.ddZ_RemainPokerPortrait1 = new DDZProj.PainterControl.DDZ_RemainPokerPortrait();
             this.ddZ_CallScorePortrait1 = new DDZProj.PainterControl.DDZ_CallScorePortrait();
             this.SuspendLayout();
@@ -41,6 +42,13 @@
             this.p_PokerInfo.Name = "p_PokerInfo";
             this.p_PokerInfo.Size = new System.Drawing.Size(411, 100);
             this.p_PokerInfo.TabIndex = 0;
+            // 
+            // ddZ_TimeCount
+            // 
+            this.ddZ_TimeCount.Location = new System.Drawing.Point(295, 3);
+            this.ddZ_TimeCount.Name = "ddZ_TimeCount";
+            this.ddZ_TimeCount.Size = new System.Drawing.Size(90, 84);
+            this.ddZ_TimeCount.TabIndex = 3;
             // 
             // ddZ_RemainPokerPortrait1
             // 
@@ -63,6 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.ddZ_TimeCount);
             this.Controls.Add(this.ddZ_RemainPokerPortrait1);
             this.Controls.Add(this.ddZ_CallScorePortrait1);
             this.Controls.Add(this.p_PokerInfo);
@@ -78,6 +87,7 @@
         private System.Windows.Forms.Panel p_PokerInfo;
         private PainterControl.DDZ_CallScorePortrait ddZ_CallScorePortrait1;
         private PainterControl.DDZ_RemainPokerPortrait ddZ_RemainPokerPortrait1;
+        private PainterControl.DDZ_TimeCount ddZ_TimeCount;
 
     }
 }

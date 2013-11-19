@@ -22,6 +22,8 @@ namespace DDZProj.Core
         private Stack<AreaCtrl> _CallStock;
         private Queue<AreaCtrl> _PostQueue;
         private int _GameState = -1;
+        private ManualResetEvent _mResetEventCallBoss;
+    
 
         /*接口数据*/
         private PokerData _PokerData;
@@ -40,6 +42,7 @@ namespace DDZProj.Core
 
         public AreaCtrl GetAreaCtrl(AreaPos pos)
         {
+          
             switch (pos)
             {
                 case AreaPos.top:
@@ -138,7 +141,7 @@ namespace DDZProj.Core
         {
             th_Dealt = new Thread(new ThreadStart(Dealt));
             th_Dealt.Start();
-            th_Dealt.Join();
+          //  th_Dealt.Join();
         }
 
         void Dealt()
@@ -167,8 +170,8 @@ namespace DDZProj.Core
             {
                 Poker p =list[i];
                 DDZPokerImage pi = PokerImageList[p.No];
-                pi.ShowPoker();                
-                pi.SetBounds(i * SysConfiguration.PokerXSep, 100, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
+                pi.ShowPoker();
+                pi.SetBounds((i + 1) *pi.Width, SysConfiguration.TopSpec, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
                 pi.BringToFront();
             }
           
@@ -178,6 +181,9 @@ namespace DDZProj.Core
         #region 等待叫地主
         public void CallBoss()
         {
+            //设置型号量
+            _mResetEventCallBoss = new ManualResetEvent(false);
+
             _AreaR.Reset();
             _AreaT.Reset();
             _AreaL.Reset();
@@ -202,35 +208,31 @@ namespace DDZProj.Core
                 if (_CallStock.Count == 0) 
                     break;
 
-                if (_CurrentArea != null)
-                    _CurrentArea.IsCurrent = false;
+                //if (_CurrentArea != null)
+                //    _CurrentArea.IsCurrent = false;
 
                 _CurrentArea = _CallStock.Pop();
                
                 _CurrentArea.Counting();
-                while (_CurrentArea.IsCurrent)
+
+                _mResetEventCallBoss.WaitOne();
+             
+                if (_CurrentArea.CallScore == 3)
                 {
-                    Thread.Sleep(20);
-                    if (_CurrentArea.CallScore == 3)
-                    {
-                        _BossArea = _CurrentArea;
-                        _CurrentArea.IsCurrent = false;
-                        _CallStock.Clear();
-                        return;
-                    }
-                    else if (_CurrentArea.CallScore > 0)
-                    {
-                        _CurrentArea.IsCurrent = false;
-                        break;
-                    }
-                }                
+                    _BossArea = _CurrentArea;
+                    _CurrentArea.IsCurrent = false;
+                    _CallStock.Clear();
+                    return;
+                }
+                else if (_CurrentArea.CallScore > 0)
+                {
+                    _CurrentArea.IsCurrent = false;
+                    break;
+                }
+                             
             } 
             /* 非 3 分的计算 */
-
-
-        }
-
-      
+        }    
       
        
         #endregion
@@ -310,7 +312,9 @@ namespace DDZProj.Core
             if (_CurrentArea != null)
             {
                 _CurrentArea.CallScore = s;
+                
                 _AreaPoker.PostScore(_CurrentArea.GetAreaPos(), s);
+                _mResetEventCallBoss.Set();
             }
         }
 

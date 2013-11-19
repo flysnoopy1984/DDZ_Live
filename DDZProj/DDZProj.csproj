@@ -100,6 +100,12 @@
     <Compile Include="PainterControl\DDZ_RemainPokerPortrait.Designer.cs">
       <DependentUpon>DDZ_RemainPokerPortrait.cs</DependentUpon>
     </Compile>
+    <Compile Include="PainterControl\DDZ_TimeCount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PainterControl\DDZ_TimeCount.Designer.cs">
+      <DependentUpon>DDZ_TimeCount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AreaCtrl.resx">
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PainterControl\DDZ_RemainPokerPortrait.resx">
       <DependentUpon>DDZ_RemainPokerPortrait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainterControl\DDZ_TimeCount.resx">
+      <DependentUpon>DDZ_TimeCount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

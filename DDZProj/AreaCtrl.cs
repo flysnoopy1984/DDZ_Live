@@ -49,6 +49,7 @@ namespace DDZProj
             _AreaPos = areaPos;
             _MainForm = f;
             IsCurrent = false;
+
             InitializeComponent();
 
             this.Init();
@@ -56,6 +57,8 @@ namespace DDZProj
             _TimerCountDown = new System.Threading.Timer(new TimerCallback(CountDown_CallBack), null, -1, 1000);
 
             CheckForIllegalCrossThreadCalls = false;//为false可以跨线程调用windows控件
+
+
         }      
 
 
@@ -78,7 +81,7 @@ namespace DDZProj
                 x = Convert.ToInt32(SysConfiguration.ScreenWidth / 32*9.5);
                 y = SysConfiguration.TopSpec;
                 //手牌区域
-                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight /9);               
+                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight /8);               
               
             }
             else
@@ -93,20 +96,24 @@ namespace DDZProj
                 y = SysConfiguration.ScreenHeight / 18*5;
 
                 //手牌区域
-                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 3.5);             
+                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 3.5);
+               
 
             }
             _AreaWidth = w;
             _AreaHeight = h;
             this.SetBounds(x, y, w, h);
+            //倒计时区域
+            ddZ_TimeCount.SetBounds(w - this.ddZ_TimeCount.Width, SysConfiguration.TopSpec, this.ddZ_TimeCount.Width, this.ddZ_TimeCount.Height);
+            
+
             _MainForm.Controls.Remove(this);
             _MainForm.Controls.Add(this);
             _maxWidthNum = (_AreaWidth - 5 * 2) / SysConfiguration.PokerXSep -1;
 
-            ////头像
-            //_ImgPortrait = ImageHandler.GetFarmerPortrait();
-            //this.pb_Portrait.Image = _ImgPortrait;
-          
+           
+           //倒计时，看一下。。可以删除
+           // this.ddZ_TimeCount.SetCount(10, PainterControl.CountShowState.Show);
         }
 
         public void Reset()
@@ -140,9 +147,7 @@ namespace DDZProj
             for (int i = 0; i < RemainPokerList.Count; i++)
             {
                 ShowOne(i);
-
             }
-
         }
 
         public void ShowOne(int i)
@@ -157,8 +162,7 @@ namespace DDZProj
             if (i+1 > _maxWidthNum)
             {
                 i -= _maxWidthNum;
-                _PCurY += SysConfiguration.PokerHeight / 2;
-                 
+                _PCurY += SysConfiguration.PokerHeight / 2;                 
             }
 
             _PCurX = i * SysConfiguration.PokerXSep + SysConfiguration.LeftSpec;            
@@ -176,21 +180,28 @@ namespace DDZProj
             IsCurrent = true;
             _CountDownNum = SysConfiguration.CallScoreTime;
             PostPokerList = null;
-            Refresh();
 
-            _TimerCountDown.Change(0, 1000);      
+            ddZ_TimeCount.SetCount(_CountDownNum,PainterControl.CountShowState.Show);
+            this.Refresh();
+            _TimerCountDown.Change(0, 1000);    
+  
+           
         }     
 
         void CountDown_CallBack(object state)
-        {
-            Refresh();
+        {            
             _CountDownNum--;
+
+            ddZ_TimeCount.SetCount(_CountDownNum, PainterControl.CountShowState.Show);
+            this.Refresh();
+
             if (_CountDownNum < -1 || IsCurrent == false)
             {
                 _TimerCountDown.Change(-1, 0);
                 _CountDownNum = -1;
                 IsCurrent = false;
-                Refresh();
+                ddZ_TimeCount.Reset();
+                this.Refresh();
             }           
         }
 
@@ -229,7 +240,7 @@ namespace DDZProj
         public void Pass()
         {
             this.IsCurrent = false;
-            Refresh();
+            ddZ_TimeCount.Reset();
         }
         #endregion
 
@@ -270,7 +281,7 @@ namespace DDZProj
         {
      
             Color c = Color.White;
-            int w = 2;
+            int w = 1;
             if (IsCurrent)
             {
                 c = Color.Yellow;
@@ -278,12 +289,12 @@ namespace DDZProj
             }
             else
             {
-                c = Color.White;
-                w = 2;
+                c = Color.FromArgb(16, 122, 3);
+                w = 1;
             }
-
+            
             ControlPaint.DrawBorder(e.Graphics,
-                                this.ClientRectangle,
+                                this.DisplayRectangle,
                                 c,
                                 w,
                                 ButtonBorderStyle.Solid,
@@ -296,16 +307,7 @@ namespace DDZProj
                                 c,
                                 w,
                                 ButtonBorderStyle.Solid);
-
-            if (_CountDownNum == -1)
-            {
-                Util.PaintNewFont(e.Graphics, "");
-            }
-            else
-            {
-                Util.PaintNewFont(e.Graphics, _CountDownNum.ToString());
-            }
-
+        
         }
         #endregion
 

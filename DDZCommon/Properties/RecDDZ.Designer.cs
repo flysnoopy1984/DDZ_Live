@@ -459,79 +459,79 @@ namespace DDZCommon.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ddz_count_0 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_1 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_2 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_3 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_4 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_5 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_6 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_7 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_8 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ddz_count_9 {
+            get {
+                object obj = ResourceManager.GetObject("ddz_count_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ddz_dipai_num {
             get {
                 object obj = ResourceManager.GetObject("ddz_dipai_num", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_0 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_0", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_1 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_2 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_3 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_4 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_5 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_6 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_7 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_8 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_8", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap ddz_end_num_9 {
-            get {
-                object obj = ResourceManager.GetObject("ddz_end_num_9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -14,7 +14,7 @@ namespace DDZProj
 {
     public partial class Main : Form
     {
-        private ConsoleMain _ConsoleMain;
+        private bn_3n _ConsoleMain;
         private ScreenControl _ScreenControl;        
         
         private Thread th_PostCard;   //出牌线程
@@ -30,7 +30,7 @@ namespace DDZProj
             InitializeComponent();
 
             _ScreenControl = new ScreenControl(this);
-            _ConsoleMain = new ConsoleMain(this);  
+            _ConsoleMain = new bn_3n(this);  
             
             //系统参数设置
             SysConfiguration.Init();
@@ -65,7 +65,7 @@ namespace DDZProj
             if (msg.Msg == 256 && keyData == (System.Windows.Forms.Keys.Enter))
             {
                 if (_ConsoleMain == null)
-                    _ConsoleMain = new ConsoleMain();
+                    _ConsoleMain = new bn_3n();
                 _ConsoleMain.Show();
                 
                 return true;

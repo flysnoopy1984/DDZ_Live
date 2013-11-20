@@ -19,10 +19,15 @@ namespace DDZProj.Core
         private Main _MainForm;
         private AreaCtrl _AreaT, _AreaL, _AreaR,_CurrentArea,_BossArea;
         private AreaPoker _AreaPoker;
+        private AreaBossPoker _AreaBossPoker;
         private Stack<AreaCtrl> _CallStock;
+        private int _MaxCallBossScore;
+
         private Queue<AreaCtrl> _PostQueue;
-        private int _GameState = -1;
-        private ManualResetEvent _mResetEventCallBoss;
+        private GameState _GameState = GameState.End;
+        
+        private AutoResetEvent _mResetEventCallBoss;
+        
     
 
         /*接口数据*/
@@ -57,15 +62,6 @@ namespace DDZProj.Core
 
         public AreaCtrl GetCurrentArea()
         {
-            /*
-            if (_AreaT.IsCurrent)
-                return _AreaT;
-            if (_AreaR.IsCurrent)
-                return _AreaR;
-            if (_AreaL.IsCurrent)
-                return _AreaL;
-            return null;
-             */
             return _CurrentArea;
         }
 
@@ -74,7 +70,7 @@ namespace DDZProj.Core
             return _BossArea;
         }
 
-        public int GetGameState()
+        public GameState GetGameState()
         {
             return _GameState;
         }
@@ -133,8 +129,35 @@ namespace DDZProj.Core
             _AreaL = new AreaCtrl(AreaPos.left, _MainForm);
             _AreaR = new AreaCtrl(AreaPos.right, _MainForm);
             _AreaPoker = new AreaPoker(_MainForm);
+            _AreaBossPoker = new AreaBossPoker(_MainForm, _AreaT);
+
+          
         }
         #endregion
+
+        #region 重置游戏
+        public void ResetGame()
+        {
+            _AreaT.ResetArea();
+            _AreaL.ResetArea();
+            _AreaR.ResetArea();
+            _AreaBossPoker.ResetArea();
+            _AreaPoker.ResetArea();
+
+            foreach (Control ctrl in _MainForm.Controls)
+            {
+                DDZPokerImage pi = ctrl as DDZPokerImage;
+                if (pi != null)
+                {
+                    _MainForm.Controls.Remove(ctrl);
+                }
+            }
+
+            _PokerData.ResetData();
+
+           
+        }
+        #endregion 
 
         #region 开始发牌
         public void StartDealt()
@@ -160,33 +183,26 @@ namespace DDZProj.Core
                 
                 Thread.Sleep(100);
             }
-            ShowBossPoker();
+            _AreaBossPoker.SetBossPoker(_PokerData.Get3DiZhuPoker());
         }
 
-        private void ShowBossPoker()
-        {
-            List<Poker> list = _PokerData.Get3DiZhuPoker();
-            for (int i = 0; i < list.Count; i++)
-            {
-                Poker p =list[i];
-                DDZPokerImage pi = PokerImageList[p.No];
-                pi.ShowPoker();
-                pi.SetBounds((i + 1) *pi.Width, SysConfiguration.TopSpec, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
-                pi.BringToFront();
-            }
-          
-        }
+      
         #endregion
 
-        #region 等待叫地主
+        #region 叫地主
         public void CallBoss()
         {
+            
             //设置型号量
-            _mResetEventCallBoss = new ManualResetEvent(false);
+            _mResetEventCallBoss = new AutoResetEvent(false);
+            //设置游戏状态
+            _GameState = GameState.CallingBoss;
+            //设置当前最大叫分
+            _MaxCallBossScore = 0;
 
-            _AreaR.Reset();
-            _AreaT.Reset();
-            _AreaL.Reset();
+            _AreaR.ResetCallBoss();
+            _AreaT.ResetCallBoss();
+            _AreaL.ResetCallBoss();
 
             _CallStock = new Stack<AreaCtrl>();
             _CallStock.Push(_AreaR);
@@ -202,38 +218,83 @@ namespace DDZProj.Core
         }
 
         void DoCallBoss()
-        {        
+        {            
             while (true)
             {             
                 if (_CallStock.Count == 0) 
-                    break;
-
-                //if (_CurrentArea != null)
-                //    _CurrentArea.IsCurrent = false;
+                    break;        
 
                 _CurrentArea = _CallStock.Pop();
                
                 _CurrentArea.Counting();
 
-                _mResetEventCallBoss.WaitOne();
-             
+                _mResetEventCallBoss.WaitOne();                
+
+                _CurrentArea.StopCounting();
+
                 if (_CurrentArea.CallScore == 3)
                 {
                     _BossArea = _CurrentArea;
-                    _CurrentArea.IsCurrent = false;
+                 
                     _CallStock.Clear();
-                    return;
-                }
-                else if (_CurrentArea.CallScore > 0)
-                {
-                    _CurrentArea.IsCurrent = false;
                     break;
                 }
+              
                              
-            } 
-            /* 非 3 分的计算 */
-        }    
-      
+            }
+            //没有人叫分           
+            if (_MaxCallBossScore == 0)
+            {
+                //End Game
+            }
+            //没有人叫3分,但有人叫分
+            if (_BossArea == null)
+            {
+                CaculateBoss();
+            }
+
+            //设置并显示Boss头像和叫分
+            if(_BossArea!=null)            
+                _BossArea.SetBossAndChangePortrait(_MaxCallBossScore);
+        }
+
+        public void PassCallBoss()
+        {
+            if (_CurrentArea!=null)
+            {
+                _CurrentArea.StopCounting();
+                this._AreaPoker.PostInfo(_CurrentArea.GetAreaPos(), "Pass");
+                _mResetEventCallBoss.Set();
+            }
+
+        }
+
+        public void EndCallBoss()
+        {
+            _mResetEventCallBoss.Set();
+        }
+
+
+        private void CaculateBoss()
+        {
+            if (_MaxCallBossScore == _AreaL.CallScore)
+            {
+                this._BossArea = _AreaL;
+            }
+            if (_MaxCallBossScore == _AreaL.CallScore)
+            {
+                this._BossArea = _AreaL;
+            }
+            if (_MaxCallBossScore == _AreaL.CallScore)
+            {
+                this._BossArea = _AreaL;
+            }            
+        }
+
+        public void ShowCallBoss()
+        {
+
+        }     
        
         #endregion
 
@@ -246,9 +307,9 @@ namespace DDZProj.Core
                 return;
             }
 
-            _AreaPoker.ClearScore(); // 清除叫地主的分数;
+            _AreaPoker.ClearInfo(); // 清除叫地主的分数;
 
-            _GameState = 1; // 游戏状态置为开始;
+            _GameState = GameState.Poking; // 游戏状态置为开始;
 
             /* 初始化玩家队列 */
             _PostQueue = new Queue<AreaCtrl>();
@@ -280,22 +341,22 @@ namespace DDZProj.Core
                 _PostQueue.Enqueue(_CurrentArea);
                  _CurrentArea.Counting();
 
-                 while (_CurrentArea.IsCurrent)
-                 {
-                     if (_GameState < 0)
-                     {
-                         _CurrentArea.IsCurrent = false;
-                         break;
-                     }
-                     Thread.Sleep(20);
-                 }  
+                 //while (_CurrentArea.IsCurrent)
+                 //{
+                 //    if (_GameState < 0)
+                 //    {
+                 //        _CurrentArea.IsCurrent = false;
+                 //        break;
+                 //    }
+                 //    Thread.Sleep(20);
+                 //}  
                 
             }
         }
 
         public void EndGame()
         {
-            _GameState = -1;
+            _GameState = GameState.End;
         }
         #endregion
 
@@ -311,6 +372,12 @@ namespace DDZProj.Core
         {
             if (_CurrentArea != null)
             {
+                if (s > _MaxCallBossScore)
+                    _MaxCallBossScore = s;
+                else
+                    //叫分小于等于上个玩家，非法！
+                    return;
+
                 _CurrentArea.CallScore = s;
                 
                 _AreaPoker.PostScore(_CurrentArea.GetAreaPos(), s);
@@ -328,7 +395,7 @@ namespace DDZProj.Core
 
         public void TestShowImageEffert()
         {
-
+            
         }
         #endregion
 

@@ -9,6 +9,19 @@ namespace DDZEntity
     {
     }
 
+    public enum AreaPortrait
+    {
+        Boss,
+        Farmer,
+    }
+
+    public enum GameState
+    {
+        CallingBoss,
+        Poking,
+        End
+    }
+
     public enum AreaPos
     {
         left = 1,

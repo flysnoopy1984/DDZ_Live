@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreaBossPoker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AreaBossPoker.Designer.cs">
+      <DependentUpon>AreaBossPoker.cs</DependentUpon>
+    </Compile>
     <Compile Include="AreaCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AreaBossPoker.resx">
+      <DependentUpon>AreaBossPoker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AreaCtrl.resx">
       <DependentUpon>AreaCtrl.cs</DependentUpon>
     </EmbeddedResource>

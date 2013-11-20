@@ -23,7 +23,6 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZProj.exe
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZProj.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\ResolveAssemblyReference.cache
-G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.ConsoleMain.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.Main.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.Properties.Resources.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\GenerateResource.read.1.tlog
@@ -60,3 +59,5 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZUnsafeCode.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\DDZUnsafeCode.pdb
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_TimeCount.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.bn_3n.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaBossPoker.resources

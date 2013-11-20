@@ -15,9 +15,9 @@ namespace DDZProj
     public partial class AreaPoker : UserControl
     {
         Main _MainForm;
-        public string TopScore = "";
-        public string LeftScore = "";
-        public string RightScore = "";
+        public string TopInfo = "";
+        public string LeftInfo = "";
+        public string RightInfo = "";
         public Dictionary<AreaPos, List<Poker>> _PostedPokerList; // 牌局中所有已出的拍
 
         public AreaPoker(Main f)
@@ -50,26 +50,31 @@ namespace DDZProj
             this.p_Top.Height = ph;
 
         }
+        public void PostInfo(AreaPos fromPos, string info)
+        {
+            switch (fromPos)
+            {
+                case AreaPos.top:
+                    TopInfo = info;
+                    p_Top.Refresh();
+                    break;
+                case AreaPos.left:
+                    LeftInfo = info;
+                    p_left.Refresh();
+                    break;
+                case AreaPos.right:
+                    RightInfo = info;
+                    p_right.Refresh();
+                    break;
+            }
+        }
 
         public void PostScore(AreaPos fromPos, int s)
         {
             if (s > 0 && s <= 3)
             {
-                switch (fromPos)
-                {
-                    case AreaPos.top:
-                        TopScore = s.ToString();
-                        p_Top.Refresh();
-                        break;
-                    case AreaPos.left:
-                        LeftScore = s.ToString();
-                        p_left.Refresh();
-                        break;
-                    case AreaPos.right:
-                        RightScore = s.ToString();
-                        p_right.Refresh();
-                        break;
-                }
+                string info = s.ToString();
+                PostInfo(fromPos, info);               
             }
         }       
 
@@ -84,11 +89,11 @@ namespace DDZProj
                     p_Top.Controls.AddRange(postList.ToArray());
                     break;
                 case AreaPos.left:
-                    p_Top.Controls.Clear();
+                    p_left.Controls.Clear();
                     p_left.Controls.AddRange(postList.ToArray());                  
                     break;
                 case AreaPos.right:
-                    p_Top.Controls.Clear();
+                    p_right.Controls.Clear();
                     p_right.Controls.AddRange(postList.ToArray());
                     direction = -1;
                     break;
@@ -105,32 +110,41 @@ namespace DDZProj
             }
         }
 
-        public void ClearScore()
+        public void ClearInfo()
         {
-            TopScore = "";
-            RightScore = "";
-            LeftScore = "";
+            TopInfo = "";
+            RightInfo = "";
+            LeftInfo = "";
             Refresh();
         }
 
-      
+        #region 重置游戏--Poker
+        public void ResetArea()
+        {
+            p_left.Controls.Clear();
+            p_Top.Controls.Clear();
+            p_right.Controls.Clear();
+            ClearInfo();
+        }
+        #endregion
 
         private void p_Top_Paint(object sender, PaintEventArgs e)
         {
-            if(_MainForm.CurrentGame.GetGameState() == -1)
-                Util.PaintNewFont(e.Graphics, TopScore, Color.Gray,SysConfiguration.LeftSpec,0);
+            if (_MainForm.CurrentGame.GetGameState() == GameState.CallingBoss)
+                Util.PaintNewFont(e.Graphics, TopInfo, Color.Gray,SysConfiguration.LeftSpec,0);
         }
 
         private void p_right_Paint(object sender, PaintEventArgs e)
         {
-            if (_MainForm.CurrentGame.GetGameState() == -1)
-                Util.PaintNewFont(e.Graphics, RightScore, Color.Gray, this.p_right.Width - 30, 0);
+            int len = RightInfo.Length * Util.PaintNewFont_Size;
+            if (_MainForm.CurrentGame.GetGameState() == GameState.CallingBoss)
+                Util.PaintNewFont(e.Graphics, RightInfo, Color.Gray, this.p_right.Width - len, 0);
         }
 
         private void p_left_Paint(object sender, PaintEventArgs e)
         {
-            if (_MainForm.CurrentGame.GetGameState() == -1)
-                Util.PaintNewFont(e.Graphics, LeftScore, Color.Gray, SysConfiguration.LeftSpec, 0);
+            if (_MainForm.CurrentGame.GetGameState() == GameState.CallingBoss)
+                Util.PaintNewFont(e.Graphics, LeftInfo, Color.Gray, SysConfiguration.LeftSpec, 0);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DDZProj
 {
-    partial class ConsoleMain
+    partial class bn_3n
     {
         /// <summary>
         /// Required designer variable.
@@ -51,8 +51,8 @@
             this.bn_Boom = new System.Windows.Forms.Button();
             this.bn_Test = new System.Windows.Forms.Button();
             this.pb_Image = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bn_1n = new System.Windows.Forms.Button();
+            this.bn_2n = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).BeginInit();
             this.SuspendLayout();
@@ -274,23 +274,23 @@
             this.pb_Image.TabIndex = 22;
             this.pb_Image.TabStop = false;
             // 
-            // button1
+            // bn_1n
             // 
-            this.button1.Location = new System.Drawing.Point(11, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "1号";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bn_1n.Location = new System.Drawing.Point(11, 105);
+            this.bn_1n.Name = "bn_1n";
+            this.bn_1n.Size = new System.Drawing.Size(75, 23);
+            this.bn_1n.TabIndex = 23;
+            this.bn_1n.Text = "1号";
+            this.bn_1n.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // bn_2n
             // 
-            this.button2.Location = new System.Drawing.Point(108, 105);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "2号";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bn_2n.Location = new System.Drawing.Point(108, 105);
+            this.bn_2n.Name = "bn_2n";
+            this.bn_2n.Size = new System.Drawing.Size(75, 23);
+            this.bn_2n.TabIndex = 24;
+            this.bn_2n.Text = "2号";
+            this.bn_2n.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -301,14 +301,14 @@
             this.button3.Text = "3号";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // ConsoleMain
+            // bn_3n
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 706);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bn_2n);
+            this.Controls.Add(this.bn_1n);
             this.Controls.Add(this.pb_Image);
             this.Controls.Add(this.bn_Test);
             this.Controls.Add(this.bn_Boom);
@@ -332,7 +332,7 @@
             this.Controls.Add(this.bn_APost);
             this.Controls.Add(this.Bn_Begin);
             this.Controls.Add(this.bn_Reset);
-            this.Name = "ConsoleMain";
+            this.Name = "bn_3n";
             this.Text = "Console";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
             this.ResumeLayout(false);
@@ -365,8 +365,8 @@
         private System.Windows.Forms.Button bn_Boom;
         private System.Windows.Forms.Button bn_Test;
         private System.Windows.Forms.PictureBox pb_Image;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bn_1n;
+        private System.Windows.Forms.Button bn_2n;
         private System.Windows.Forms.Button button3;
     }
 }

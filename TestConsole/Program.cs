@@ -2,21 +2,57 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace TestConsole
 {
+  
     class Program
     {
+        static ManualResetEvent _mr;
+
+        static Thread t1;
+       
+
+        static Thread t2;
+
         static void Main(string[] args)
         {
-            int[] ds = GetRandomSequence2(10,20);
-            for (int i=0; i < ds.Length; i++)
-            {
-                Console.Write(ds[i]+",");
-               
-            }
+            _mr = new ManualResetEvent(false);
+            t1 = new Thread(new ThreadStart(dothing1));
+            t1.Start();
+
+            t2 = new Thread(new ThreadStart(dothing2));
+            t2.Start();
+
             Console.Read();
+
+            t1 = new Thread(new ThreadStart(dothing1));
+            t1.Start();
+
+            t2 = new Thread(new ThreadStart(dothing2));
+            t2.Start();
+
+            Console.Read();
+
         }
+        static void dothing2()
+        {
+            _mr.WaitOne();
+            Console.WriteLine("T2");
+        }
+
+        static void dothing1()
+        {
+            Console.WriteLine("T1");
+            _mr.Set();
+
+        }
+
+        
+
+       
+        
 
         /// <summary>
         /// Designed by eaglet

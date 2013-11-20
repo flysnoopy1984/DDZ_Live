@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DDZProj.Core;
 using DDZCommon;
+using DDZEntity;
 
 namespace DDZProj.PainterControl
 {
@@ -32,6 +33,27 @@ namespace DDZProj.PainterControl
             this.pb_Portrait.Image = _CurrentPortaitImage;
             this.pb_CallBossNum.Image = ImageHandler.GetCallBossNum_OnPortrait(0);
         }
+
+        public void SetPortrait(AreaPortrait portrait)
+        {
+            if (portrait == AreaPortrait.Boss)
+            {
+                _CurrentPortaitImage = ImageHandler.GetBossPortrait();              
+            }
+            else
+            {
+                _CurrentPortaitImage = ImageHandler.GetFarmerPortrait();
+            }
+
+            this.pb_Portrait.Image = _CurrentPortaitImage;
+        }
+
+        public void SetScore(int socre)
+        {
+            this.pb_CallBossNum.Image = ImageHandler.GetCallBossNum_OnPortrait(socre);
+        }
+
+
 
         private void DDZ_CallScorePortrait_Paint(object sender, PaintEventArgs e)
         {

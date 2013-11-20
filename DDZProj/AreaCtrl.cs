@@ -33,12 +33,28 @@ namespace DDZProj
        
         public bool IsBoss { get; set; }
         public bool IsCurrent { get; set; }
-        public int CallScore { get; set; }
+        private int _CallScore;
+
         public List<DDZPokerImage> RemainPokerList { get; set; }
         public List<DDZPokerImage> PostPokerList { get; set; }
-        public int Score { get; set; }
+        public int PlayerScore { get; set; }
         public Image _ImgPortrait;
 
+        public int CallScore
+        {
+            get
+            {
+                return _CallScore;
+            }
+            set
+            {
+                _CallScore = value;
+                if (value > 0)
+                {
+                    SetCallScoreImage(value);
+                }
+            }
+        }
         public AreaPos GetAreaPos()
         {
             return _AreaPos;
@@ -57,8 +73,6 @@ namespace DDZProj
             _TimerCountDown = new System.Threading.Timer(new TimerCallback(CountDown_CallBack), null, -1, 1000);
 
             CheckForIllegalCrossThreadCalls = false;//为false可以跨线程调用windows控件
-
-
         }      
 
 
@@ -115,14 +129,23 @@ namespace DDZProj
            //倒计时，看一下。。可以删除
            // this.ddZ_TimeCount.SetCount(10, PainterControl.CountShowState.Show);
         }
-
-        public void Reset()
+        public void ResetCallBoss()
         {
             IsCurrent = false;
             _CountDownNum = -1;
             IsBoss = false;
         }
+      
 
+        #endregion
+
+        #region 重置游戏--区域
+        public void ResetArea()
+        {
+            p_PokerInfo.Controls.Clear();
+           
+        }
+        
         #endregion
 
         #region 接口--获取牌信息
@@ -180,40 +203,56 @@ namespace DDZProj
             IsCurrent = true;
             _CountDownNum = SysConfiguration.CallScoreTime;
             PostPokerList = null;
-
-            ddZ_TimeCount.SetCount(_CountDownNum,PainterControl.CountShowState.Show);
-            this.Refresh();
-            _TimerCountDown.Change(0, 1000);    
-  
            
+            this.Refresh();
+            _TimerCountDown.Change(0, 1000);         
         }     
 
         void CountDown_CallBack(object state)
-        {            
-            _CountDownNum--;
+        {          
 
             ddZ_TimeCount.SetCount(_CountDownNum, PainterControl.CountShowState.Show);
-            this.Refresh();
+
+            _CountDownNum--;      
 
             if (_CountDownNum < -1 || IsCurrent == false)
             {
-                _TimerCountDown.Change(-1, 0);
-                _CountDownNum = -1;
-                IsCurrent = false;
-                ddZ_TimeCount.Reset();
-                this.Refresh();
+                _MainForm.CurrentGame.PassCallBoss();
+              
+                StopCounting();
+
             }           
+        }
+
+        public void StopCounting()
+        {
+            _TimerCountDown.Change(-1, 0);
+            _CountDownNum = -1;
+            IsCurrent = false;
+            ddZ_TimeCount.Reset();
+            this.Refresh();
         }
 
      
         #endregion    
 
         #region 设置地主图标
-        public void SetBoss()
+        public void SetBossAndChangePortrait(int bossScore)
         {
             IsBoss = true;
-
+            ddZ_CallScorePortrait.SetPortrait(AreaPortrait.Boss);
+            ddZ_CallScorePortrait.SetScore(bossScore);
         }
+        public void SetCallScoreImage(int callScore)
+        {
+            ddZ_CallScorePortrait.SetScore(callScore);
+        }
+
+        public void ResetPortraitAndScore()
+        {
+            ddZ_CallScorePortrait.SetPortrait(AreaPortrait.Farmer);
+            ddZ_CallScorePortrait.SetScore(0);
+        }        
         #endregion
 
         #region 出牌

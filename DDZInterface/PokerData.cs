@@ -12,6 +12,14 @@ namespace DDZInterface
     {
         private List<Poker> _BossPoker;
         private Dictionary<AreaPos, List<Poker>> _PokerInfo;
+
+        #region 数据清空
+        public void ResetData()
+        {
+            _PokerInfo = null;
+            _BossPoker = null;
+        }
+        #endregion
         public Dictionary<AreaPos, List<Poker>> GetPokerInfo()
         {
             try

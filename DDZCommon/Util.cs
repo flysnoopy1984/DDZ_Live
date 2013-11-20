@@ -10,6 +10,7 @@ namespace DDZCommon
 {
     public class Util
     {
+        public const int PaintNewFont_Size = 48;
         /// <summary>
         /// Designed by eaglet
         /// </summary>
@@ -62,6 +63,7 @@ namespace DDZCommon
         {
             PaintNewFont(g, text, Color.Gray,0,30);
         }
+
         public static void PaintNewFont(Graphics g,string text,Color c,int x,int y)
         {
             try
@@ -71,7 +73,7 @@ namespace DDZCommon
                 //设置文本输出质量
                 g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
                 g.SmoothingMode = SmoothingMode.AntiAlias;
-                Font newFont = new Font("Times New Roman", 48);
+                Font newFont = new Font("Times New Roman", PaintNewFont_Size);
                 Matrix matrix = new Matrix();
                 //投射
                 matrix.Shear(-1.5f, 0.0f);

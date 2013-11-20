@@ -31,7 +31,7 @@
             this.p_PokerInfo = new System.Windows.Forms.Panel();
             this.ddZ_TimeCount = new DDZProj.PainterControl.DDZ_TimeCount();
             this.ddZ_RemainPokerPortrait1 = new DDZProj.PainterControl.DDZ_RemainPokerPortrait();
-            this.ddZ_CallScorePortrait1 = new DDZProj.PainterControl.DDZ_CallScorePortrait();
+            this.ddZ_CallScorePortrait = new DDZProj.PainterControl.DDZ_CallScorePortrait();
             this.SuspendLayout();
             // 
             // p_PokerInfo
@@ -57,14 +57,14 @@
             this.ddZ_RemainPokerPortrait1.Size = new System.Drawing.Size(109, 46);
             this.ddZ_RemainPokerPortrait1.TabIndex = 2;
             // 
-            // ddZ_CallScorePortrait1
+            // ddZ_CallScorePortrait
             // 
-            this.ddZ_CallScorePortrait1.BackColor = System.Drawing.Color.Black;
-            this.ddZ_CallScorePortrait1.BossCall = 0;
-            this.ddZ_CallScorePortrait1.Location = new System.Drawing.Point(9, 4);
-            this.ddZ_CallScorePortrait1.Name = "ddZ_CallScorePortrait1";
-            this.ddZ_CallScorePortrait1.Size = new System.Drawing.Size(108, 37);
-            this.ddZ_CallScorePortrait1.TabIndex = 1;
+            this.ddZ_CallScorePortrait.BackColor = System.Drawing.Color.Black;
+            this.ddZ_CallScorePortrait.BossCall = 0;
+            this.ddZ_CallScorePortrait.Location = new System.Drawing.Point(9, 4);
+            this.ddZ_CallScorePortrait.Name = "ddZ_CallScorePortrait";
+            this.ddZ_CallScorePortrait.Size = new System.Drawing.Size(108, 37);
+            this.ddZ_CallScorePortrait.TabIndex = 1;
             // 
             // AreaCtrl
             // 
@@ -73,7 +73,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.ddZ_TimeCount);
             this.Controls.Add(this.ddZ_RemainPokerPortrait1);
-            this.Controls.Add(this.ddZ_CallScorePortrait1);
+            this.Controls.Add(this.ddZ_CallScorePortrait);
             this.Controls.Add(this.p_PokerInfo);
             this.Name = "AreaCtrl";
             this.Size = new System.Drawing.Size(411, 378);
@@ -85,7 +85,7 @@
         #endregion
 
         private System.Windows.Forms.Panel p_PokerInfo;
-        private PainterControl.DDZ_CallScorePortrait ddZ_CallScorePortrait1;
+        private PainterControl.DDZ_CallScorePortrait ddZ_CallScorePortrait;
         private PainterControl.DDZ_RemainPokerPortrait ddZ_RemainPokerPortrait1;
         private PainterControl.DDZ_TimeCount ddZ_TimeCount;
 

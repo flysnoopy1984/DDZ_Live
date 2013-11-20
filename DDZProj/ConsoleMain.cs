@@ -11,7 +11,7 @@ using DDZProj.Core;
 
 namespace DDZProj
 {
-    public partial class ConsoleMain : Form
+    public partial class bn_3n : Form
     {
         private Main _mainForm;
         private List<Poker> postPokerList
@@ -20,12 +20,12 @@ namespace DDZProj
             set;
         }
         
-        public ConsoleMain()
+        public bn_3n()
         {
             InitializeComponent();
         }
 
-        public ConsoleMain(Main mainForm)
+        public bn_3n(Main mainForm)
         {
             _mainForm = mainForm;
 
@@ -42,7 +42,7 @@ namespace DDZProj
 
         private void bn_Reset_Click(object sender, EventArgs e)
         {
-
+            _mainForm.CurrentGame.ResetGame();
         }
 
         private void bn_CallBoss_Click(object sender, EventArgs e)
@@ -223,7 +223,7 @@ namespace DDZProj
 
         private void bn_Pass_Click(object sender, EventArgs e)
         {
-            _mainForm.CurrentGame.GetCurrentArea().Pass();
+            _mainForm.CurrentGame.PassCallBoss();
         }
 
         private void bn_Boom_Click(object sender, EventArgs e)

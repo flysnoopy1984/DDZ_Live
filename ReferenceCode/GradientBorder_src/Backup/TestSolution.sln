@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{EC1ED24D-BA41-4CE6-9E26-EF9506320C3D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animations", "Animations\Animations.csproj", "{5222558B-C90B-4A8D-9081-9079D2E826D0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gradients", "Gradients\Gradients.csproj", "{5467D480-33D8-42AF-969D-17EF309C4283}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EC1ED24D-BA41-4CE6-9E26-EF9506320C3D}.Debug.ActiveCfg = Debug|.NET
+		{EC1ED24D-BA41-4CE6-9E26-EF9506320C3D}.Debug.Build.0 = Debug|.NET
+		{EC1ED24D-BA41-4CE6-9E26-EF9506320C3D}.Release.ActiveCfg = Release|.NET
+		{EC1ED24D-BA41-4CE6-9E26-EF9506320C3D}.Release.Build.0 = Release|.NET
+		{5222558B-C90B-4A8D-9081-9079D2E826D0}.Debug.ActiveCfg = Debug|.NET
+		{5222558B-C90B-4A8D-9081-9079D2E826D0}.Debug.Build.0 = Debug|.NET
+		{5222558B-C90B-4A8D-9081-9079D2E826D0}.Release.ActiveCfg = Release|.NET
+		{5222558B-C90B-4A8D-9081-9079D2E826D0}.Release.Build.0 = Release|.NET
+		{5467D480-33D8-42AF-969D-17EF309C4283}.Debug.ActiveCfg = Debug|.NET
+		{5467D480-33D8-42AF-969D-17EF309C4283}.Debug.Build.0 = Debug|.NET
+		{5467D480-33D8-42AF-969D-17EF309C4283}.Release.ActiveCfg = Release|.NET
+		{5467D480-33D8-42AF-969D-17EF309C4283}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

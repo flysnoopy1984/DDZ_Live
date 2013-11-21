@@ -13,20 +13,23 @@ namespace DDZProj.Core
 {
     public class DDZGame
     {
-        private Thread th_Dealt, th_CallBoss,th_Listen,th_Game;  //发牌线程     
+        private Thread th_Dealt, th_CallBoss,th_PostPokerListen,th_Game;  //发牌线程     
         private Dictionary<int,DDZPokerImage> _PiList;
         private SoundPlayer _SoundGive;//出牌声音
         private Main _MainForm;
         private AreaCtrl _AreaT, _AreaL, _AreaR,_CurrentArea,_BossArea;
         private AreaPoker _AreaPoker;
         private AreaBossPoker _AreaBossPoker;
+        private AreaScore _AreaScore;
         private Stack<AreaCtrl> _CallStock;
         private int _MaxCallBossScore;
 
         private Queue<AreaCtrl> _PostQueue;
+        private Stack<List<Poker>> _PostPokerStack;
         private GameState _GameState = GameState.End;
         
         private AutoResetEvent _mResetEventCallBoss;
+        private AutoResetEvent _mResetEventPoking;
         
     
 
@@ -129,9 +132,8 @@ namespace DDZProj.Core
             _AreaL = new AreaCtrl(AreaPos.left, _MainForm);
             _AreaR = new AreaCtrl(AreaPos.right, _MainForm);
             _AreaPoker = new AreaPoker(_MainForm);
-            _AreaBossPoker = new AreaBossPoker(_MainForm, _AreaT);
-
-          
+            _AreaBossPoker = new AreaBossPoker(_MainForm);
+            _AreaScore = new AreaScore(_MainForm);
         }
         #endregion
 
@@ -184,19 +186,19 @@ namespace DDZProj.Core
                 Thread.Sleep(100);
             }
             _AreaBossPoker.SetBossPoker(_PokerData.Get3DiZhuPoker());
+
+            _GameState = GameState.DealtComplete;
         }
 
       
         #endregion
 
         #region 叫地主
-        public void CallBoss()
-        {
-            
+        public void StartCallBoss()
+        {            
             //设置型号量
             _mResetEventCallBoss = new AutoResetEvent(false);
-            //设置游戏状态
-            _GameState = GameState.CallingBoss;
+         
             //设置当前最大叫分
             _MaxCallBossScore = 0;
 
@@ -210,11 +212,10 @@ namespace DDZProj.Core
             _CallStock.Push(_AreaL);
             _BossArea = null;
 
-           th_CallBoss = new Thread(new ThreadStart(DoCallBoss));         
-           th_CallBoss.Start();
+            th_CallBoss = new Thread(new ThreadStart(DoCallBoss));         
+            th_CallBoss.Start();
 
-           th_Listen = new Thread(new ThreadStart(ListenCallBoss));
-           th_Listen.Start();
+         
         }
 
         void DoCallBoss()
@@ -238,8 +239,7 @@ namespace DDZProj.Core
                  
                     _CallStock.Clear();
                     break;
-                }
-              
+                }      
                              
             }
             //没有人叫分           
@@ -250,12 +250,18 @@ namespace DDZProj.Core
             //没有人叫3分,但有人叫分
             if (_BossArea == null)
             {
-                CaculateBoss();
+                CaculateWhoIsBoss();
             }
 
             //设置并显示Boss头像和叫分
-            if(_BossArea!=null)            
+            if (_BossArea != null)
+            {
                 _BossArea.SetBossAndChangePortrait(_MaxCallBossScore);
+               // _BossArea.MoveBossPokerToArea(_PokerData.Get3DiZhuPoker());
+            }
+
+            //设置游戏状态
+            _GameState = GameState.CallBossComplete;
         }
 
         public void PassCallBoss()
@@ -275,7 +281,7 @@ namespace DDZProj.Core
         }
 
 
-        private void CaculateBoss()
+        private void CaculateWhoIsBoss()
         {
             if (_MaxCallBossScore == _AreaL.CallScore)
             {
@@ -311,9 +317,12 @@ namespace DDZProj.Core
 
             _GameState = GameState.Poking; // 游戏状态置为开始;
 
+            _mResetEventPoking = new AutoResetEvent(false); //初始化信号量
             /* 初始化玩家队列 */
             _PostQueue = new Queue<AreaCtrl>();
+            //地主先出牌，先进入队列
             _PostQueue.Enqueue(_BossArea);
+
             switch (_BossArea.GetAreaPos())
             {
                 case AreaPos.top:
@@ -329,29 +338,37 @@ namespace DDZProj.Core
                     _PostQueue.Enqueue(_AreaT);
                     break;
             }
+
             th_Game = new Thread(new ThreadStart(Gaming));
             th_Game.Start();
+
+            th_PostPokerListen = new Thread(new ThreadStart(ListenPostPoker));
+            th_PostPokerListen.Start();
         }
 
         void Gaming()
         {
-            while (_GameState>0)
-            {                
+            while (_GameState == GameState.Poking)
+            {
                 _CurrentArea = _PostQueue.Dequeue();
                 _PostQueue.Enqueue(_CurrentArea);
-                 _CurrentArea.Counting();
+                _CurrentArea.Counting();
 
-                 //while (_CurrentArea.IsCurrent)
-                 //{
-                 //    if (_GameState < 0)
-                 //    {
-                 //        _CurrentArea.IsCurrent = false;
-                 //        break;
-                 //    }
-                 //    Thread.Sleep(20);
-                 //}  
-                
+                _mResetEventPoking.WaitOne();
+
+                _CurrentArea.StopCounting();
             }
+        }
+
+        public void PassPoking()
+        {
+            if (_CurrentArea != null)
+            {
+                _CurrentArea.StopCounting();
+                this._AreaPoker.PostInfo(_CurrentArea.GetAreaPos(), "Pass");
+                _mResetEventPoking.Set();
+            }
+
         }
 
         public void EndGame()
@@ -387,10 +404,10 @@ namespace DDZProj.Core
 
         public void TestPostPoker(List<Poker> pList)
         {
-            _CurrentArea.PostPoker(pList);
+            if (_PostPokerStack == null) return;
+            if (pList.Count == 0) return;
 
-            AreaCtrl.OrderPoker(_CurrentArea.RemainPokerList);
-            _AreaPoker.PostPoker(_CurrentArea.GetAreaPos(), _CurrentArea.PostPokerList);
+            _PostPokerStack.Push(pList);          
         }
 
         public void TestShowImageEffert()
@@ -399,19 +416,121 @@ namespace DDZProj.Core
         }
         #endregion
 
-        #region 接口数据监听
-        void ListenCallBoss()
-        {
-
-        }
+        #region 接口数据监听       
 
         void ListenPostPoker()
         {
-            
+            _PostPokerStack = new Stack<List<Poker>>();
+            List<Poker> pList = null;
+            while (_GameState == GameState.Poking)
+            {
+                if (_PostPokerStack.Count > 0)
+                {
+                    pList = _PostPokerStack.Pop();
+                    if (pList != null)
+                    {
+                      
+                        _CurrentArea.PostPoker(pList);
+
+                        AreaCtrl.OrderPoker(_CurrentArea.RemainPokerList);
+
+                        _AreaPoker.PostPoker(_CurrentArea.GetAreaPos(), _CurrentArea.PostPokerList);
+                    }
+                }
+            }
         }
         #endregion
 
-      
+        #region 接口按钮
+        public void Button_Begin_Action()
+        {
+            if (_GameState == GameState.End)
+            {
+                StartDealt();
+            }
+            else if (_GameState == GameState.DealtComplete)
+            {
+                StartCallBoss();
+            }
+            else if (_GameState == GameState.CallBossComplete)
+            {
+                if (this._BossArea != null)
+                {
+                    StartGame();
+                }
+            }            
+        }
+
+        public void Button_Pass_Action()
+        {
+            if (_GameState == GameState.DealtComplete)
+            {
+                PassCallBoss();
+            }
+            else if (_GameState == GameState.Poking)
+            {
+                PassPoking();
+            }
+        }
+
+        public void Button_NumberAction()
+        {
+
+        }
+
+        public void Button_NumberOne()
+        {
+
+        }
+
+        public void Button_NumberTwo()
+        {
+            
+        }
+
+        public void Button_NumberThree()
+        {
+
+        }
+
+        public void Button_ScoreAction(int s)
+        {
+            if (_GameState == GameState.DealtComplete)
+            {
+                if (_CurrentArea != null)
+                {
+                    if (s > _MaxCallBossScore)
+                        _MaxCallBossScore = s;
+                    else
+                        //叫分小于等于上个玩家，非法！
+                        return;
+
+                    _CurrentArea.CallScore = s;
+
+                    _AreaPoker.PostScore(_CurrentArea.GetAreaPos(), s);
+                    _mResetEventCallBoss.Set();
+                }
+            }
+        }
+        public void Button_ScoreOne()
+        {
+            Button_ScoreAction(1);
+        }
+
+        public void Button_ScoreTwo()
+        {
+            Button_ScoreAction(2);
+        }
+
+        public void Button_ScoreThree()
+        {
+            Button_ScoreAction(3);
+        }
+
+
+        #endregion
+
+
 
 
     }

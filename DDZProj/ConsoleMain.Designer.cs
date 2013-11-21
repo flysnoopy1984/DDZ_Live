@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            AnimatorNS.Animation animation4 = new AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bn_3n));
             this.bn_Reset = new System.Windows.Forms.Button();
             this.Bn_Begin = new System.Windows.Forms.Button();
             this.bn_APost = new System.Windows.Forms.Button();
             this.bn_PostB = new System.Windows.Forms.Button();
             this.bn_PostC = new System.Windows.Forms.Button();
             this.bn_End = new System.Windows.Forms.Button();
-            this.bn_CallBoss = new System.Windows.Forms.Button();
             this.bn_One = new System.Windows.Forms.Button();
             this.bn_Two = new System.Windows.Forms.Button();
             this.bn_Three = new System.Windows.Forms.Button();
             this.tb_pokerInfo = new System.Windows.Forms.TextBox();
             this.p_pokerbutton = new System.Windows.Forms.Panel();
             this.bn_ChangePoker = new System.Windows.Forms.Button();
-            this.bn_Start = new System.Windows.Forms.Button();
             this.bn_PostPoker = new System.Windows.Forms.Button();
             this.bn_CurrentArea = new System.Windows.Forms.Button();
             this.bn_Pass = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@
             this.bn_1n = new System.Windows.Forms.Button();
             this.bn_2n = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.animator1 = new AnimatorNS.Animator(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +71,12 @@
             // 
             // Bn_Begin
             // 
+            this.animator1.SetDecoration(this.Bn_Begin, AnimatorNS.DecorationType.None);
             this.Bn_Begin.Location = new System.Drawing.Point(301, 56);
             this.Bn_Begin.Name = "Bn_Begin";
             this.Bn_Begin.Size = new System.Drawing.Size(75, 23);
             this.Bn_Begin.TabIndex = 1;
-            this.Bn_Begin.Text = "开始发牌";
+            this.Bn_Begin.Text = "开始";
             this.Bn_Begin.UseVisualStyleBackColor = true;
             this.Bn_Begin.Click += new System.EventHandler(this.Bn_Begin_Click);
             // 
@@ -116,16 +119,6 @@
             this.bn_End.Text = "结束";
             this.bn_End.UseVisualStyleBackColor = true;
             this.bn_End.Click += new System.EventHandler(this.bn_End_Click);
-            // 
-            // bn_CallBoss
-            // 
-            this.bn_CallBoss.Location = new System.Drawing.Point(394, 12);
-            this.bn_CallBoss.Name = "bn_CallBoss";
-            this.bn_CallBoss.Size = new System.Drawing.Size(75, 23);
-            this.bn_CallBoss.TabIndex = 6;
-            this.bn_CallBoss.Text = "Call Boss";
-            this.bn_CallBoss.UseVisualStyleBackColor = true;
-            this.bn_CallBoss.Click += new System.EventHandler(this.bn_CallBoss_Click);
             // 
             // bn_One
             // 
@@ -182,19 +175,10 @@
             this.bn_ChangePoker.UseVisualStyleBackColor = true;
             this.bn_ChangePoker.Click += new System.EventHandler(this.bn_ChangePoker_Click);
             // 
-            // bn_Start
-            // 
-            this.bn_Start.Location = new System.Drawing.Point(394, 56);
-            this.bn_Start.Name = "bn_Start";
-            this.bn_Start.Size = new System.Drawing.Size(75, 23);
-            this.bn_Start.TabIndex = 13;
-            this.bn_Start.Text = "Start";
-            this.bn_Start.UseVisualStyleBackColor = true;
-            this.bn_Start.Click += new System.EventHandler(this.bn_Start_Click);
-            // 
             // bn_PostPoker
             // 
-            this.bn_PostPoker.Location = new System.Drawing.Point(561, 204);
+            this.animator1.SetDecoration(this.bn_PostPoker, AnimatorNS.DecorationType.None);
+            this.bn_PostPoker.Location = new System.Drawing.Point(108, 169);
             this.bn_PostPoker.Name = "bn_PostPoker";
             this.bn_PostPoker.Size = new System.Drawing.Size(75, 23);
             this.bn_PostPoker.TabIndex = 14;
@@ -204,7 +188,8 @@
             // 
             // bn_CurrentArea
             // 
-            this.bn_CurrentArea.Location = new System.Drawing.Point(394, 150);
+            this.animator1.SetDecoration(this.bn_CurrentArea, AnimatorNS.DecorationType.None);
+            this.bn_CurrentArea.Location = new System.Drawing.Point(13, 169);
             this.bn_CurrentArea.Name = "bn_CurrentArea";
             this.bn_CurrentArea.Size = new System.Drawing.Size(75, 23);
             this.bn_CurrentArea.TabIndex = 15;
@@ -214,7 +199,8 @@
             // 
             // bn_Pass
             // 
-            this.bn_Pass.Location = new System.Drawing.Point(394, 105);
+            this.animator1.SetDecoration(this.bn_Pass, AnimatorNS.DecorationType.None);
+            this.bn_Pass.Location = new System.Drawing.Point(394, 57);
             this.bn_Pass.Name = "bn_Pass";
             this.bn_Pass.Size = new System.Drawing.Size(75, 23);
             this.bn_Pass.TabIndex = 16;
@@ -282,6 +268,7 @@
             this.bn_1n.TabIndex = 23;
             this.bn_1n.Text = "1号";
             this.bn_1n.UseVisualStyleBackColor = true;
+            this.bn_1n.Click += new System.EventHandler(this.bn_1n_Click);
             // 
             // bn_2n
             // 
@@ -291,6 +278,7 @@
             this.bn_2n.TabIndex = 24;
             this.bn_2n.Text = "2号";
             this.bn_2n.UseVisualStyleBackColor = true;
+            this.bn_2n.Click += new System.EventHandler(this.bn_2n_Click);
             // 
             // button3
             // 
@@ -300,6 +288,28 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "3号";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // animator1
+            // 
+            this.animator1.AnimationType = AnimatorNS.AnimationType.VertSlide;
+            this.animator1.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.animator1.DefaultAnimation = animation4;
             // 
             // bn_3n
             // 
@@ -318,20 +328,19 @@
             this.Controls.Add(this.bn_Pass);
             this.Controls.Add(this.bn_CurrentArea);
             this.Controls.Add(this.bn_PostPoker);
-            this.Controls.Add(this.bn_Start);
             this.Controls.Add(this.bn_ChangePoker);
             this.Controls.Add(this.p_pokerbutton);
             this.Controls.Add(this.tb_pokerInfo);
             this.Controls.Add(this.bn_Three);
             this.Controls.Add(this.bn_Two);
             this.Controls.Add(this.bn_One);
-            this.Controls.Add(this.bn_CallBoss);
             this.Controls.Add(this.bn_End);
             this.Controls.Add(this.bn_PostC);
             this.Controls.Add(this.bn_PostB);
             this.Controls.Add(this.bn_APost);
             this.Controls.Add(this.Bn_Begin);
             this.Controls.Add(this.bn_Reset);
+            this.animator1.SetDecoration(this, AnimatorNS.DecorationType.None);
             this.Name = "bn_3n";
             this.Text = "Console";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
@@ -348,14 +357,12 @@
         private System.Windows.Forms.Button bn_PostB;
         private System.Windows.Forms.Button bn_PostC;
         private System.Windows.Forms.Button bn_End;
-        private System.Windows.Forms.Button bn_CallBoss;
         private System.Windows.Forms.Button bn_One;
         private System.Windows.Forms.Button bn_Two;
         private System.Windows.Forms.Button bn_Three;
         private System.Windows.Forms.TextBox tb_pokerInfo;
         private System.Windows.Forms.Panel p_pokerbutton;
         private System.Windows.Forms.Button bn_ChangePoker;
-        private System.Windows.Forms.Button bn_Start;
         private System.Windows.Forms.Button bn_PostPoker;
         private System.Windows.Forms.Button bn_CurrentArea;
         private System.Windows.Forms.Button bn_Pass;
@@ -368,5 +375,6 @@
         private System.Windows.Forms.Button bn_1n;
         private System.Windows.Forms.Button bn_2n;
         private System.Windows.Forms.Button button3;
+        private AnimatorNS.Animator animator1;
     }
 }

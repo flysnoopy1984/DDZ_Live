@@ -38,6 +38,7 @@ namespace DDZProj
         public List<DDZPokerImage> RemainPokerList { get; set; }
         public List<DDZPokerImage> PostPokerList { get; set; }
         public int PlayerScore { get; set; }
+        public int PlayerName { get; set; }
         public Image _ImgPortrait;
 
         public int CallScore
@@ -200,11 +201,11 @@ namespace DDZProj
         #region 倒计时
         public void Counting()
         {
-            IsCurrent = true;
+           
             _CountDownNum = SysConfiguration.CallScoreTime;
             PostPokerList = null;
-           
-            this.Refresh();
+
+            ChooseSeat();
             _TimerCountDown.Change(0, 1000);         
         }     
 
@@ -217,7 +218,7 @@ namespace DDZProj
 
             if (_CountDownNum < -1 || IsCurrent == false)
             {
-                _MainForm.CurrentGame.PassCallBoss();
+                _MainForm.CurrentGame.Button_Pass_Action();
               
                 StopCounting();
 
@@ -228,9 +229,9 @@ namespace DDZProj
         {
             _TimerCountDown.Change(-1, 0);
             _CountDownNum = -1;
-            IsCurrent = false;
+         
             ddZ_TimeCount.Reset();
-            this.Refresh();
+            UnChooseSeat();
         }
 
      
@@ -252,7 +253,12 @@ namespace DDZProj
         {
             ddZ_CallScorePortrait.SetPortrait(AreaPortrait.Farmer);
             ddZ_CallScorePortrait.SetScore(0);
-        }        
+        }
+
+        public void MoveBossPokerToArea()
+        {
+
+        }
         #endregion
 
         #region 出牌
@@ -312,6 +318,22 @@ namespace DDZProj
 
             }
         }
+        #endregion
+
+        #region 座位控制
+
+        public void ChooseSeat()
+        {
+            this.IsCurrent = true;
+            this.Refresh();
+        }
+
+        public void UnChooseSeat()
+        {
+            this.IsCurrent = false;
+            this.Refresh();
+        }
+
         #endregion
 
         #region 呈现Paint

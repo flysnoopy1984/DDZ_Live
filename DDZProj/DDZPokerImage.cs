@@ -50,6 +50,11 @@ namespace DDZProj
             
             ShowPoker();        
         }
+
+        public void MoveTo(int x, int y)
+        {
+            
+        }
        
         
     }

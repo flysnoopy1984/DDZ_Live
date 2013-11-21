@@ -1,0 +1,14 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\bin\Debug\Gradients.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\bin\Debug\Gradients.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\bin\Debug\Gradients.xml
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\bin\Debug\Animations.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\bin\Debug\Animations.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\Gradients.GradientBorder.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\Gradients.GradientBorderAnimationExtender.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\Gradients.GradientBorderButton.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\Gradients.GradientBorderLabel.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\ResGen.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\ResGen.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\Gradients.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Gradients\obj\Debug\Gradients.pdb

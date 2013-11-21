@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DDZEntity;
 using DDZProj.Core;
+using AnimatorNS;
 
 namespace DDZProj
 {
@@ -36,8 +37,7 @@ namespace DDZProj
 
         private void Bn_Begin_Click(object sender, EventArgs e)
         {
-            _mainForm.CurrentGame.StartDealt();
-
+            _mainForm.CurrentGame.Button_Begin_Action();
         }
 
         private void bn_Reset_Click(object sender, EventArgs e)
@@ -47,22 +47,22 @@ namespace DDZProj
 
         private void bn_CallBoss_Click(object sender, EventArgs e)
         {
-            _mainForm.CurrentGame.CallBoss();
+            _mainForm.CurrentGame.StartCallBoss();
         }
 
         private void bn_One_Click(object sender, EventArgs e)
         {
-            _mainForm.CurrentGame.TestSetScore(1);
+            _mainForm.CurrentGame.Button_ScoreAction(1);
         }
 
         private void bn_Two_Click(object sender, EventArgs e)
         {
-            _mainForm.CurrentGame.TestSetScore(2);
+            _mainForm.CurrentGame.Button_ScoreAction(2);
         }
 
         private void bn_Three_Click(object sender, EventArgs e)
         {
-            _mainForm.CurrentGame.TestSetScore(3);
+            _mainForm.CurrentGame.Button_ScoreAction(3);
         }
 
         private void bn_APost_Click(object sender, EventArgs e)
@@ -195,23 +195,20 @@ namespace DDZProj
         private void bn_Start_Click(object sender, EventArgs e)
         {
             _mainForm.CurrentGame.StartGame();
-
         }
 
         private void bn_PostPoker_Click(object sender, EventArgs e)
         {
-           
-            _mainForm.CurrentGame.TestPostPoker(postPokerList);
+            List<Poker> newpost = new List<Poker>();
+            newpost.AddRange(postPokerList);
+
+            _mainForm.CurrentGame.TestPostPoker(newpost);
             postPokerList.Clear();
         }
 
         private void bn_CurrentArea_Click(object sender, EventArgs e)
         {
-            /*
-            AreaCtrl ac = _mainForm.CurrentGame.GetCurrentArea();
-            if(ac!=null)
-                FillPokerInfo(ac);
-             */
+      
             AreaCtrl ac = _mainForm.CurrentGame.TestCurrentArea();
             FillPokerInfo(ac);
         }
@@ -223,7 +220,7 @@ namespace DDZProj
 
         private void bn_Pass_Click(object sender, EventArgs e)
         {
-            _mainForm.CurrentGame.PassCallBoss();
+            _mainForm.CurrentGame.Button_Pass_Action();
         }
 
         private void bn_Boom_Click(object sender, EventArgs e)
@@ -238,8 +235,27 @@ namespace DDZProj
 
         private void bn_Test_Click(object sender, EventArgs e)
         {
-            Image img = ImageHandler.GetBossPortrait();
-            pb_Image.Image = img;
+            Image MyBitmap = ImageHandler.GetBossPortrait();
+            pb_Image.Image = MyBitmap;
+            pb_Image.Hide();
+      
+            animator1.DefaultAnimation = Animation.Mosaic;
+            animator1.Show(pb_Image);
+
+        }
+
+        private void bn_1n_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bn_2n_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
 
         }
 

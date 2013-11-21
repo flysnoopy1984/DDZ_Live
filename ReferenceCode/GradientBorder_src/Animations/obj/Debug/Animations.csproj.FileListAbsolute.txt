@@ -1,0 +1,5 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Animations\bin\Debug\Animations.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Animations\bin\Debug\Animations.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Animations\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Animations\obj\Debug\Animations.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\GradientBorder_src\Animations\obj\Debug\Animations.pdb

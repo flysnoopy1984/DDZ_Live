@@ -17,7 +17,8 @@ namespace DDZEntity
 
     public enum GameState
     {
-        CallingBoss,
+        DealtComplete,
+        CallBossComplete,
         Poking,
         End
     }

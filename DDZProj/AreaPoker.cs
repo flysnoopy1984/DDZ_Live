@@ -130,20 +130,20 @@ namespace DDZProj
 
         private void p_Top_Paint(object sender, PaintEventArgs e)
         {
-            if (_MainForm.CurrentGame.GetGameState() == GameState.CallingBoss)
+            if (_MainForm.CurrentGame.GetGameState() == GameState.CallBossComplete)
                 Util.PaintNewFont(e.Graphics, TopInfo, Color.Gray,SysConfiguration.LeftSpec,0);
         }
 
         private void p_right_Paint(object sender, PaintEventArgs e)
         {
             int len = RightInfo.Length * Util.PaintNewFont_Size;
-            if (_MainForm.CurrentGame.GetGameState() == GameState.CallingBoss)
+            if (_MainForm.CurrentGame.GetGameState() == GameState.CallBossComplete)
                 Util.PaintNewFont(e.Graphics, RightInfo, Color.Gray, this.p_right.Width - len, 0);
         }
 
         private void p_left_Paint(object sender, PaintEventArgs e)
         {
-            if (_MainForm.CurrentGame.GetGameState() == GameState.CallingBoss)
+            if (_MainForm.CurrentGame.GetGameState() == GameState.CallBossComplete)
                 Util.PaintNewFont(e.Graphics, LeftInfo, Color.Gray, SysConfiguration.LeftSpec, 0);
         }
     }

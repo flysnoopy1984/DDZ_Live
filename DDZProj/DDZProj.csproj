@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Animator">
+      <HintPath>..\ReferenceDLL\Animator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -94,6 +97,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="PainterControl\DDZ_3BossPoker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PainterControl\DDZ_3BossPoker.Designer.cs">
+      <DependentUpon>DDZ_3BossPoker.cs</DependentUpon>
+    </Compile>
     <Compile Include="PainterControl\DDZ_CallScorePortrait.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +120,12 @@
     </Compile>
     <Compile Include="PainterControl\DDZ_TimeCount.Designer.cs">
       <DependentUpon>DDZ_TimeCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PainterControl\LabelScoreInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PainterControl\LabelScoreInfo.Designer.cs">
+      <DependentUpon>LabelScoreInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainterControl\DDZ_3BossPoker.resx">
+      <DependentUpon>DDZ_3BossPoker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PainterControl\DDZ_CallScorePortrait.resx">
       <DependentUpon>DDZ_CallScorePortrait.cs</DependentUpon>

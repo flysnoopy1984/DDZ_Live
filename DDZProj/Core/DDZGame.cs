@@ -220,7 +220,7 @@ namespace DDZProj.Core
 
         void DoCallBoss()
         {            
-            while (true)
+            while (this._GameState == GameState.DealtComplete)
             {             
                 if (_CallStock.Count == 0) 
                     break;        
@@ -268,18 +268,20 @@ namespace DDZProj.Core
         {
             if (_CurrentArea!=null)
             {
-                _CurrentArea.StopCounting();
+               // _CurrentArea.StopCounting();
                 this._AreaPoker.PostInfo(_CurrentArea.GetAreaPos(), "Pass");
-                _mResetEventCallBoss.Set();
+                if (!_mResetEventCallBoss.Set())
+                {
+                    MessageBox.Show("Error");
+                }
             }
 
         }
 
         public void EndCallBoss()
         {
-            _mResetEventCallBoss.Set();
+            //_mResetEventCallBoss.Set();
         }
-
 
         private void CaculateWhoIsBoss()
         {
@@ -351,7 +353,9 @@ namespace DDZProj.Core
             while (_GameState == GameState.Poking)
             {
                 _CurrentArea = _PostQueue.Dequeue();
+
                 _PostQueue.Enqueue(_CurrentArea);
+
                 _CurrentArea.Counting();
 
                 _mResetEventPoking.WaitOne();
@@ -364,9 +368,12 @@ namespace DDZProj.Core
         {
             if (_CurrentArea != null)
             {
-                _CurrentArea.StopCounting();
+              //  _CurrentArea.StopCounting();
                 this._AreaPoker.PostInfo(_CurrentArea.GetAreaPos(), "Pass");
-                _mResetEventPoking.Set();
+                if (!_mResetEventPoking.Set())
+                {
+                    MessageBox.Show("Error");
+                } 
             }
 
         }
@@ -434,7 +441,12 @@ namespace DDZProj.Core
 
                         AreaCtrl.OrderPoker(_CurrentArea.RemainPokerList);
 
-                        _AreaPoker.PostPoker(_CurrentArea.GetAreaPos(), _CurrentArea.PostPokerList);
+                        _AreaPoker.PostPoker(_CurrentArea.GetAreaPos(), _CurrentArea.PostPokerList);                       
+
+                        if (!_mResetEventPoking.Set())
+                        {
+                            MessageBox.Show("Error");
+                        } 
                     }
                 }
             }

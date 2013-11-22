@@ -118,6 +118,9 @@ namespace DDZProj
             _AreaWidth = w;
             _AreaHeight = h;
             this.SetBounds(x, y, w, h);
+            //Boss3Poker 区域
+
+            ddZ_3BossPoker.SetBounds(w - this.ddZ_TimeCount.Width, SysConfiguration.TopSpec, this.ddZ_TimeCount.Width, this.ddZ_TimeCount.Height);
             //倒计时区域
             ddZ_TimeCount.SetBounds(w - this.ddZ_TimeCount.Width, SysConfiguration.TopSpec, this.ddZ_TimeCount.Width, this.ddZ_TimeCount.Height);
             
@@ -200,12 +203,12 @@ namespace DDZProj
 
         #region 倒计时
         public void Counting()
-        {
-           
+        {           
             _CountDownNum = SysConfiguration.CallScoreTime;
             PostPokerList = null;
 
             ChooseSeat();
+
             _TimerCountDown.Change(0, 1000);         
         }     
 
@@ -218,9 +221,9 @@ namespace DDZProj
 
             if (_CountDownNum < -1 || IsCurrent == false)
             {
-                _MainForm.CurrentGame.Button_Pass_Action();
-              
                 StopCounting();
+
+                _MainForm.CurrentGame.Button_Pass_Action();               
 
             }           
         }
@@ -278,14 +281,16 @@ namespace DDZProj
                 }
             }
             this.p_PokerInfo.Controls.Clear();
+
             ShowRemainPoker();
-            this.IsCurrent = false;
+           
         }
 
         public void Pass()
         {
-            this.IsCurrent = false;
+        
             ddZ_TimeCount.Reset();
+            UnChooseSeat();
         }
         #endregion
 

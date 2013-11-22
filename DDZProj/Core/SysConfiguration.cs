@@ -83,7 +83,7 @@ namespace DDZProj.Core
 
             
             //叫地主倒计时时间
-            CallScoreTime = 15;
+            CallScoreTime = 150;
 
         }
               

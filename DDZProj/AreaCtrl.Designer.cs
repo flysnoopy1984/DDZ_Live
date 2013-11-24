@@ -46,7 +46,7 @@
             // 
             // ddZ_TimeCount
             // 
-            this.ddZ_TimeCount.BackColor = System.Drawing.Color.Gainsboro;
+            this.ddZ_TimeCount.BackColor = System.Drawing.Color.Transparent;
             this.ddZ_TimeCount.Location = new System.Drawing.Point(299, 79);
             this.ddZ_TimeCount.Name = "ddZ_TimeCount";
             this.ddZ_TimeCount.Size = new System.Drawing.Size(90, 57);
@@ -54,10 +54,10 @@
             // 
             // ddZ_3BossPoker
             // 
-            this.ddZ_3BossPoker.BackColor = System.Drawing.Color.DimGray;
-            this.ddZ_3BossPoker.Location = new System.Drawing.Point(275, 4);
+            this.ddZ_3BossPoker.BackColor = System.Drawing.Color.Transparent;
+            this.ddZ_3BossPoker.Location = new System.Drawing.Point(261, 4);
             this.ddZ_3BossPoker.Name = "ddZ_3BossPoker";
-            this.ddZ_3BossPoker.Size = new System.Drawing.Size(114, 69);
+            this.ddZ_3BossPoker.Size = new System.Drawing.Size(150, 70);
             this.ddZ_3BossPoker.TabIndex = 4;
             // 
             // ddZ_RemainPokerPortrait1

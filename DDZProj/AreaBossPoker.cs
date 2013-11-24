@@ -15,7 +15,7 @@ namespace DDZProj
     {
         Main _MainForm;
         AreaCtrl _TopArea;
-        List<Poker> _BossList;
+        List<DDZPokerImage> _BossImageList;
         public AreaBossPoker(Main f)
         {
             _MainForm = f;
@@ -24,6 +24,11 @@ namespace DDZProj
             InitializeComponent();
 
             Init();
+        }
+
+        public List<DDZPokerImage> GetBossPokerImageList()
+        {
+            return _BossImageList;
         }
 
         #region 初始化
@@ -47,7 +52,8 @@ namespace DDZProj
 
         public void SetBossPoker(List<Poker> bossList)
         {
-            _BossList = bossList;
+            _BossImageList = new List<DDZPokerImage>();
+            this.Controls.Clear();
             for (int i = 0; i < bossList.Count; i++)
             {
                 Poker p = bossList[i];
@@ -55,15 +61,23 @@ namespace DDZProj
                 pi.ShowPoker();
                 pi.SetBounds(i * SysConfiguration.PokerWidth, 0, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
                 pi.BringToFront();
-
+                _BossImageList.Add(pi);
                 this.Controls.Add(pi);
             }
         }
 
         public void MoveToBossArea()
         {
+            int i = 0;
             foreach (DDZPokerImage pi in this.Controls)
             {
+                AreaCtrl area = _MainForm.CurrentGame.GetBossArea();
+                if (area != null)
+                {
+                    pi.SetBounds(i * SysConfiguration.PokerWidth, 0, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight/2);
+                    area.Get3BossPokerControl().Controls.Add(pi);
+                    i++;
+                }
 
             }
         }

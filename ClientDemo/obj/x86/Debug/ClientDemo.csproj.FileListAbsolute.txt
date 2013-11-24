@@ -18,3 +18,4 @@ H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.Prope
 H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.csproj.GenerateResource.Cache
 H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.exe
 H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.pdb
+H:\Projects\OutSource_Project\DDZ_Live\ClientDemo\obj\x86\Debug\ClientDemo.csprojResolveAssemblyReference.cache

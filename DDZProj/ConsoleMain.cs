@@ -12,7 +12,7 @@ using AnimatorNS;
 
 namespace DDZProj
 {
-    public partial class bn_3n : Form
+    public partial class ConsoleMain : Form
     {
         private Main _mainForm;
         private List<Poker> postPokerList
@@ -21,12 +21,12 @@ namespace DDZProj
             set;
         }
         
-        public bn_3n()
+        public ConsoleMain()
         {
             InitializeComponent();
         }
 
-        public bn_3n(Main mainForm)
+        public ConsoleMain(Main mainForm)
         {
             _mainForm = mainForm;
 
@@ -209,7 +209,7 @@ namespace DDZProj
         private void bn_CurrentArea_Click(object sender, EventArgs e)
         {
       
-            AreaCtrl ac = _mainForm.CurrentGame.TestCurrentArea();
+            AreaCtrl ac = _mainForm.CurrentGame.GetCurrentArea();
             FillPokerInfo(ac);
         }
 
@@ -235,8 +235,9 @@ namespace DDZProj
 
         private void bn_Test_Click(object sender, EventArgs e)
         {
-            Image MyBitmap = ImageHandler.GetBossPortrait();
-            pb_Image.Image = MyBitmap;
+
+            Image MyBitmap = DDZCommon.ResManager.GetImageRes("_1");
+            pb_Image.Image = ImageHandler.ImageTransfer(MyBitmap, 20, 20, MyBitmap.Width, MyBitmap.Height);
             pb_Image.Hide();
       
             animator1.DefaultAnimation = Animation.Mosaic;

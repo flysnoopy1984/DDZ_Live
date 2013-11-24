@@ -46,7 +46,6 @@ H:\Projects\OutSource_Project\DDZ_Live\DDZProj\bin\Debug\DDZEntity.pdb
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\bin\Debug\DDZInterface.pdb
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.csprojResolveAssemblyReference.cache
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaCtrl.resources
-H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.ConsoleMain.resources
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.Main.resources
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.Properties.Resources.resources
 H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.csproj.GenerateResource.Cache
@@ -63,3 +62,13 @@ G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.bn_3n.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaBossPoker.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\bin\Debug\Animator.dll
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_3BossPoker.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\bin\Debug\Animator.dll
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\bin\Debug\DDZUnsafeCode.dll
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\bin\Debug\DDZUnsafeCode.pdb
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.AreaBossPoker.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_3BossPoker.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_CallScorePortrait.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_RemainPokerPortrait.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.PainterControl.DDZ_TimeCount.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.ConsoleMain.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.EndForm.resources

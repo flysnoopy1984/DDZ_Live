@@ -9,12 +9,15 @@ using System.Windows.Forms;
 using DDZProj.Core;
 using System.Threading;
 using System.Media;
+using AnimatorNS;
 
 namespace DDZProj
 {
     public partial class Main : Form
     {
-        private bn_3n _ConsoleMain;
+        private ConsoleMain _ConsoleMain;
+        private EndForm _EndForm;
+        
         private ScreenControl _ScreenControl;        
         
         private Thread th_PostCard;   //出牌线程
@@ -25,13 +28,50 @@ namespace DDZProj
             get { return _DDZGame; }
         }
 
+        public Animator GetAnimator()
+        {
+            return this.animator1;
+        }
+
+        public void ShowEndForm()
+        {
+            if (_EndForm == null)
+                _EndForm = new EndForm();
+
+            _EndForm.SetBounds(SysConfiguration.ScreenWidth / 2 - _EndForm.Width / 2,
+                               SysConfiguration.ScreenHeight / 2 - _EndForm.Height/2,
+                               _EndForm.Width, 
+                               _EndForm.Height);
+            _EndForm.Hide();
+            animator1.DefaultAnimation = Animation.Leaf;
+            animator1.Show(_EndForm);
+          
+ 
+        }
+
+        public void ShowEndForm(AreaScore area)
+        {
+
+            area.BringToFront();
+            area.SetBounds(SysConfiguration.ScreenWidth / 2 - area.Width / 2,
+                               SysConfiguration.ScreenHeight / 2 - area.Height / 2,
+                               area.Width,
+                               area.Height);
+            area.Hide();
+            animator1.DefaultAnimation = Animation.HorizSlide;
+            animator1.Show(area);
+
+
+        }
+
         public Main()
         {
             InitializeComponent();
 
             _ScreenControl = new ScreenControl(this);
-            _ConsoleMain = new bn_3n(this);  
-            
+            _ConsoleMain = new ConsoleMain(this);
+            _EndForm = new EndForm();         
+
             //系统参数设置
             SysConfiguration.Init();
 
@@ -65,8 +105,9 @@ namespace DDZProj
             if (msg.Msg == 256 && keyData == (System.Windows.Forms.Keys.Enter))
             {
                 if (_ConsoleMain == null)
-                    _ConsoleMain = new bn_3n();
+                    _ConsoleMain = new ConsoleMain();
                 _ConsoleMain.Show();
+              
                 
                 return true;
             }

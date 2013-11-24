@@ -1,6 +1,6 @@
 ﻿namespace DDZProj
 {
-    partial class bn_3n
+    partial class ConsoleMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             AnimatorNS.Animation animation4 = new AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bn_3n));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsoleMain));
             this.bn_Reset = new System.Windows.Forms.Button();
             this.Bn_Begin = new System.Windows.Forms.Button();
             this.bn_APost = new System.Windows.Forms.Button();

@@ -45,9 +45,10 @@ namespace DDZProj
             _MainForm.Controls.Add(this);
 
             int ph = h / 3;
-            this.p_left.Height = ph;
-            this.p_right.Height = ph;
-            this.p_Top.Height = ph;
+            p_left.SetBounds(0, h/3*2, w, ph);
+            p_Top.SetBounds(0,0,w,ph);
+            p_right.SetBounds(0, ph, w, ph);
+            
 
         }
         public void PostInfo(AreaPos fromPos, string info)
@@ -101,12 +102,28 @@ namespace DDZProj
             SetPostPoker(postList, direction);
         }
 
+        /// <summary>
+        /// direction =1 排从左往右 -1 从右往左
+        /// </summary>
+        /// <param name="postList"></param>
+        /// <param name="direction"></param>
         private void SetPostPoker(List<DDZPokerImage> postList,int direction = 1)
         {        
             for (int i = 0; i < postList.Count; i++)
             {
-                postList[i].ShowPoker();
-                postList[i].SetBounds(SysConfiguration.LeftSpec+i * SysConfiguration.PokerXSep, 0, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
+                if (direction == 1)
+                {
+                    postList[i].ShowPoker();
+                    postList[i].SetBounds(SysConfiguration.LeftSpec + i * SysConfiguration.PokerXSep, SysConfiguration.TopSpec, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
+                }
+                else
+                {
+                    postList[i].ShowPoker();
+                    int x = this.Width - SysConfiguration.LeftSpec - SysConfiguration.PokerWidth - i * SysConfiguration.PokerXSep;
+                    postList[i].SetBounds(x, SysConfiguration.TopSpec, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
+                    postList[i].SendToBack();
+
+                }
             }
         }
 

@@ -9,6 +9,17 @@ namespace DDZProj.Core
 {
     public class ImageHandler
     {
+
+        public static Image ImageTransfer(Image sourceImg,int tagW,int tagH,int srcW,int srcH)
+        {
+           
+            Rectangle destRect = new Rectangle(0, 0, tagW, tagH);
+            Bitmap tagBitmap = new Bitmap(tagW, tagW);
+            Graphics g = Graphics.FromImage(tagBitmap);
+            g.DrawImage(sourceImg, destRect, new Rectangle(0, 0, srcW, srcH), GraphicsUnit.Pixel);
+            return (Image)tagBitmap;
+        }
+
         private static Image _FormerPortrait;
         public static Image GetFarmerPortrait()
         {
@@ -21,7 +32,7 @@ namespace DDZProj.Core
                 Rectangle destRect = new Rectangle(0, 0, w, h);
                 Bitmap rtnBmp = new Bitmap(w, h);
                 Graphics g = Graphics.FromImage(rtnBmp);
-                g.DrawImage(img, destRect, new Rectangle(0, 0, w, h), System.Drawing.GraphicsUnit.Pixel);
+                g.DrawImage(img, destRect, new Rectangle(0, 0, w, h), GraphicsUnit.Pixel);
                 _FormerPortrait = (Image)rtnBmp;
             }
             return _FormerPortrait;

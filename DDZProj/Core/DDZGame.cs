@@ -8,6 +8,7 @@ using System.Threading;
 using DDZEntity;
 using DDZInterface;
 using System.Collections;
+using AnimatorNS;
 
 namespace DDZProj.Core
 {
@@ -76,6 +77,11 @@ namespace DDZProj.Core
         public GameState GetGameState()
         {
             return _GameState;
+        }
+
+        public AreaBossPoker GetAreaBossPoker()
+        {
+            return _AreaBossPoker;
         }
         #endregion
 
@@ -157,13 +163,15 @@ namespace DDZProj.Core
 
             _PokerData.ResetData();
 
-           
+            _GameState = GameState.End;
         }
         #endregion 
 
         #region 开始发牌
         public void StartDealt()
         {
+            _GameState = GameState.Dealting;
+
             th_Dealt = new Thread(new ThreadStart(Dealt));
             th_Dealt.Start();
           //  th_Dealt.Join();
@@ -171,7 +179,8 @@ namespace DDZProj.Core
 
         void Dealt()
         {
-            int i = 1;
+            int i = 1;          
+
             Dictionary<AreaPos, List<Poker>> piInfo =  _PokerData.GetPokerInfo();
             _AreaT.ObtainPoker(piInfo[AreaPos.top]);
             _AreaL.ObtainPoker(piInfo[AreaPos.left]);
@@ -202,6 +211,8 @@ namespace DDZProj.Core
             //设置当前最大叫分
             _MaxCallBossScore = 0;
 
+            _GameState = GameState.CallBossing;
+
             _AreaR.ResetCallBoss();
             _AreaT.ResetCallBoss();
             _AreaL.ResetCallBoss();
@@ -219,8 +230,8 @@ namespace DDZProj.Core
         }
 
         void DoCallBoss()
-        {            
-            while (this._GameState == GameState.DealtComplete)
+        {
+            while (this._GameState == GameState.CallBossing)
             {             
                 if (_CallStock.Count == 0) 
                     break;        
@@ -256,8 +267,15 @@ namespace DDZProj.Core
             //设置并显示Boss头像和叫分
             if (_BossArea != null)
             {
+                //Boss 头像
                 _BossArea.SetBossAndChangePortrait(_MaxCallBossScore);
-               // _BossArea.MoveBossPokerToArea(_PokerData.Get3DiZhuPoker());
+                //BOss 3张排
+                _BossArea.SetBossPoker(_AreaBossPoker.GetBossPokerImageList());
+
+                _AreaBossPoker.ResetArea();
+
+                _BossArea.AddPokerToRemain(_PokerData.Get3DiZhuPoker());
+
             }
 
             //设置游戏状态
@@ -378,10 +396,22 @@ namespace DDZProj.Core
 
         }
 
+     
+        #endregion
+
+        #region 游戏结束
         public void EndGame()
         {
             _GameState = GameState.End;
+
+            this.ResetGame();
+
+
+            //_MainForm.ShowEndForm(this._AreaScore);
+            _MainForm.ShowEndForm();
         }
+
+      
         #endregion
 
         #region 测试
@@ -423,7 +453,7 @@ namespace DDZProj.Core
         }
         #endregion
 
-        #region 接口数据监听       
+        #region 接口数据监听
 
         void ListenPostPoker()
         {
@@ -435,8 +465,7 @@ namespace DDZProj.Core
                 {
                     pList = _PostPokerStack.Pop();
                     if (pList != null)
-                    {
-                      
+                    {                      
                         _CurrentArea.PostPoker(pList);
 
                         AreaCtrl.OrderPoker(_CurrentArea.RemainPokerList);
@@ -475,7 +504,7 @@ namespace DDZProj.Core
 
         public void Button_Pass_Action()
         {
-            if (_GameState == GameState.DealtComplete)
+            if (_GameState == GameState.CallBossing)
             {
                 PassCallBoss();
             }
@@ -507,7 +536,7 @@ namespace DDZProj.Core
 
         public void Button_ScoreAction(int s)
         {
-            if (_GameState == GameState.DealtComplete)
+            if (_GameState == GameState.CallBossing)
             {
                 if (_CurrentArea != null)
                 {
@@ -541,9 +570,5 @@ namespace DDZProj.Core
 
 
         #endregion
-
-
-
-
     }
 }

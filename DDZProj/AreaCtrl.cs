@@ -10,6 +10,7 @@ using DDZEntity;
 using DDZProj.Core;
 using System.Threading;
 using DDZCommon;
+using DDZProj.PainterControl;
 
 namespace DDZProj
 {
@@ -60,6 +61,12 @@ namespace DDZProj
         {
             return _AreaPos;
         }
+
+        public DDZ_3BossPoker Get3BossPokerControl()
+        {
+            return this.ddZ_3BossPoker;
+        }
+
 
         public AreaCtrl(AreaPos areaPos, Main f)
         {
@@ -118,16 +125,16 @@ namespace DDZProj
             _AreaWidth = w;
             _AreaHeight = h;
             this.SetBounds(x, y, w, h);
-            //Boss3Poker 区域
 
-            ddZ_3BossPoker.SetBounds(w - this.ddZ_TimeCount.Width, SysConfiguration.TopSpec, this.ddZ_TimeCount.Width, this.ddZ_TimeCount.Height);
+            //Boss3Poker 区域
+            ddZ_3BossPoker.SetBounds(w - this.ddZ_3BossPoker.Width - SysConfiguration.LeftSpec, SysConfiguration.TopSpec, this.ddZ_3BossPoker.Width, this.ddZ_3BossPoker.Height);
             //倒计时区域
-            ddZ_TimeCount.SetBounds(w - this.ddZ_TimeCount.Width, SysConfiguration.TopSpec, this.ddZ_TimeCount.Width, this.ddZ_TimeCount.Height);
+            ddZ_TimeCount.SetBounds(w - this.ddZ_TimeCount.Width - SysConfiguration.LeftSpec, SysConfiguration.TopSpec + ddZ_3BossPoker.Bottom, this.ddZ_TimeCount.Width, this.ddZ_TimeCount.Height);
             
 
             _MainForm.Controls.Remove(this);
             _MainForm.Controls.Add(this);
-            _maxWidthNum = (_AreaWidth - 5 * 2) / SysConfiguration.PokerXSep -1;
+            _maxWidthNum = (_AreaWidth) / SysConfiguration.PokerXSep -1;
 
            
            //倒计时，看一下。。可以删除
@@ -147,7 +154,8 @@ namespace DDZProj
         public void ResetArea()
         {
             p_PokerInfo.Controls.Clear();
-           
+
+            ddZ_3BossPoker.ResetArea();
         }
         
         #endregion
@@ -197,6 +205,20 @@ namespace DDZProj
             pi.SetBounds(_PCurX , _PCurY, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
             
             pi.BringToFront();
+        }
+
+        public void AddPokerToRemain(List<Poker> pokerList)
+        {
+            int i = RemainPokerList[RemainPokerList.Count - 1].Poker.Index+1;
+            foreach (Poker p in pokerList)
+            {
+                p.Index = i;
+                i++;
+                RemainPokerList.Add(_MainForm.CurrentGame.PokerImageList[p.No]);
+            }
+            AreaCtrl.OrderPoker(RemainPokerList);
+
+            ShowRemainPoker();
         }
 
         #endregion
@@ -258,9 +280,9 @@ namespace DDZProj
             ddZ_CallScorePortrait.SetScore(0);
         }
 
-        public void MoveBossPokerToArea()
+        public void SetBossPoker(List<DDZPokerImage> bossImageList)
         {
-
+            this.ddZ_3BossPoker.SetBossPoker(bossImageList);
         }
         #endregion
 

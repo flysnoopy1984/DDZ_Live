@@ -46,3 +46,5 @@ G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Animator\Animator\Tester\obj\x86\D
 G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Animator\Animator\Tester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
 G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Animator\Animator\Tester\obj\x86\Debug\ResGen.write.1.tlog
 G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Animator\Animator\Tester\obj\x86\Debug\Tester.pdb
+H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\Animator\Animator\Tester\obj\x86\Debug\Tester.exe
+H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\Animator\Animator\Tester\obj\x86\Debug\Tester.pdb

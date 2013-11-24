@@ -8,11 +8,15 @@ using System.Text;
 using System.Windows.Forms;
 using DDZEntity;
 using DDZProj.Core;
+using System.Runtime.InteropServices;
 
 namespace DDZProj
 {
     public partial class AreaScore : UserControl
     {
+     
+
+
         Main _MainForm;
         AreaCtrl _TopArea;
 
@@ -24,6 +28,8 @@ namespace DDZProj
             InitializeComponent();
 
             this.Init();
+
+          
 
         }
 

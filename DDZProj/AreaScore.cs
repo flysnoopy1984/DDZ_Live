@@ -14,22 +14,21 @@ namespace DDZProj
 {
     public partial class AreaScore : UserControl
     {
-     
 
+      
 
         Main _MainForm;
         AreaCtrl _TopArea;
-
+        AreaCtrl _RightArea;
         public AreaScore(Main f)
-        {
+        {         
+
             _MainForm = f;
             _TopArea = f.CurrentGame.GetAreaCtrl(AreaPos.top);
-
+            _RightArea = f.CurrentGame.GetAreaCtrl(AreaPos.right);
             InitializeComponent();
 
-            this.Init();
-
-          
+            this.Init();         
 
         }
 
@@ -39,7 +38,7 @@ namespace DDZProj
             int w = this.Width;
             int h = this.Height;
 
-            int x = _TopArea.Right + SysConfiguration.LeftSpec;
+            int x = _RightArea.Left+SysConfiguration.LeftSpec*2;
             int y = SysConfiguration.TopSpec;
 
             this.SetBounds(x, y, w, h);

@@ -636,6 +636,41 @@ namespace DDZCommon.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap tshadowdown {
+            get {
+                object obj = ResourceManager.GetObject("tshadowdown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tshadowdownleft {
+            get {
+                object obj = ResourceManager.GetObject("tshadowdownleft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tshadowdownright {
+            get {
+                object obj = ResourceManager.GetObject("tshadowdownright", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tshadowright {
+            get {
+                object obj = ResourceManager.GetObject("tshadowright", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tshadowtopright {
+            get {
+                object obj = ResourceManager.GetObject("tshadowtopright", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap upomp_lthj_radio {
             get {
                 object obj = ResourceManager.GetObject("upomp_lthj_radio", resourceCulture);

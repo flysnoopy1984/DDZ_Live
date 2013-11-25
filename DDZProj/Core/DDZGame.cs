@@ -118,12 +118,12 @@ namespace DDZProj.Core
 
                 DDZPokerImage pi = new DDZPokerImage(p);               
              
-                pi.SetBounds(SysConfiguration.ScreenWidth / 2, SysConfiguration.ScreenHeight / 2, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
+                pi.SetBounds(SysConfiguration.ScreenWidth / 2, SysConfiguration.ScreenHeight *3 / 2, SysConfiguration.PokerWidth, SysConfiguration.PokerHeight);
                 pi.BringToFront();
                 _MainForm.Controls.Add(pi);
                 _PiList.Add(i,pi);
                 j++;
-            }
+            }   
           
             //UI区域初始化
             this.InitArea();

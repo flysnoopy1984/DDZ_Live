@@ -16,6 +16,8 @@ namespace DDZProj.PainterControl
         Dictionary<int, PictureBox> _BossPBList;
         public DDZ_3BossPoker()
         {
+            
+
             InitializeComponent();
 
             Init();
@@ -23,7 +25,9 @@ namespace DDZProj.PainterControl
 
         private void Init()
         {
-            
+            this.Width = SysConfiguration.AreaBossPokerWidth;
+            this.Height = SysConfiguration.AreaBossPokerHeight;
+           
             pb1.SetBounds(0, 0, this.Width / 3, this.Height);
             pb2.SetBounds(pb1.Right, 0, this.Width / 3, this.Height);
             pb3.SetBounds(pb2.Right, 0, this.Width / 3, this.Height);

@@ -34,10 +34,14 @@ namespace DDZProj
         void Init()
         {
             int w = SysConfiguration.ScreenWidth / 32 * 14;
-            int h = SysConfiguration.ScreenHeight / 2;
+            int h = SysConfiguration.ScreenHeight / 2 + SysConfiguration.TopSpec*3;
 
             int x = SysConfiguration.ScreenWidth / 32 * 9;
-            int y = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 8.5);
+
+            AreaCtrl topArea = _MainForm.CurrentGame.GetAreaCtrl(AreaPos.top);
+           // int y = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 8.5);
+
+            int y = topArea.Bottom + SysConfiguration.TopSpec*2;
 
             this.SetBounds(x, y, w, h);
 

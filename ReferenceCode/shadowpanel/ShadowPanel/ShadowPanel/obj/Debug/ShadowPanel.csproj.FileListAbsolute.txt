@@ -1,0 +1,5 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanel\bin\Debug\ShadowPanel.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanel\bin\Debug\ShadowPanel.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanel\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanel\obj\Debug\ShadowPanel.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanel\obj\Debug\ShadowPanel.pdb

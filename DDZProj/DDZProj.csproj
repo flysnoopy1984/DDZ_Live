@@ -91,6 +91,12 @@
     <Compile Include="DDZPokerImage.Designer.cs">
       <DependentUpon>DDZPokerImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="EndCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EndCtrl.Designer.cs">
+      <DependentUpon>EndCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="EndForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsoleMain.resx">
       <DependentUpon>ConsoleMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndCtrl.resx">
+      <DependentUpon>EndCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EndFOrm.resx">
       <DependentUpon>EndForm.cs</DependentUpon>

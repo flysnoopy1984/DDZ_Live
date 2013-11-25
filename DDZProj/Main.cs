@@ -33,33 +33,34 @@ namespace DDZProj
             return this.animator1;
         }
 
-        public void ShowEndForm()
-        {
-            if (_EndForm == null)
-                _EndForm = new EndForm();
+        //public void ShowEndForm()
+        //{
+        //    if (_EndForm == null)
+        //        _EndForm = new EndForm();
 
-            _EndForm.SetBounds(SysConfiguration.ScreenWidth / 2 - _EndForm.Width / 2,
-                               SysConfiguration.ScreenHeight / 2 - _EndForm.Height/2,
-                               _EndForm.Width, 
-                               _EndForm.Height);
-            _EndForm.Hide();
-            animator1.DefaultAnimation = Animation.Leaf;
-            animator1.Show(_EndForm);
+        //    _EndForm.SetBounds(SysConfiguration.ScreenWidth / 2 - _EndForm.Width / 2,
+        //                       SysConfiguration.ScreenHeight / 2 - _EndForm.Height/2,
+        //                       _EndForm.Width, 
+        //                       _EndForm.Height);
+        //    _EndForm.Hide();
+        
           
  
-        }
+        //}
 
-        public void ShowEndForm(AreaScore area)
+        public void ShowEndForm()
         {
-
+            EndCtrl area = new EndCtrl();
+            this.Controls.Add(area);
             area.BringToFront();
             area.SetBounds(SysConfiguration.ScreenWidth / 2 - area.Width / 2,
                                SysConfiguration.ScreenHeight / 2 - area.Height / 2,
                                area.Width,
                                area.Height);
             area.Hide();
-            animator1.DefaultAnimation = Animation.HorizSlide;
-            animator1.Show(area);
+
+           animator1.DefaultAnimation = Animation.Particles;
+           animator1.Show(area);
 
 
         }
@@ -106,8 +107,7 @@ namespace DDZProj
             {
                 if (_ConsoleMain == null)
                     _ConsoleMain = new ConsoleMain();
-                _ConsoleMain.Show();
-              
+                _ConsoleMain.Show();            
                 
                 return true;
             }

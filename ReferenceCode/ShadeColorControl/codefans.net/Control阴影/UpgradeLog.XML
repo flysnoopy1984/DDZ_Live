@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ShadeColorControl">
+</Property><Property Name="Solution File" Value="G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl.sln">
+</Property><Property Name="User Options File" Value="G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl.suo">
+</Property><Property Name="Date" Value="2013年11月25日">
+</Property><Property Name="Time" Value="16:09">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ShadeColorControl.sln" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ShadeColorControl.suo" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl.suo">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\ShadeColorControl.csproj" Description="Project file successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\ShadeColorControl.csproj">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Form1.cs" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Form1.cs">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Form1.Designer.cs" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Program.cs" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Program.cs">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Properties\AssemblyInfo.cs" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Properties\Resources.Designer.cs" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Properties\Settings.Designer.cs" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\T_Control.cs" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\T_Control.cs">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\T_Control.designer.cs" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\T_Control.designer.cs">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Properties\Settings.settings" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Form1.resx" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Form1.resx">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\Properties\Resources.resx" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\T_Control.resx" Description="File successfully backed up as G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\Backup\ShadeColorControl\T_Control.resx">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\ShadeColorControl.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ShadeColorControl" Source="ShadeColorControl\ShadeColorControl.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ShadeColorControl.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ShadeColorControl.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ShadeColorControl" Source="ShadeColorControl\ShadeColorControl.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

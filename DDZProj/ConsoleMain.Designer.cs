@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            AnimatorNS.Animation animation4 = new AnimatorNS.Animation();
+            AnimatorNS.Animation animation1 = new AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsoleMain));
             this.bn_Reset = new System.Windows.Forms.Button();
             this.Bn_Begin = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@
             // 
             // bn_Reset
             // 
+            this.animator1.SetDecoration(this.bn_Reset, AnimatorNS.DecorationType.None);
             this.bn_Reset.Location = new System.Drawing.Point(12, 12);
             this.bn_Reset.Name = "bn_Reset";
             this.bn_Reset.Size = new System.Drawing.Size(75, 23);
@@ -82,6 +83,7 @@
             // 
             // bn_APost
             // 
+            this.animator1.SetDecoration(this.bn_APost, AnimatorNS.DecorationType.None);
             this.bn_APost.Location = new System.Drawing.Point(561, 57);
             this.bn_APost.Name = "bn_APost";
             this.bn_APost.Size = new System.Drawing.Size(75, 23);
@@ -92,6 +94,7 @@
             // 
             // bn_PostB
             // 
+            this.animator1.SetDecoration(this.bn_PostB, AnimatorNS.DecorationType.None);
             this.bn_PostB.Location = new System.Drawing.Point(561, 105);
             this.bn_PostB.Name = "bn_PostB";
             this.bn_PostB.Size = new System.Drawing.Size(75, 23);
@@ -102,6 +105,7 @@
             // 
             // bn_PostC
             // 
+            this.animator1.SetDecoration(this.bn_PostC, AnimatorNS.DecorationType.None);
             this.bn_PostC.Location = new System.Drawing.Point(561, 150);
             this.bn_PostC.Name = "bn_PostC";
             this.bn_PostC.Size = new System.Drawing.Size(75, 23);
@@ -112,6 +116,7 @@
             // 
             // bn_End
             // 
+            this.animator1.SetDecoration(this.bn_End, AnimatorNS.DecorationType.None);
             this.bn_End.Location = new System.Drawing.Point(301, 105);
             this.bn_End.Name = "bn_End";
             this.bn_End.Size = new System.Drawing.Size(75, 23);
@@ -122,6 +127,7 @@
             // 
             // bn_One
             // 
+            this.animator1.SetDecoration(this.bn_One, AnimatorNS.DecorationType.None);
             this.bn_One.Location = new System.Drawing.Point(11, 57);
             this.bn_One.Name = "bn_One";
             this.bn_One.Size = new System.Drawing.Size(75, 23);
@@ -132,6 +138,7 @@
             // 
             // bn_Two
             // 
+            this.animator1.SetDecoration(this.bn_Two, AnimatorNS.DecorationType.None);
             this.bn_Two.Location = new System.Drawing.Point(108, 56);
             this.bn_Two.Name = "bn_Two";
             this.bn_Two.Size = new System.Drawing.Size(75, 23);
@@ -142,6 +149,7 @@
             // 
             // bn_Three
             // 
+            this.animator1.SetDecoration(this.bn_Three, AnimatorNS.DecorationType.None);
             this.bn_Three.Location = new System.Drawing.Point(208, 57);
             this.bn_Three.Name = "bn_Three";
             this.bn_Three.Size = new System.Drawing.Size(75, 23);
@@ -152,6 +160,7 @@
             // 
             // tb_pokerInfo
             // 
+            this.animator1.SetDecoration(this.tb_pokerInfo, AnimatorNS.DecorationType.None);
             this.tb_pokerInfo.Location = new System.Drawing.Point(12, 341);
             this.tb_pokerInfo.Multiline = true;
             this.tb_pokerInfo.Name = "tb_pokerInfo";
@@ -160,6 +169,7 @@
             // 
             // p_pokerbutton
             // 
+            this.animator1.SetDecoration(this.p_pokerbutton, AnimatorNS.DecorationType.None);
             this.p_pokerbutton.Location = new System.Drawing.Point(13, 259);
             this.p_pokerbutton.Name = "p_pokerbutton";
             this.p_pokerbutton.Size = new System.Drawing.Size(444, 76);
@@ -167,6 +177,7 @@
             // 
             // bn_ChangePoker
             // 
+            this.animator1.SetDecoration(this.bn_ChangePoker, AnimatorNS.DecorationType.None);
             this.bn_ChangePoker.Location = new System.Drawing.Point(547, 12);
             this.bn_ChangePoker.Name = "bn_ChangePoker";
             this.bn_ChangePoker.Size = new System.Drawing.Size(89, 23);
@@ -210,6 +221,7 @@
             // 
             // lb_A
             // 
+            this.animator1.SetDecoration(this.lb_A, AnimatorNS.DecorationType.None);
             this.lb_A.FormattingEnabled = true;
             this.lb_A.Location = new System.Drawing.Point(12, 438);
             this.lb_A.Name = "lb_A";
@@ -218,6 +230,7 @@
             // 
             // lb_B
             // 
+            this.animator1.SetDecoration(this.lb_B, AnimatorNS.DecorationType.None);
             this.lb_B.FormattingEnabled = true;
             this.lb_B.Location = new System.Drawing.Point(301, 438);
             this.lb_B.Name = "lb_B";
@@ -226,6 +239,7 @@
             // 
             // lb_C
             // 
+            this.animator1.SetDecoration(this.lb_C, AnimatorNS.DecorationType.None);
             this.lb_C.FormattingEnabled = true;
             this.lb_C.Location = new System.Drawing.Point(584, 438);
             this.lb_C.Name = "lb_C";
@@ -234,6 +248,7 @@
             // 
             // bn_Boom
             // 
+            this.animator1.SetDecoration(this.bn_Boom, AnimatorNS.DecorationType.None);
             this.bn_Boom.Location = new System.Drawing.Point(681, 11);
             this.bn_Boom.Name = "bn_Boom";
             this.bn_Boom.Size = new System.Drawing.Size(75, 23);
@@ -244,6 +259,7 @@
             // 
             // bn_Test
             // 
+            this.animator1.SetDecoration(this.bn_Test, AnimatorNS.DecorationType.None);
             this.bn_Test.Location = new System.Drawing.Point(692, 56);
             this.bn_Test.Name = "bn_Test";
             this.bn_Test.Size = new System.Drawing.Size(75, 23);
@@ -254,14 +270,17 @@
             // 
             // pb_Image
             // 
+            this.animator1.SetDecoration(this.pb_Image, AnimatorNS.DecorationType.None);
             this.pb_Image.Location = new System.Drawing.Point(681, 123);
             this.pb_Image.Name = "pb_Image";
             this.pb_Image.Size = new System.Drawing.Size(133, 130);
+            this.pb_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Image.TabIndex = 22;
             this.pb_Image.TabStop = false;
             // 
             // bn_1n
             // 
+            this.animator1.SetDecoration(this.bn_1n, AnimatorNS.DecorationType.None);
             this.bn_1n.Location = new System.Drawing.Point(11, 105);
             this.bn_1n.Name = "bn_1n";
             this.bn_1n.Size = new System.Drawing.Size(75, 23);
@@ -272,6 +291,7 @@
             // 
             // bn_2n
             // 
+            this.animator1.SetDecoration(this.bn_2n, AnimatorNS.DecorationType.None);
             this.bn_2n.Location = new System.Drawing.Point(108, 105);
             this.bn_2n.Name = "bn_2n";
             this.bn_2n.Size = new System.Drawing.Size(75, 23);
@@ -282,6 +302,7 @@
             // 
             // button3
             // 
+            this.animator1.SetDecoration(this.button3, AnimatorNS.DecorationType.None);
             this.button3.Location = new System.Drawing.Point(208, 105);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
@@ -294,24 +315,24 @@
             // 
             this.animator1.AnimationType = AnimatorNS.AnimationType.VertSlide;
             this.animator1.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.animator1.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.animator1.DefaultAnimation = animation1;
             // 
-            // bn_3n
+            // ConsoleMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -341,7 +362,7 @@
             this.Controls.Add(this.Bn_Begin);
             this.Controls.Add(this.bn_Reset);
             this.animator1.SetDecoration(this, AnimatorNS.DecorationType.None);
-            this.Name = "bn_3n";
+            this.Name = "ConsoleMain";
             this.Text = "Console";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
             this.ResumeLayout(false);

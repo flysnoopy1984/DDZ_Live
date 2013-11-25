@@ -499,6 +499,21 @@
   <ItemGroup>
     <None Include="Resources\PokerBack.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tshadowdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tshadowdownleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tshadowdownright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tshadowright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tshadowtopright.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,0 +1,8 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl\bin\Debug\ShadeColorControl.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl\bin\Debug\ShadeColorControl.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl\obj\Debug\ShadeColorControl.Form1.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl\obj\Debug\ShadeColorControl.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl\obj\Debug\ClarityControl.T_Control.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl\obj\Debug\ShadeColorControl.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ShadeColorControl\codefans.net\Control阴影\ShadeColorControl\obj\Debug\ShadeColorControl.pdb

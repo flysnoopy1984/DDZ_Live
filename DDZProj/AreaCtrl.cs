@@ -99,35 +99,35 @@ namespace DDZProj
             if (_AreaPos == AreaPos.top)
             {
                 w = SysConfiguration.ScreenWidth / 32*13;
-                h = SysConfiguration.ScreenHeight / 9 * 4 - SysConfiguration.TopSpec;
+                h = SysConfiguration.ScreenHeight/9*4 + SysConfiguration.TopSpec*2;
                 x = Convert.ToInt32(SysConfiguration.ScreenWidth / 32*9.5);
                 y = SysConfiguration.TopSpec;
+
                 //手牌区域
-                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight /8);               
-              
+                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight /7);               
             }
             else
             {
-                w = SysConfiguration.ScreenWidth / 4;
-                h = Convert.ToInt32(SysConfiguration.ScreenHeight / 18*11.5);
+                w = SysConfiguration.ScreenWidth / 4+SysConfiguration.LeftSpec*3;
+                h = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 11.5) + SysConfiguration.LeftSpec;
                 if (_AreaPos == AreaPos.left)
                     x = SysConfiguration.LeftSpec;
                 else if (_AreaPos == AreaPos.right)
                     x = SysConfiguration.ScreenWidth - w - SysConfiguration.LeftSpec;
 
-                y = SysConfiguration.ScreenHeight / 18*5;
+                y = SysConfiguration.ScreenHeight / 18 * 7 - SysConfiguration.LeftSpec;
 
                 //手牌区域
-                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 3.5);
-               
-
+                p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 3.5); 
             }
+
             _AreaWidth = w;
             _AreaHeight = h;
+
             this.SetBounds(x, y, w, h);
 
             //Boss3Poker 区域
-            ddZ_3BossPoker.SetBounds(w - this.ddZ_3BossPoker.Width - SysConfiguration.LeftSpec, SysConfiguration.TopSpec, this.ddZ_3BossPoker.Width, this.ddZ_3BossPoker.Height);
+            ddZ_3BossPoker.SetBounds(w - SysConfiguration.AreaBossPokerWidth - SysConfiguration.LeftSpec, SysConfiguration.TopSpec, SysConfiguration.AreaBossPokerWidth, SysConfiguration.AreaBossPokerHeight);
             //倒计时区域
             ddZ_TimeCount.SetBounds(w - this.ddZ_TimeCount.Width - SysConfiguration.LeftSpec, SysConfiguration.TopSpec + ddZ_3BossPoker.Bottom, this.ddZ_TimeCount.Width, this.ddZ_TimeCount.Height);
             

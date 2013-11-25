@@ -1,0 +1,11 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\bin\Debug\ShadowPanelTest.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\bin\Debug\ShadowPanelTest.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\bin\Debug\ShadowPanel.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\bin\Debug\ShadowPanel.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\obj\Debug\ShadowPanelTest.Form1.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\obj\Debug\ShadowPanelTest.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\obj\Debug\ResGen.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\obj\Debug\ResGen.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\obj\Debug\ShadowPanelTest.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\shadowpanel\ShadowPanel\ShadowPanelTest\obj\Debug\ShadowPanelTest.pdb

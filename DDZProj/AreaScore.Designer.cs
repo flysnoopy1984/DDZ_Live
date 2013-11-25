@@ -270,6 +270,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pb3);
             this.Controls.Add(this.pb2);
             this.Controls.Add(this.pb1);
@@ -291,7 +292,7 @@
             this.Controls.Add(this.labelScoreInfo2);
             this.Controls.Add(this.labelScoreInfo1);
             this.Name = "AreaScore";
-            this.Size = new System.Drawing.Size(277, 180);
+            this.Size = new System.Drawing.Size(275, 178);
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();

@@ -74,3 +74,6 @@ H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.EndForm.res
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.ConsoleMain.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.EndForm.resources
 G:\Project\DDZ\DDZProj\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.EndCtrl.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\bin\Debug\DDZProj.exe.config
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.Effect.EndCtrl.resources
+H:\Projects\OutSource_Project\DDZ_Live\DDZProj\obj\x86\Debug\DDZProj.Effect.Begin_YXKS.resources

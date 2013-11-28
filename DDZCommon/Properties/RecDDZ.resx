@@ -385,4 +385,10 @@
   <data name="tshadowtopright" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tshadowtopright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EndGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EndGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="string_yxks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\string_yxks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

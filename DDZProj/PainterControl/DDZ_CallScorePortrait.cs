@@ -26,6 +26,13 @@ namespace DDZProj.PainterControl
 
         }
 
+        public Image GetCurrentPortaitImage()
+        {
+            return _CurrentPortaitImage;
+        }
+    
+    
+
         private void Init()
         {
             _CurrentPortaitImage = ImageHandler.GetFarmerPortrait();

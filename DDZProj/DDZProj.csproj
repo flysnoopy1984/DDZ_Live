@@ -11,7 +11,8 @@
     <RootNamespace>DDZProj</RootNamespace>
     <AssemblyName>DDZProj</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -38,6 +39,7 @@
       <HintPath>..\ReferenceDLL\Animator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -79,10 +81,12 @@
     <Compile Include="ConsoleMain.Designer.cs">
       <DependentUpon>ConsoleMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Core\Configure\PlayerElement.cs" />
+    <Compile Include="Core\Configure\PlayerElementCollection.cs" />
     <Compile Include="Core\DDZGame.cs" />
-    <Compile Include="Core\DDZPlayer.cs" />
     <Compile Include="Core\GameScore.cs" />
     <Compile Include="Core\ImageHandler.cs" />
+    <Compile Include="Core\Configure\PlayerSection.cs" />
     <Compile Include="Core\ScreenControl.cs" />
     <Compile Include="Core\SysConfiguration.cs" />
     <Compile Include="DDZPokerImage.cs">
@@ -91,10 +95,16 @@
     <Compile Include="DDZPokerImage.Designer.cs">
       <DependentUpon>DDZPokerImage.cs</DependentUpon>
     </Compile>
-    <Compile Include="EndCtrl.cs">
+    <Compile Include="Effect\Begin_YXKS.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EndCtrl.Designer.cs">
+    <Compile Include="Effect\Begin_YXKS.Designer.cs">
+      <DependentUpon>Begin_YXKS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effect\EndCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Effect\EndCtrl.Designer.cs">
       <DependentUpon>EndCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="EndForm.cs">
@@ -156,7 +166,10 @@
     <EmbeddedResource Include="ConsoleMain.resx">
       <DependentUpon>ConsoleMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EndCtrl.resx">
+    <EmbeddedResource Include="Effect\Begin_YXKS.resx">
+      <DependentUpon>Begin_YXKS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effect\EndCtrl.resx">
       <DependentUpon>EndCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EndFOrm.resx">
@@ -187,6 +200,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

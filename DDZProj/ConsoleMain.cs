@@ -237,55 +237,8 @@ namespace DDZProj
         private void bn_Test_Click(object sender, EventArgs e)
         {
 
-            Bitmap MyBitmap =(Bitmap) DDZCommon.ResManager.GetImageRes("_1");
-       //     MyBitmap = Util.RotateImage(MyBitmap, 10, 10, 100, true);
-
-
-
-            pb_Image.Image = Util.Rotate(MyBitmap, 70);
-            pb_Image.SizeMode = PictureBoxSizeMode.AutoSize;
-         
-            pb_Image.Refresh();//最后刷新图片框
-
-           // Graphics g = pb_Image.CreateGraphics();
-           //// g.DrawImage(MyBitmap, 0, 0, MyBitmap.Width, MyBitmap.Height);
-           // System.Windows.Forms.Timer timer = new Timer();
-           // timer.Interval = 300;
-           // int fw = 0;
-           // timer.Tick += delegate
-           // {
-                
-           //     int width = MyBitmap.Width;
-           //     int height = MyBitmap.Height;
-           //     System.Drawing.Drawing2D.Matrix transform;//距阵
-
-           //     transform = new System.Drawing.Drawing2D.Matrix(-1, 0, 0, 1, width, 0);
-           //     transform.Translate(fw, 0);
-
-           //     g.Transform = transform;
-           //     g.DrawImage(MyBitmap, new System.Drawing.Rectangle(0, 0, width, height),
-           //         0, 0, width, MyBitmap.Height,
-           //         GraphicsUnit.Pixel);
-           //     //恢复绘图平面
-           //     g.ResetTransform();
-
-           //     fw += 10;
-           //     if (fw > width)
-           //     {
-           //         timer.Stop();
-           //         timer.Dispose();
-           //     }
-           // };
-           // timer.Start();
-            
-                
-         
-
-            //pb_Image.Hide();
+          
       
-            //animator1.DefaultAnimation = Animation.Mosaic;
-            //animator1.Show(pb_Image);
-
         }
 
         private void bn_1n_Click(object sender, EventArgs e)

@@ -514,6 +514,12 @@
   <ItemGroup>
     <None Include="Resources\tshadowtopright.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EndGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\string_yxks.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,6 +9,7 @@ using DDZEntity;
 using DDZInterface;
 using System.Collections;
 using AnimatorNS;
+using System.Configuration;
 
 namespace DDZProj.Core
 {
@@ -27,11 +28,12 @@ namespace DDZProj.Core
 
         private Queue<AreaCtrl> _PostQueue;
         private Stack<List<Poker>> _PostPokerStack;
-        private GameState _GameState = GameState.End;
+        private GameState _GameState = GameState.New;
         
         private AutoResetEvent _mResetEventCallBoss;
         private AutoResetEvent _mResetEventPoking;
-        
+
+        private Dictionary<AreaPos, Player> _Players;
     
 
         /*接口数据*/
@@ -90,6 +92,7 @@ namespace DDZProj.Core
             _SoundGive = new SoundPlayer(global::DDZProj.Properties.Resources.give);
             _PiList = new Dictionary<int, DDZPokerImage>();
             _PokerData = new PokerData();
+            _Players = new Dictionary<AreaPos, Player>();
             _MainForm = f;
         }
 
@@ -123,10 +126,13 @@ namespace DDZProj.Core
                 _MainForm.Controls.Add(pi);
                 _PiList.Add(i,pi);
                 j++;
-            }   
-          
+            }
+
+            //初始化玩家
+            this.InitPlayer();
             //UI区域初始化
             this.InitArea();
+        
         }
 
         /// <summary>
@@ -134,36 +140,58 @@ namespace DDZProj.Core
         /// </summary>
         private void InitArea()
         {
-            _AreaT = new AreaCtrl(AreaPos.top, _MainForm);
-            _AreaL = new AreaCtrl(AreaPos.left, _MainForm);
-            _AreaR = new AreaCtrl(AreaPos.right, _MainForm);
+            _AreaT = new AreaCtrl(AreaPos.top, _MainForm, _Players[AreaPos.top]);
+            _AreaL = new AreaCtrl(AreaPos.left, _MainForm, _Players[AreaPos.left]);
+            _AreaR = new AreaCtrl(AreaPos.right, _MainForm, _Players[AreaPos.right]);
+
             _AreaPoker = new AreaPoker(_MainForm);
             _AreaBossPoker = new AreaBossPoker(_MainForm);
             _AreaScore = new AreaScore(_MainForm);
+        }
+
+        public void InitPlayer()
+        {
+            PlayerSection section = ConfigurationManager.GetSection("PlayerSection") as PlayerSection;
+            if (section != null)
+            {
+                for (int i = 0; i < section.PlayerList.Count; i++)
+                {
+                    PlayerElement pe = section.PlayerList[i];
+                    Player player = new Player();
+                    player.Name = pe.PlayerName;
+                    AreaPos pos = (AreaPos)Enum.Parse(typeof(AreaPos),pe.PlayerLocation.ToLower());
+                    player.Location = pos;
+
+                    _Players.Add(pos, player);
+                }
+            }
         }
         #endregion
 
         #region 重置游戏
         public void ResetGame()
         {
-            _AreaT.ResetArea();
-            _AreaL.ResetArea();
-            _AreaR.ResetArea();
-            _AreaBossPoker.ResetArea();
-            _AreaPoker.ResetArea();
-
-            foreach (Control ctrl in _MainForm.Controls)
+            if (_GameState == GameState.End)
             {
-                DDZPokerImage pi = ctrl as DDZPokerImage;
-                if (pi != null)
+                _AreaT.ResetArea();
+                _AreaL.ResetArea();
+                _AreaR.ResetArea();
+                _AreaBossPoker.ResetArea();
+                _AreaPoker.ResetArea();
+
+                foreach (Control ctrl in _MainForm.Controls)
                 {
-                    _MainForm.Controls.Remove(ctrl);
+                    DDZPokerImage pi = ctrl as DDZPokerImage;
+                    if (pi != null)
+                    {
+                        _MainForm.Controls.Remove(ctrl);
+                    }
                 }
+
+                _PokerData.ResetData();
+
+                _GameState = GameState.End;
             }
-
-            _PokerData.ResetData();
-
-            _GameState = GameState.End;
         }
         #endregion 
 
@@ -485,9 +513,15 @@ namespace DDZProj.Core
         #region 接口按钮
         public void Button_Begin_Action()
         {
-            if (_GameState == GameState.End)
+            if (_GameState == GameState.End||_GameState == GameState.New)
             {
-                StartDealt();
+              // ResetGame();
+                if (_GameState == GameState.End)
+                {
+                    _MainForm.HideEndForm();                   
+                }
+                _MainForm.ShowBegin();
+              //  StartDealt();
             }
             else if (_GameState == GameState.DealtComplete)
             {

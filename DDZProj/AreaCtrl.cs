@@ -38,9 +38,7 @@ namespace DDZProj
 
         public List<DDZPokerImage> RemainPokerList { get; set; }
         public List<DDZPokerImage> PostPokerList { get; set; }
-        public int PlayerScore { get; set; }
-        public int PlayerName { get; set; }
-        public Image _ImgPortrait;
+        public Player _Player;
 
         public int CallScore
         {
@@ -68,10 +66,11 @@ namespace DDZProj
         }
 
 
-        public AreaCtrl(AreaPos areaPos, Main f)
+        public AreaCtrl(AreaPos areaPos, Main f,Player player)
         {
             _AreaPos = areaPos;
             _MainForm = f;
+            _Player = player;
             IsCurrent = false;
 
             InitializeComponent();
@@ -99,7 +98,7 @@ namespace DDZProj
             if (_AreaPos == AreaPos.top)
             {
                 w = SysConfiguration.ScreenWidth / 32*13;
-                h = SysConfiguration.ScreenHeight/9*4 + SysConfiguration.TopSpec*2;
+                h = SysConfiguration.ScreenHeight / 9 * 4 - SysConfiguration.TopSpec;
                 x = Convert.ToInt32(SysConfiguration.ScreenWidth / 32*9.5);
                 y = SysConfiguration.TopSpec;
 
@@ -109,13 +108,13 @@ namespace DDZProj
             else
             {
                 w = SysConfiguration.ScreenWidth / 4+SysConfiguration.LeftSpec*3;
-                h = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 11.5) + SysConfiguration.LeftSpec;
+                h = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 11.5) + SysConfiguration.TopSpec*2;
                 if (_AreaPos == AreaPos.left)
                     x = SysConfiguration.LeftSpec;
                 else if (_AreaPos == AreaPos.right)
                     x = SysConfiguration.ScreenWidth - w - SysConfiguration.LeftSpec;
 
-                y = SysConfiguration.ScreenHeight / 18 * 7 - SysConfiguration.LeftSpec;
+                y = SysConfiguration.ScreenHeight / 18 * 6;
 
                 //手牌区域
                 p_PokerInfo.Height = Convert.ToInt32(SysConfiguration.ScreenHeight / 18 * 3.5); 
@@ -156,6 +155,8 @@ namespace DDZProj
             p_PokerInfo.Controls.Clear();
 
             ddZ_3BossPoker.ResetArea();
+
+            StopCounting();
         }
         
         #endregion

@@ -50,6 +50,8 @@ namespace DDZProj
             pb2.Image = ImageHandler.GetFarmerPortrait();
             pb3.Image = ImageHandler.GetFarmerPortrait();
 
+
+
         }
         #endregion
     }

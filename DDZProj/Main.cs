@@ -94,7 +94,7 @@ namespace DDZProj
             this.Controls.Add(_EndArea);
 
             _Begin_YXKS = new Begin_YXKS();
-          //  _Begin_YXKS.Hide();
+            _Begin_YXKS.Hide();
             this.Controls.Add(_Begin_YXKS);
 
             //开始特效

@@ -12,6 +12,8 @@ using System.Media;
 using AnimatorNS;
 using System.Configuration;
 using DDZProj.Effect;
+using Pfz.AnimationManagement.WinForms;
+using Pfz.AnimationManagement;
 
 namespace DDZProj
 {
@@ -41,15 +43,20 @@ namespace DDZProj
 
         public void ShowBegin()
         {
-
-           // beginImg = ImageHandler.ImageTransfer(beginImg, 660, 200, beginImg.Width, beginImg.Height);
-           // ImageFromLeftToRight(srcImg, 20, (SysConfiguration.ScreenWidth + srcImg.Width) / 2, 400);
-            ImageFromLeftToRight();
+            _Begin_YXKS.Show();
+            var animation =
+                 AnimationBuilder.
+                      BeginSequence().
+                        Range(-_Begin_YXKS.Width, 900, 0.5, (value) => _Begin_YXKS.Left = value).               
+                      EndSequence();
+          
+           AnimationManager.Add(animation);
+            
+            
         }
 
         public void ShowEndForm()
-        {
-         
+        {         
 
             _EndArea.BringToFront();
             _EndArea.SetBounds(SysConfiguration.ScreenWidth / 2 - _EndArea.Width / 2,
@@ -81,13 +88,17 @@ namespace DDZProj
              
 
             //系统参数设置
-            SysConfiguration.Init();      
-         
+            SysConfiguration.Init();
 
+            
+            
 
             /* 各种特效 Begin*/
-           
+            //pfz 特效初始化
+            Initializer.Initialize();
+
             _AnimationType = AnimationType.Scale;
+
             //结局特效
             _EndArea = new EndCtrl();
             _EndArea.Hide();

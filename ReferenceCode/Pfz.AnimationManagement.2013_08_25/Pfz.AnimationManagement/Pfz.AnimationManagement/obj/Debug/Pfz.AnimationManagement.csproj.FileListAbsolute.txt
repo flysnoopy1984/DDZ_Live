@@ -1,0 +1,8 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement\bin\Debug\Pfz.AnimationManagement.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement\bin\Debug\Pfz.AnimationManagement.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement\obj\Debug\Pfz.AnimationManagement.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement\obj\Debug\GenerateResource.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement\obj\Debug\GenerateResource.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement\obj\Debug\Pfz.AnimationManagement.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement\obj\Debug\Pfz.AnimationManagement.pdb

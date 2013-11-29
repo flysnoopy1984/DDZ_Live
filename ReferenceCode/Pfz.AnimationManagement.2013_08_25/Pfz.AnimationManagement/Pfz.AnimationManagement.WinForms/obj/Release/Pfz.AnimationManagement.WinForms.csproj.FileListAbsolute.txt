@@ -1,0 +1,7 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Release\Pfz.AnimationManagement.WinForms.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Release\Pfz.AnimationManagement.WinForms.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Release\Pfz.AnimationManagement.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Release\Pfz.AnimationManagement.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\obj\Release\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\obj\Release\Pfz.AnimationManagement.WinForms.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\obj\Release\Pfz.AnimationManagement.WinForms.pdb

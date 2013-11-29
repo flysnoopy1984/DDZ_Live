@@ -1,0 +1,7 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.Wpf\bin\Release\Pfz.AnimationManagement.Wpf.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.Wpf\bin\Release\Pfz.AnimationManagement.Wpf.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.Wpf\bin\Release\Pfz.AnimationManagement.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.Wpf\bin\Release\Pfz.AnimationManagement.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.Wpf\obj\Release\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.Wpf\obj\Release\Pfz.AnimationManagement.Wpf.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.Wpf\obj\Release\Pfz.AnimationManagement.Wpf.pdb

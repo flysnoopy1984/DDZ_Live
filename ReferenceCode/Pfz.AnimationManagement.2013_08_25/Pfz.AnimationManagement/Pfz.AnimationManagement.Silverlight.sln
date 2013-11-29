@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pfz.AnimationManagement.Silverlight", "Pfz.AnimationManagement\Pfz.AnimationManagement.Silverlight.csproj", "{9D102E20-4AE0-4974-AFB6-828D3489A348}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyberminds57", "Cyberminds57\Cyberminds57.csproj", "{DF4AD669-41C8-4BEA-B2F5-1F645710E615}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D102E20-4AE0-4974-AFB6-828D3489A348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D102E20-4AE0-4974-AFB6-828D3489A348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D102E20-4AE0-4974-AFB6-828D3489A348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D102E20-4AE0-4974-AFB6-828D3489A348}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF4AD669-41C8-4BEA-B2F5-1F645710E615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4AD669-41C8-4BEA-B2F5-1F645710E615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4AD669-41C8-4BEA-B2F5-1F645710E615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4AD669-41C8-4BEA-B2F5-1F645710E615}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

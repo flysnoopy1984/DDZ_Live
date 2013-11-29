@@ -1,0 +1,13 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\bin\Debug\WinFormsSample.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\bin\Debug\WinFormsSample.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\bin\Debug\Pfz.AnimationManagement.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\bin\Debug\Pfz.AnimationManagement.WinForms.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\bin\Debug\Pfz.AnimationManagement.WinForms.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\bin\Debug\Pfz.AnimationManagement.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\obj\x86\Debug\WinFormsSample.Form1.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\obj\x86\Debug\WinFormsSample.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\obj\x86\Debug\WinFormsSample.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\WinFormsSample\obj\x86\Debug\WinFormsSample.pdb

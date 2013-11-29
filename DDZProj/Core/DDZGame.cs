@@ -521,7 +521,7 @@ namespace DDZProj.Core
                     _MainForm.HideEndForm();                   
                 }
                 _MainForm.ShowBegin();
-              //  StartDealt();
+                //StartDealt();
             }
             else if (_GameState == GameState.DealtComplete)
             {

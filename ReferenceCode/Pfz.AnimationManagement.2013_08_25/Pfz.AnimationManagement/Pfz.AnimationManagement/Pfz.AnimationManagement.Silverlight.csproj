@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D102E20-4AE0-4974-AFB6-828D3489A348}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pfz.AnimationManagement.Silverlight</RootNamespace>
+    <AssemblyName>Pfz.AnimationManagement.Silverlight</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\AnimationDecorator.cs" />
+    <Compile Include="Abstract\AnimationGroup.cs" />
+    <Compile Include="Abstract\IAfterEndAwareAnimation.cs" />
+    <Compile Include="Abstract\IAnimation.cs" />
+    <Compile Include="Abstract\IAnimationBuilder.cs" />
+    <Compile Include="Abstract\IAnimationGroup.cs" />
+    <Compile Include="Abstract\IRangeCalculator.cs" />
+    <Compile Include="Abstract\ISpeedToDurationCalculator.cs" />
+    <Compile Include="Abstract\RangeCalculator.cs" />
+    <Compile Include="Abstract\SpeedToDurationCalculator.cs" />
+    <Compile Include="AnimationBuilder.cs" />
+    <Compile Include="AnimationBuilders\AcceleratingStartBuilder.cs" />
+    <Compile Include="AnimationBuilders\SegmentedTimeBuilder.cs" />
+    <Compile Include="AnimationBuilders\PauseConditionBuilder.cs" />
+    <Compile Include="AnimationBuilders\DeacceleratingEndBuilder.cs" />
+    <Compile Include="AnimationBuilders\DisposeOnEndBuilder.cs" />
+    <Compile Include="AnimationBuilders\RunConditionBuilder.cs" />
+    <Compile Include="AnimationBuilders\LoopBuilder.cs" />
+    <Compile Include="AnimationBuilders\ParallelBuilder.cs" />
+    <Compile Include="AnimationBuilders\PrematureEndConditionBuilder.cs" />
+    <Compile Include="AnimationBuilders\ProgressiveTimeMultiplierBuilder.cs" />
+    <Compile Include="AnimationBuilders\ProgressiveTimeMultipliersBuilder.cs" />
+    <Compile Include="AnimationBuilders\RangesBuilder.cs" />
+    <Compile Include="AnimationBuilders\SequenceBuilder.cs" />
+    <Compile Include="AnimationBuilders\TimeLimitBuilder.cs" />
+    <Compile Include="AnimationBuilders\TimeMultiplierBuilder.cs" />
+    <Compile Include="Animations\AnimationReference.cs" />
+    <Compile Include="Animations\Conditions\PauseCondition.cs" />
+    <Compile Include="Animations\Conditions\RunCondition.cs" />
+    <Compile Include="Animations\Conditions\PrematureEndCondition.cs" />
+    <Compile Include="Animations\DelegatedAnimation.cs" />
+    <Compile Include="Animations\DisposeOnEndAnimation.cs" />
+    <Compile Include="Animations\TimeManipulation\SegmentedTime.cs" />
+    <Compile Include="FrameBasedAnimationHelper.cs" />
+    <Compile Include="Animations\Groups\ParallelAnimationGroup.cs" />
+    <Compile Include="Animations\Groups\SequentialAnimationGroup.cs" />
+    <Compile Include="Animations\ImperativeAnimation.cs" />
+    <Compile Include="Animations\LoopAnimation.cs" />
+    <Compile Include="Animations\RangeAnimation.cs" />
+    <Compile Include="Animations\TimeManipulation\ProgressiveTimeMultiplier.cs" />
+    <Compile Include="Animations\TimeManipulation\TimeLimit.cs" />
+    <Compile Include="Animations\TimeManipulation\TimeMultiplier.cs" />
+    <Compile Include="Animations\TimeManipulation\Wait.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangeCalculators\DoubleRangeCalculator.cs" />
+    <Compile Include="RangeCalculators\DoubleSpeedToDurationCalculator.cs" />
+    <Compile Include="RangeCalculators\Int32RangeCalculator.cs" />
+    <Compile Include="RangeCalculators\Int32SpeedToDurationCalculator.cs" />
+    <Compile Include="Silverlight\ColorRangeCalculator.cs" />
+    <Compile Include="Silverlight\ColorSpeedToDurationCalculator.cs" />
+    <Compile Include="Silverlight\PointRangeCalculator.cs" />
+    <Compile Include="Silverlight\PointSpeedToDurationCalculator.cs" />
+    <Compile Include="Silverlight\AnimationManager.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

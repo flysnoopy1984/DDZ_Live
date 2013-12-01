@@ -1,0 +1,13 @@
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Debug\Pfz.AnimationManagement.WinForms.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Debug\Pfz.AnimationManagement.WinForms.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Debug\Pfz.AnimationManagement.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Debug\Pfz.AnimationManagement.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\obj\Debug\Pfz.AnimationManagement.WinForms.dll
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\obj\Debug\Pfz.AnimationManagement.WinForms.pdb
+H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Debug\Pfz.AnimationManagement.WinForms.dll
+H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Debug\Pfz.AnimationManagement.WinForms.pdb
+H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Debug\Pfz.AnimationManagement.dll
+H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\bin\Debug\Pfz.AnimationManagement.pdb
+H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\obj\Debug\Pfz.AnimationManagement.WinForms.dll
+H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\Pfz.AnimationManagement.2013_08_25\Pfz.AnimationManagement\Pfz.AnimationManagement.WinForms\obj\Debug\Pfz.AnimationManagement.WinForms.pdb

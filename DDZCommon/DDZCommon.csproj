@@ -518,6 +518,42 @@
     <None Include="Resources\EndGame.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\char_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_Di.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_ju.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\string_yxks.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

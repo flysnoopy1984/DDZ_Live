@@ -41,6 +41,16 @@ namespace DDZProj
             _mainForm.CurrentGame.Button_Begin_Action();
         }
 
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            e.Cancel = true;
+            
+            
+            base.OnClosing(e);
+
+            this.Hide();
+        }
+
         private void bn_Reset_Click(object sender, EventArgs e)
         {
             _mainForm.CurrentGame.ResetGame();

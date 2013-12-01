@@ -518,10 +518,11 @@ namespace DDZProj.Core
               // ResetGame();
                 if (_GameState == GameState.End)
                 {
-                    _MainForm.HideEndForm();                   
+                    _MainForm.HideEndForm();                  
                 }
-                _MainForm.ShowBegin();
-              //  StartDealt();
+                if(_GameState == GameState.New)
+                    _MainForm.ShowBegin();
+                //StartDealt();
             }
             else if (_GameState == GameState.DealtComplete)
             {

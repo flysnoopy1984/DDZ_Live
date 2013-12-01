@@ -40,7 +40,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DoubleBuffered = true;
             this.Name = "Begin_YXKS";
-            this.Size = new System.Drawing.Size(660, 198);
+            this.Size = new System.Drawing.Size(660, 168);
             this.ResumeLayout(false);
 
         }

@@ -15,7 +15,7 @@ H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\bin\Debug\ServerConsole.exe
 H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\bin\Debug\ServerConsole.pdb
 H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\bin\Debug\TcpIpCore.dll
 H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\bin\Debug\TcpIpCore.pdb
-H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.csprojResolveAssemblyReference.cache
 H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.MainConsole.resources
 H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.Properties.Resources.resources
 H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.csproj.GenerateResource.Cache
+H:\Projects\OutSource_Project\DDZ_Live\ServerConsole\obj\x86\Debug\ServerConsole.csprojResolveAssemblyReference.cache

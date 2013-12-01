@@ -12,6 +12,9 @@ using System.Media;
 using AnimatorNS;
 using System.Configuration;
 using DDZProj.Effect;
+using Pfz.AnimationManagement.WinForms;
+using Pfz.AnimationManagement;
+using System.Diagnostics;
 
 namespace DDZProj
 {
@@ -27,7 +30,13 @@ namespace DDZProj
         private Graphics _AnimatorDC;
         private DDZGame _DDZGame;
         private EndCtrl _EndArea;
-        private Begin_YXKS _Begin_YXKS;
+
+        #region 特效移动位置
+        private int yxks_x, yxks_y, dxj_x, dxj_y;
+        private bool _IsFirst = true;
+        #endregion
+        //private Begin_YXKS _Begin_YXKS;
+        //private Begin_DXJ _Begin_DXJ;
 
         public DDZGame CurrentGame
         {
@@ -41,15 +50,12 @@ namespace DDZProj
 
         public void ShowBegin()
         {
-
-           // beginImg = ImageHandler.ImageTransfer(beginImg, 660, 200, beginImg.Width, beginImg.Height);
-           // ImageFromLeftToRight(srcImg, 20, (SysConfiguration.ScreenWidth + srcImg.Width) / 2, 400);
-            ImageFromLeftToRight();
+            GameBeginEffect();
+            
         }
 
         public void ShowEndForm()
-        {
-         
+        {         
 
             _EndArea.BringToFront();
             _EndArea.SetBounds(SysConfiguration.ScreenWidth / 2 - _EndArea.Width / 2,
@@ -60,13 +66,15 @@ namespace DDZProj
 
             animator1.AnimationType = _AnimationType;
             animator1.Show(_EndArea);
+
+
         }
 
         public void HideEndForm()
         {
             if (_EndArea != null)
             {
-
+                
                 animator1.AnimationType = _AnimationType;
                 animator1.Hide(_EndArea);
             }
@@ -81,22 +89,24 @@ namespace DDZProj
              
 
             //系统参数设置
-            SysConfiguration.Init();      
-         
+            SysConfiguration.Init();
 
+            
+            
 
             /* 各种特效 Begin*/
-           
+            //pfz 特效初始化
+            Initializer.Initialize();
+
             _AnimationType = AnimationType.Scale;
+
             //结局特效
             _EndArea = new EndCtrl();
             _EndArea.Hide();
             this.Controls.Add(_EndArea);
+            
 
-            _Begin_YXKS = new Begin_YXKS();
-            _Begin_YXKS.Hide();
-            this.Controls.Add(_Begin_YXKS);
-
+           
             //开始特效
 
 
@@ -111,39 +121,70 @@ namespace DDZProj
 
 
         #region 特效
-        public void ImageFromLeftToRight()
+        public void GameBeginEffect()
         {
-            int bx = 0;
-            int ex = 2000;
-            int y = 400;
+            _Begin_YXKS.Show();
+            _Begin_DXJ.Show();
 
-            Bitmap srcImg = new Bitmap(_Begin_YXKS.Width, _Begin_YXKS.Height);
-            _Begin_YXKS.DrawToBitmap(srcImg, new Rectangle(0, 0, srcImg.Width, srcImg.Height));
+            _Begin_YXKS.SetBounds(-_Begin_YXKS.Width, yxks_y, _Begin_YXKS.Width, _Begin_YXKS.Height);
+            _Begin_DXJ.SetBounds(SysConfiguration.ScreenWidth + _Begin_DXJ.Width, dxj_y, _Begin_DXJ.Width, _Begin_DXJ.Height);
 
+           
+          
+            yxks_x = SysConfiguration.ScreenWidth / 2 - _Begin_YXKS.Width * 3 / 4;
+            yxks_y = SysConfiguration.ScreenHeight / 2 - _Begin_YXKS.Height;
 
-            _AnimatorDC = _Begin_YXKS.CreateGraphics();
+            dxj_x = SysConfiguration.ScreenWidth / 2 - _Begin_DXJ.Width / 4;
+            dxj_y = SysConfiguration.ScreenHeight / 2;
 
-            Color bgColor = Color.FromKnownColor(KnownColor.White);
-            int stepX = 30;
-            int delay = 10;
+           
+            _Begin_DXJ.SetTurnNum(12);
 
-            th_ImgLR = new Thread(delegate()
-            {
-                int cx = bx;
-                while (cx + srcImg.Width < ex)
+            int x1 = -_Begin_YXKS.Width;
+            int x2 = SysConfiguration.ScreenWidth + _Begin_DXJ.Width;
+            Dictionary<int,bool> aniState = new Dictionary<int,bool>();
+            aniState.Add(1, false);
+            aniState.Add(2, false);
+            Thread t = new Thread(delegate() {
+
+                while (aniState[1] == false || aniState[2] == false)
                 {
-                    _AnimatorDC.Clear(bgColor);
-                    _AnimatorDC.DrawImage(srcImg, cx, y);
-                    cx += stepX;
-                    Thread.Sleep(delay);
-
-                    _Begin_YXKS.Invalidate();
+                    if(x1 <= yxks_x)
+                    {
+                        x1 += 100;
+                        _Begin_YXKS.SetBounds(x1, yxks_y, _Begin_YXKS.Width, _Begin_YXKS.Height);
+                        if (x1!=yxks_x && x1 + 100 > yxks_x )
+                        {
+                            x1 = yxks_x;
+                            aniState[1] = true;
+                        }                
+                      
+                    }
+                    if (x2 >= dxj_x)
+                    {
+                         x2 -= 100;
+                         _Begin_DXJ.SetBounds(x2, dxj_y, _Begin_DXJ.Width, _Begin_DXJ.Height);
+                         if (x2 != dxj_x && x2 - 100 < dxj_x)
+                         {
+                             x2 = dxj_x;
+                             aniState[2] = true;
+                         }
+                       
+                    }
+                  
+                    Thread.Sleep(30);
                 }
-            });
 
-            th_ImgLR.Start();
-        }
-      
+                Thread.Sleep(1000);
+                _Begin_YXKS.Hide();
+                _Begin_DXJ.Hide();
+
+                this.CurrentGame.StartDealt();
+              
+            });
+            t.Start();
+        
+        }      
         #endregion
 
 
@@ -177,6 +218,39 @@ namespace DDZProj
             return base.ProcessCmdKey(ref msg, keyData);
         }
         #endregion
+
+        private void _Begin_YXKS_Move(object sender, EventArgs e)
+        {
+            //if (_Begin_YXKS.Left == yxks_x)
+            //{
+               
+            //    _Begin_YXKS.Hide();
+            //    _Begin_DXJ.Hide();
+
+            //    _Begin_YXKS.SetBounds(0, yxks_y, _Begin_YXKS.Width, _Begin_YXKS.Height);
+            //    _Begin_DXJ.SetBounds(0, dxj_y, _Begin_DXJ.Width, _Begin_DXJ.Height);
+
+            //    Thread.Sleep(1000);
+            //    if (_IsFirst)
+            //    {
+            //        this.CurrentGame.StartDealt();
+            //        _IsFirst = false;
+            //    }
+               
+            //}
+
+
+
+        }
+
+      
+        private void animator1_AnimationCompleted(object sender, AnimationCompletedEventArg e)
+        {
+            if (e.Mode == AnimateMode.Hide)
+            {
+                ShowBegin();
+            }
+        }
 
     }
 }

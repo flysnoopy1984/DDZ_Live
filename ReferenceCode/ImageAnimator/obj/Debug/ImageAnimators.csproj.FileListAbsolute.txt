@@ -30,3 +30,14 @@ H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\Men
 H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\ImageAnimators.csproj.GenerateResource.Cache
 H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\ImageAnimators.exe
 H:\Projects\OutSource_Project\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\ImageAnimators.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\bin\Debug\ImageAnimators.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\bin\Debug\ImageAnimators.pdb
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\Mengliao.CSharp.A14.FormMain.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\Mengliao.CSharp.A14.Properties.Resources.resources
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\GenerateResource-ResGen.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\ResGen.read.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\GenerateResource-ResGen.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\ResGen.write.1.tlog
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\ImageAnimators.exe
+G:\Project\DDZ\DDZProj\DDZ_Live\ReferenceCode\ImageAnimator\obj\Debug\ImageAnimators.pdb

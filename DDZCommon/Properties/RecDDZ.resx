@@ -391,4 +391,40 @@
   <data name="string_yxks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\string_yxks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="char_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_Di" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_Di.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_ju" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_ju.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
